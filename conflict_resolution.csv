@@ -1,0 +1,17 @@
+repo,field,candidate_value,source
+openai/codex,description,Lightweight coding agent that runs in your terminal,github_api_live
+openai/codex,description,"OpenAI's local coding agent that runs on your computer – install via npm or Homebrew; Apache-2.0 licensed",target_set_csv
+openai/codex,description,Codex CLI is a coding agent from OpenAI that runs locally on your computer.,readme_opening
+google-gemini/gemini-cli,description,An open-source AI agent that brings the power of Gemini directly into your terminal.,github_api_live
+google-gemini/gemini-cli,description,"Open-source AI agent bringing Google Gemini into your terminal with 60 req/min free tier and 1M token context; Apache-2.0",target_set_csv
+google-gemini/gemini-cli,description,Gemini CLI is an open-source AI agent that brings the power of Gemini directly into your terminal.,readme_opening
+QwenLM/Qwen3-Coder,description,"Qwen3-Coder is the code version of Qwen3, the large language model series developed by Qwen team.",github_api_live
+QwenLM/Qwen3-Coder,description,"Alibaba Qwen's agentic code model family supporting 256K context and 358 languages; available in 480B / 30B / Next sizes",target_set_csv
+QwenLM/Qwen3-TTS,description,"Qwen3-TTS is an open-source series of TTS models developed by the Qwen team at Alibaba Cloud, supporting stable, expressive, and streaming speech generation, free-form voice design, and vivid voice cloning.",github_api_live
+QwenLM/Qwen3-TTS,description,"Qwen's end-to-end speech generation series with voice clone / design across 10 languages and sub-100ms streaming latency",target_set_csv
+OpenHands/OpenHands,description,OpenHands: AI-Driven Development,github_api_live
+OpenHands/OpenHands,description,"AI-driven software development platform (original All-Hands-AI URL redirects to OpenHands/OpenHands); MIT-licensed; SWE-Bench 77.6",target_set_csv
+OpenHands/OpenHands,canonical_owner_repo,OpenHands/OpenHands,github_api_live
+OpenHands/OpenHands,canonical_owner_repo,All-Hands-AI/OpenHands,target_set_csv_original_url
+OpenHands/OpenHands,license,Other (NOASSERTION),github_api_live
+OpenHands/OpenHands,license,MIT,target_set_csv
