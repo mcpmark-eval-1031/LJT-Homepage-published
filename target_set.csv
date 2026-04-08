@@ -1,6 +1,6 @@
-Original URL,Original Repo,Canonical Owner/Repo,Project Name,Description
-https://github.com/openai/codex,openai/codex,openai/codex,Codex CLI,OpenAI's local coding agent that runs on your computer – install via npm or Homebrew; Apache-2.0 licensed
-https://github.com/google-gemini/gemini-cli,google-gemini/gemini-cli,google-gemini/gemini-cli,Gemini CLI,Open-source AI agent bringing Google Gemini into your terminal with 60 req/min free tier and 1M token context; Apache-2.0
-https://github.com/QwenLM/Qwen3-Coder,QwenLM/Qwen3-Coder,QwenLM/Qwen3-Coder,Qwen3-Coder,Alibaba Qwen's agentic code model family supporting 256K context and 358 languages; available in 480B / 30B / Next sizes
-https://github.com/QwenLM/Qwen3-TTS,QwenLM/Qwen3-TTS,QwenLM/Qwen3-TTS,Qwen3-TTS,Qwen's end-to-end speech generation series with voice clone / design across 10 languages and sub-100ms streaming latency
-https://github.com/All-Hands-AI/OpenHands,All-Hands-AI/OpenHands,OpenHands/OpenHands,OpenHands,AI-driven software development platform (original All-Hands-AI URL redirects to OpenHands/OpenHands); MIT-licensed; SWE-Bench 77.6
+Original URL,Original Repo,Canonical Owner/Repo,Project Name,Primary Language,License,Stars,Default Branch,Description
+https://github.com/openai/codex,openai/codex,openai/codex,Codex CLI,Rust,Apache-2.0,73958,main,Lightweight coding agent that runs in your terminal
+https://github.com/google-gemini/gemini-cli,google-gemini/gemini-cli,google-gemini/gemini-cli,Gemini CLI,TypeScript,Apache-2.0,100641,main,An open-source AI agent that brings the power of Gemini directly into your terminal.
+https://github.com/QwenLM/Qwen3-Coder,QwenLM/Qwen3-Coder,QwenLM/Qwen3-Coder,Qwen3-Coder,Python,(none),16310,main,Qwen3-Coder is the code version of Qwen3 the large language model series developed by Qwen team.
+https://github.com/QwenLM/Qwen3-TTS,QwenLM/Qwen3-TTS,QwenLM/Qwen3-TTS,Qwen3-TTS,Python,Apache-2.0,10451,main,"Qwen3-TTS is an open-source series of TTS models developed by the Qwen team at Alibaba Cloud, supporting stable, expressive, and streaming speech generation, free-form voice design, and vivid voice cloning."
+https://github.com/All-Hands-AI/OpenHands,All-Hands-AI/OpenHands,OpenHands/OpenHands,OpenHands,Python,MIT (core),70845,main,AI-driven software development platform. Original URL redirects to OpenHands/OpenHands.
