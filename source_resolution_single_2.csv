@@ -1,0 +1,35 @@
+repo,field,candidate_value,source,review_state,selected
+openai/codex,project_name,Codex CLI,target_set_csv,unchallenged,YES
+openai/codex,original_url_from_playlist,https://github.com/openai/codex,target_set_csv,unchallenged,YES
+openai/codex,canonical_owner_repo,openai/codex,github_api_live,unchallenged,YES
+openai/codex,description,Lightweight coding agent that runs in your terminal,github_api_live,winner,YES
+"openai/codex",description,"OpenAI's local coding agent that runs on your computer – install via npm or Homebrew; Apache-2.0 licensed",target_set_csv,discarded,NO
+openai/codex,description,Codex CLI is a coding agent from OpenAI that runs locally on your computer.,readme_opening,discarded,NO
+openai/codex,license,Apache-2.0,github_api_live,unchallenged,YES
+google-gemini/gemini-cli,project_name,Gemini CLI,target_set_csv,unchallenged,YES
+google-gemini/gemini-cli,original_url_from_playlist,https://github.com/google-gemini/gemini-cli,target_set_csv,unchallenged,YES
+google-gemini/gemini-cli,canonical_owner_repo,google-gemini/gemini-cli,github_api_live,unchallenged,YES
+google-gemini/gemini-cli,description,An open-source AI agent that brings the power of Gemini directly into your terminal.,github_api_live,winner,YES
+"google-gemini/gemini-cli",description,"Open-source AI agent bringing Google Gemini into your terminal with 60 req/min free tier and 1M token context; Apache-2.0",target_set_csv,discarded,NO
+google-gemini/gemini-cli,description,Gemini CLI is an open-source AI agent that brings the power of Gemini directly into your terminal.,readme_opening,discarded,NO
+google-gemini/gemini-cli,license,Apache-2.0,github_api_live,unchallenged,YES
+QwenLM/Qwen3-Coder,project_name,Qwen3-Coder,target_set_csv,unchallenged,YES
+QwenLM/Qwen3-Coder,original_url_from_playlist,https://github.com/QwenLM/Qwen3-Coder,target_set_csv,unchallenged,YES
+QwenLM/Qwen3-Coder,canonical_owner_repo,QwenLM/Qwen3-Coder,github_api_live,unchallenged,YES
+"QwenLM/Qwen3-Coder",description,"Qwen3-Coder is the code version of Qwen3, the large language model series developed by Qwen team.",github_api_live,winner,YES
+"QwenLM/Qwen3-Coder",description,"Alibaba Qwen's agentic code model family supporting 256K context and 358 languages; available in 480B / 30B / Next sizes",target_set_csv,discarded,NO
+QwenLM/Qwen3-Coder,license,(none detected),github_api_live,unchallenged,YES
+QwenLM/Qwen3-TTS,project_name,Qwen3-TTS,target_set_csv,unchallenged,YES
+QwenLM/Qwen3-TTS,original_url_from_playlist,https://github.com/QwenLM/Qwen3-TTS,target_set_csv,unchallenged,YES
+QwenLM/Qwen3-TTS,canonical_owner_repo,QwenLM/Qwen3-TTS,github_api_live,unchallenged,YES
+"QwenLM/Qwen3-TTS",description,"Qwen3-TTS is an open-source series of TTS models developed by the Qwen team at Alibaba Cloud, supporting stable, expressive, and streaming speech generation, free-form voice design, and vivid voice cloning.",github_api_live,winner,YES
+"QwenLM/Qwen3-TTS",description,"Qwen's end-to-end speech generation series with voice clone / design across 10 languages and sub-100ms streaming latency",target_set_csv,discarded,NO
+QwenLM/Qwen3-TTS,license,Apache-2.0,github_api_live,unchallenged,YES
+OpenHands/OpenHands,project_name,OpenHands,target_set_csv,unchallenged,YES
+OpenHands/OpenHands,original_url_from_playlist,https://github.com/All-Hands-AI/OpenHands,target_set_csv,unchallenged,YES
+OpenHands/OpenHands,canonical_owner_repo,OpenHands/OpenHands,github_api_live,winner,YES
+OpenHands/OpenHands,canonical_owner_repo,All-Hands-AI/OpenHands,target_set_csv_original_url,discarded,NO
+OpenHands/OpenHands,description,OpenHands: AI-Driven Development,github_api_live,winner,YES
+"OpenHands/OpenHands",description,"AI-driven software development platform (original All-Hands-AI URL redirects to OpenHands/OpenHands); MIT-licensed; SWE-Bench 77.6",target_set_csv,discarded,NO
+OpenHands/OpenHands,license,Other (NOASSERTION),github_api_live,winner,YES
+OpenHands/OpenHands,license,MIT,target_set_csv,discarded,NO
