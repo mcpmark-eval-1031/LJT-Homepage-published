@@ -1,10 +1,10 @@
 {
   "_meta": {
     "source_rule": "github_api_live > readme_opening > target_set_csv",
-    "snapshot_date": "2026-04-08",
-    "review_branch": "review/preserve-a-description-listed-repo-even",
-    "review_commit": "862c2730bb29e387c382ac45b47051f52f5ed963",
-    "policy_file": "source_priority.md"
+    "snapshot_date": "2026-04-09",
+    "review_branch": "review/conflict-resolution",
+    "policy_file": "source_priority.md",
+    "note": "source_priority.md was written before this file per the conflict-resolution workflow"
   },
   "repos": {
     "openai/codex": {
@@ -47,8 +47,8 @@
       "project_name": "OpenHands",
       "chosen_source": "github_api_live",
       "_notes": {
-        "canonical_owner_repo": "Playlist listed All-Hands-AI/OpenHands; GitHub API confirms redirect to OpenHands/OpenHands (repo ID 771302083)",
-        "license": "target_set_csv claimed MIT; GitHub SPDX detection returns NOASSERTION at this snapshot"
+        "canonical_owner_repo": "Playlist listed All-Hands-AI/OpenHands; GitHub API confirms redirect to OpenHands/OpenHands (repo ID 771302083). Original URL preserved in original_url_from_playlist.",
+        "license": "target_set_csv claimed MIT (corroborated by README badge); however GitHub SPDX automated detection returns NOASSERTION at this snapshot. github_api_live wins per policy."
       }
     }
   }
