@@ -1,0 +1,28 @@
+file_path,line_number,tag,content,directory
+luffy/module_a.py,7,TODO,# TODO: Add input validation for empty data,luffy
+luffy/module_a.py,8,TODO,# TODO: Implement caching mechanism for repeated calls,luffy
+luffy/module_a.py,9,TODO,# TODO(dev): Add support for streaming data processing,luffy
+luffy/module_a.py,14,TODO,# TODO - Implement proper schema validation,luffy
+luffy/module_a.py,15,TODO,# TODO(dev): Add type hints,luffy
+luffy/module_a.py,22,TODO,# TODO(dev): Implement option handling,luffy
+luffy/module_a.py,29,TODO,# TODO: Load config from file instead of hardcoding,luffy
+luffy/module_a.py,30,TODO,# TODO(dev): Add validation for config parameters,luffy
+luffy/module_a.py,35,TODO,# TODO(warning): Handle network timeout gracefully,luffy
+luffy/module_a.py,36,TODO,# TODO(future): Add support for batch processing,luffy
+luffy/module_a.py,37,TODO,# TODO(dev): Implement error recovery,luffy
+luffy/module_a.py,41,TODO,# TODO(dev): Graceful shutdown implementation,luffy
+luffy/module_b.py,5,TODO,# TODO: Add retry logic for failed requests,luffy
+luffy/module_b.py,6,TODO,# TODO(bug): Fix memory leak in connection pool,luffy
+luffy/module_b.py,7,TODO,# TODO(dev): Add connection pooling configuration,luffy
+luffy/module_b.py,11,TODO,# TODO: Add timeout parameter,luffy
+luffy/module_b.py,12,TODO,# TODO: Handle SSL certificate errors,luffy
+luffy/module_b.py,13,TODO,# TODO(dev): Implement exponential backoff,luffy
+luffy/module_b.py,18,TODO,# TODO - Implement request signing,luffy
+luffy/module_b.py,19,TODO,# TODO(dev): Add response compression support,luffy
+luffy/module_b.py,24,TODO,# TODO(dev): Implement concurrent batch processing,luffy
+luffy/tests/test_module_a.py,3,TODO,# TODO: Add more test cases,luffy/tests
+luffy/tests/test_module_a.py,4,TODO,# TODO: Mock external dependencies,luffy/tests
+luffy/tests/test_module_a.py,7,TODO,# TODO: Test edge cases,luffy/tests
+luffy/utils/helpers.py,3,TODO,# TODO add support for multi-threading,luffy/utils
+luffy/utils/helpers.py,4,TODO,# TODO(bugfix): Race condition in concurrent access,luffy/utils
+luffy/utils/helpers.py,8,TODO,# TODO: Support custom formatting templates,luffy/utils
