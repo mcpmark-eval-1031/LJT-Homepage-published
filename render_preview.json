@@ -1,0 +1,274 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "Vicent0205/Vicent0205.github.io",
+  "source_branch": "master",
+  "source_sha": "52c3bfd25c5ed59284548f3096932d00213501ae",
+  "snapshot_at": "2026-04-09T08:40:00Z",
+  "site_meta": {
+    "first_name": "Junteng",
+    "middle_name": "",
+    "last_name": "Liu",
+    "title": "blank",
+    "url": "https://Vicent0205.github.io",
+    "baseurl": "",
+    "description": "Personal academic homepage of Junteng Liu, Ph.D. candidate at HKUST NLP Group.",
+    "keywords": "NLP, large language models, agentic LLM, reasoning, HKUST",
+    "lang": "en"
+  },
+  "about": {
+    "layout": "about",
+    "permalink": "/",
+    "subtitle": "Ph.D. Candidate at HKUST NLP Group",
+    "profile_image": "prof_pic.jpg",
+    "profile_image_circular": false,
+    "selected_papers": false,
+    "social": false,
+    "announcements_enabled": true,
+    "announcements_scrollable": true,
+    "announcements_limit": 5,
+    "latest_posts_enabled": false,
+    "bio_text": "I am a second-year Ph.D. candidate at [HKUST NLP Group](https://github.com/hkust-nlp), advised by Professor [Junxian He](https://jxhe.github.io/). I received my B.Eng. from [Shanghai Jiao Tong University (SJTU)](https://en.sjtu.edu.cn/) in 2024.\n\nMy research focuses on natural language processing and machine learning, with an emphasis on:\n\n- Agentic LLMs and long-horizon reasoning\n- Logical reasoning and reinforcement learning\n- Vision-language models and perception bottlenecks\n- LLM truthfulness and interpretability\n\nBefore starting my Ph.D., I worked as a research intern at Tencent WXG and Shanghai AI Lab. I was a research intern at MiniMax from February 2025 to February 2026, contributing to the MiniMax M1 and M2.x models.\n\nI am broadly interested in building trustworthy and capable reasoning systems.",
+    "scholar_url": "https://scholar.google.com/citations?user=tbK9jl4AAAAJ",
+    "twitter_handle": "junteng88716710"
+  },
+  "publications": [
+    {
+      "cite_key": "liu2025webexplorer",
+      "year": 2025,
+      "title": "WebExplorer: Explore and Evolve for Training Long-Horizon Web Agents",
+      "authors_raw": "**Junteng Liu***, Yunji Li*, Chi Zhang, Jingyang Li, Aili Chen, Ke Ji, Weiyu Cheng, Zijia Wu, Chengyu Du, Qidi Xu, Jiayuan Song, Zhengmao Zhu, Wenhu Chen, Pengyu Zhao, Junxian He",
+      "is_first_author": true,
+      "co_first_author": true,
+      "venue": "arXiv 2025",
+      "venue_type": "preprint",
+      "abbr": "arXiv",
+      "paper_url": "https://arxiv.org/abs/2509.06501",
+      "code_url": "https://github.com/hkust-nlp/WebExplorer",
+      "selected": true
+    },
+    {
+      "cite_key": "liu2025synlogic",
+      "year": 2025,
+      "title": "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond",
+      "authors_raw": "**Junteng Liu**, Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, Junxian He",
+      "is_first_author": true,
+      "co_first_author": false,
+      "venue": "NeurIPS 2025",
+      "venue_type": "conference",
+      "abbr": "NeurIPS",
+      "paper_url": "https://arxiv.org/abs/2505.19641",
+      "code_url": "https://github.com/MiniMax-AI/SynLogic",
+      "selected": true
+    },
+    {
+      "cite_key": "liu2025chart",
+      "year": 2025,
+      "title": "On the Perception Bottleneck of VLMs for Chart Understanding",
+      "authors_raw": "**Junteng Liu**, Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, Junxian He",
+      "is_first_author": true,
+      "co_first_author": false,
+      "venue": "EMNLP Findings 2025",
+      "venue_type": "conference",
+      "abbr": "EMNLP Findings",
+      "paper_url": "https://arxiv.org/abs/2503.18435",
+      "code_url": "https://github.com/hkust-nlp/Vision4Chart",
+      "selected": true
+    },
+    {
+      "cite_key": "minimax2025m1",
+      "year": 2025,
+      "title": "MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention",
+      "authors_raw": "MiniMax Team",
+      "is_first_author": false,
+      "co_first_author": false,
+      "venue": "Technical Report 2025",
+      "venue_type": "technical_report",
+      "abbr": "Tech Report",
+      "paper_url": "https://arxiv.org/abs/2506.13585",
+      "code_url": "",
+      "selected": false
+    },
+    {
+      "cite_key": "",
+      "year": 2025,
+      "title": "The Tool Decathlon: Benchmarking Language Agents for Diverse, Realistic, and Long-Horizon Task Execution",
+      "authors_raw": "Junlong Li, Wenshuo Zhao, Jian Zhao, Weihao Zeng, Haoze Wu, Xiaochen Wang, Rui Ge, Yuxuan Cao, Yuzhen Huang, Wei Liu, **Junteng Liu**, Zhaochen Su, Yiyang Guo, Fan Zhou, Lueyang Zhang, Juan Michelini, Xingyao Wang, Xiang Yue, Shuyan Zhou, Graham Neubig, Junxian He",
+      "is_first_author": false,
+      "co_first_author": false,
+      "venue": "arXiv 2025",
+      "venue_type": "preprint",
+      "abbr": "",
+      "paper_url": "https://arxiv.org/abs/2510.25726",
+      "code_url": "https://github.com/hkust-nlp/Toolathlon",
+      "selected": false
+    },
+    {
+      "cite_key": "liu2024truthfulness",
+      "year": 2024,
+      "title": "On the Universal Truthfulness Hyperplane Inside LLMs",
+      "authors_raw": "**Junteng Liu**, Shiqi Chen, Yu Cheng, Junxian He",
+      "is_first_author": true,
+      "co_first_author": false,
+      "venue": "EMNLP 2024",
+      "venue_type": "conference",
+      "abbr": "EMNLP",
+      "paper_url": "https://arxiv.org/abs/2407.08582",
+      "code_url": "https://github.com/hkust-nlp/Universal_Truthfulness_Hyperplane",
+      "selected": false
+    },
+    {
+      "cite_key": "chen2024incontext",
+      "year": 2024,
+      "title": "In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation",
+      "authors_raw": "Shiqi Chen, Miao Xiong, **Junteng Liu**, Zhengxuan Wu, Teng Xiao, Siyang Gao, Junxian He",
+      "is_first_author": false,
+      "co_first_author": false,
+      "venue": "ICML 2024",
+      "venue_type": "conference",
+      "abbr": "ICML",
+      "paper_url": "https://arxiv.org/abs/2403.01548",
+      "code_url": "",
+      "selected": false
+    },
+    {
+      "cite_key": "huang2023ceval",
+      "year": 2023,
+      "title": "C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models",
+      "authors_raw": "Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, **Junteng Liu**, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He",
+      "is_first_author": false,
+      "co_first_author": false,
+      "venue": "NeurIPS 2023",
+      "venue_type": "conference",
+      "abbr": "NeurIPS",
+      "paper_url": "https://arxiv.org/abs/2305.08322",
+      "code_url": "",
+      "selected": false
+    },
+    {
+      "cite_key": "zhang2023composing",
+      "year": 2023,
+      "title": "Composing Parameter-Efficient Modules with Arithmetic Operations",
+      "authors_raw": "Jinghan Zhang, Shiqi Chen, **Junteng Liu**, Junxian He",
+      "is_first_author": false,
+      "co_first_author": false,
+      "venue": "NeurIPS 2023",
+      "venue_type": "conference",
+      "abbr": "NeurIPS",
+      "paper_url": "https://arxiv.org/abs/2306.14870",
+      "code_url": "",
+      "selected": false
+    }
+  ],
+  "news": [
+    {
+      "filename": "announcement_1.md",
+      "date": "2025-09-01",
+      "inline": true,
+      "related_posts": false,
+      "body_markdown": "Our paper **[WebExplorer](https://arxiv.org/abs/2509.06501)** was released on arXiv for long-horizon web-agent training."
+    },
+    {
+      "filename": "announcement_2.md",
+      "date": "2025-05-28",
+      "inline": true,
+      "related_posts": false,
+      "body_markdown": "**[SynLogic](https://arxiv.org/abs/2505.19641)** was accepted to **NeurIPS 2025**."
+    },
+    {
+      "filename": "announcement_5.md",
+      "date": "2025-05-27",
+      "inline": true,
+      "related_posts": false,
+      "body_markdown": "Our paper **[On the Perception Bottleneck of VLMs for Chart Understanding](https://arxiv.org/abs/2503.18435)** was accepted to **EMNLP 2025 Findings**."
+    },
+    {
+      "filename": "announcement_4.md",
+      "date": "2024-12-01",
+      "inline": true,
+      "related_posts": false,
+      "body_markdown": "Our paper **[On the Universal Truthfulness Hyperplane Inside LLMs](https://arxiv.org/abs/2407.08582)** was presented at **EMNLP 2024**."
+    },
+    {
+      "filename": "announcement_3.md",
+      "date": "2024-10-01",
+      "inline": true,
+      "related_posts": false,
+      "body_markdown": "Joined **HKUST NLP Group** as a Ph.D. student advised by Prof. Junxian He."
+    }
+  ],
+  "cv": {
+    "name": "Junteng Liu",
+    "label": "Ph.D. Candidate",
+    "email": "jliugi@connect.ust.hk",
+    "location": "Hong Kong",
+    "summary": "Ph.D. candidate at HKUST NLP Group working on reasoning-capable and trustworthy language models.",
+    "pdf_path": "/assets/pdf/autoCV_0313.pdf",
+    "social_networks": [
+      { "network": "GitHub", "username": "Vicent0205" },
+      { "network": "X", "username": "junteng88716710" }
+    ],
+    "education": [
+      {
+        "institution": "Hong Kong University of Science and Technology",
+        "location": "Hong Kong",
+        "area": "Computer Science and Engineering",
+        "study_type": "Ph.D.",
+        "start_date": "2024",
+        "end_date": "Present"
+      },
+      {
+        "institution": "Shanghai Jiao Tong University",
+        "location": "Shanghai, China",
+        "area": "Automation (IEEE Honor Class)",
+        "study_type": "B.Eng.",
+        "start_date": "2020",
+        "end_date": "2024"
+      }
+    ],
+    "experience": [
+      {
+        "company": "MiniMax",
+        "position": "Research Intern",
+        "location": "Shanghai, China",
+        "start_date": "2025-02",
+        "end_date": "2026-02",
+        "highlights": ["Worked on large-scale logical reasoning data synthesis and training."]
+      },
+      {
+        "company": "Tencent WXG",
+        "position": "Research Intern",
+        "location": "Shenzhen, China",
+        "start_date": "2024-06",
+        "end_date": "2024-09",
+        "highlights": ["Studied perception bottlenecks in vision-language models for chart understanding."]
+      },
+      {
+        "company": "Shanghai AI Lab",
+        "position": "Research Intern",
+        "location": "Shanghai, China",
+        "start_date": "2023-06",
+        "end_date": "2023-12",
+        "highlights": ["Worked on LLM truthfulness and internal representation analysis."]
+      }
+    ],
+    "awards": [
+      {
+        "title": "Zhiyuan Honor Scholarship",
+        "date": "2023",
+        "awarder": "Shanghai Jiao Tong University"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Research Topics",
+        "level": "Advanced",
+        "icon": "fa-solid fa-brain",
+        "keywords": ["Agentic LLMs", "Long-Horizon Reasoning", "RL for Reasoning", "Vision-Language Models", "LLM Truthfulness"]
+      }
+    ],
+    "languages": [
+      { "name": "Chinese", "summary": "Native" },
+      { "name": "English", "summary": "Fluent" }
+    ]
+  }
+}
