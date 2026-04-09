@@ -3,7 +3,7 @@
 **Repository**: `mcpmark-eval-1031/LUFFY`  
 **Review branch**: `review/sync-todo-to-readme`  
 **Base snapshot commit**: `fbe7a135c8220ddbc2d633367d4cdaeb42087c78` (main)  
-**Audit generated**: 2026-04-08T21:31:25Z  
+**Audit generated**: 2026-04-09T03:34:12Z  
 **Source of truth**: `full_scope.csv` (canonical TODO coordinates derived from source scan)
 
 ---
@@ -38,33 +38,33 @@ erroneous prefix and restores root-relative coordinates consistent with the sour
 
 | # | full_scope.csv `canonical_coordinate` | README (live) coordinate | Match | Note |
 |---|---------------------------------------|--------------------------|-------|------|
-|  1 | `module_a.py:7` | `module_a.py:7` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:7` |
-|  2 | `module_a.py:8` | `module_a.py:8` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:8` |
-|  3 | `module_a.py:9` | `module_a.py:9` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:9` |
-|  4 | `module_a.py:14` | `module_a.py:14` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:14` |
-|  5 | `module_a.py:15` | `module_a.py:15` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:15` |
-|  6 | `module_a.py:22` | `module_a.py:22` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:22` |
-|  7 | `module_a.py:29` | `module_a.py:29` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:29` |
-|  8 | `module_a.py:30` | `module_a.py:30` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:30` |
-|  9 | `module_a.py:35` | `module_a.py:35` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:35` |
-| 10 | `module_a.py:36` | `module_a.py:36` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:36` |
-| 11 | `module_a.py:37` | `module_a.py:37` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:37` |
-| 12 | `module_a.py:41` | `module_a.py:41` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:41` |
-| 13 | `module_b.py:5` | `module_b.py:5` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:5` |
-| 14 | `module_b.py:6` | `module_b.py:6` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:6` |
-| 15 | `module_b.py:7` | `module_b.py:7` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:7` |
-| 16 | `module_b.py:11` | `module_b.py:11` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:11` |
-| 17 | `module_b.py:12` | `module_b.py:12` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:12` |
-| 18 | `module_b.py:13` | `module_b.py:13` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:13` |
-| 19 | `module_b.py:18` | `module_b.py:18` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:18` |
-| 20 | `module_b.py:19` | `module_b.py:19` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:19` |
-| 21 | `module_b.py:24` | `module_b.py:24` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:24` |
-| 22 | `tests/test_module_a.py:3` | `tests/test_module_a.py:3` | ✅ MATCH | unchallenged |
-| 23 | `tests/test_module_a.py:4` | `tests/test_module_a.py:4` | ✅ MATCH | unchallenged |
-| 24 | `tests/test_module_a.py:7` | `tests/test_module_a.py:7` | ✅ MATCH | unchallenged |
-| 25 | `utils/helpers.py:3` | `utils/helpers.py:3` | ✅ MATCH | unchallenged |
-| 26 | `utils/helpers.py:4` | `utils/helpers.py:4` | ✅ MATCH | unchallenged |
-| 27 | `utils/helpers.py:8` | `utils/helpers.py:8` | ✅ MATCH | unchallenged |
+|   1 | `module_a.py:7` | `module_a.py:7` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:7` |
+|   2 | `module_a.py:8` | `module_a.py:8` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:8` |
+|   3 | `module_a.py:9` | `module_a.py:9` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:9` |
+|   4 | `module_a.py:14` | `module_a.py:14` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:14` |
+|   5 | `module_a.py:15` | `module_a.py:15` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:15` |
+|   6 | `module_a.py:22` | `module_a.py:22` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:22` |
+|   7 | `module_a.py:29` | `module_a.py:29` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:29` |
+|   8 | `module_a.py:30` | `module_a.py:30` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:30` |
+|   9 | `module_a.py:35` | `module_a.py:35` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:35` |
+|  10 | `module_a.py:36` | `module_a.py:36` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:36` |
+|  11 | `module_a.py:37` | `module_a.py:37` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:37` |
+|  12 | `module_a.py:41` | `module_a.py:41` | ✅ MATCH | corrected from erroneous `src/nebula/module_a.py:41` |
+|  13 | `module_b.py:5` | `module_b.py:5` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:5` |
+|  14 | `module_b.py:6` | `module_b.py:6` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:6` |
+|  15 | `module_b.py:7` | `module_b.py:7` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:7` |
+|  16 | `module_b.py:11` | `module_b.py:11` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:11` |
+|  17 | `module_b.py:12` | `module_b.py:12` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:12` |
+|  18 | `module_b.py:13` | `module_b.py:13` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:13` |
+|  19 | `module_b.py:18` | `module_b.py:18` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:18` |
+|  20 | `module_b.py:19` | `module_b.py:19` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:19` |
+|  21 | `module_b.py:24` | `module_b.py:24` | ✅ MATCH | corrected from erroneous `src/nebula/module_b.py:24` |
+|  22 | `tests/test_module_a.py:3` | `tests/test_module_a.py:3` | ✅ MATCH | unchallenged |
+|  23 | `tests/test_module_a.py:4` | `tests/test_module_a.py:4` | ✅ MATCH | unchallenged |
+|  24 | `tests/test_module_a.py:7` | `tests/test_module_a.py:7` | ✅ MATCH | unchallenged |
+|  25 | `utils/helpers.py:3` | `utils/helpers.py:3` | ✅ MATCH | unchallenged |
+|  26 | `utils/helpers.py:4` | `utils/helpers.py:4` | ✅ MATCH | unchallenged |
+|  27 | `utils/helpers.py:8` | `utils/helpers.py:8` | ✅ MATCH | unchallenged |
 
 ---
 
