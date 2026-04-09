@@ -9,12 +9,12 @@
     "source_rule": "scan_result > readme_coordinate",
     "source_rule_rationale": "Source files (module_a.py, module_b.py) reside at the monorepo root, not under src/nebula/. The src/nebula/ prefix was appended by commit fbe7a135 as a misapplied normalization step. scan_result is authoritative for the 21 contested entries; 6 entries (tests/, utils/) already matched and are unchallenged.",
     "upstream_evidence": [
-      "README.md @ main (fbe7a135) \u2014 readme_coordinate dimension (27 entries)",
-      "module_a.py @ main \u2014 scan dimension source file (12 TODOs)",
-      "module_b.py @ main \u2014 scan dimension source file (9 TODOs)",
-      "tests/test_module_a.py @ main \u2014 scan dimension source file (3 TODOs)",
-      "utils/helpers.py @ main \u2014 scan dimension source file (3 TODOs)",
-      "cross_source_matrix.csv @ review/sync-todo-to-readme \u2014 combined two-dimension matrix"
+      "README.md @ main (fbe7a135) — readme_coordinate dimension (27 entries)",
+      "module_a.py @ main — scan dimension source file (12 TODOs)",
+      "module_b.py @ main — scan dimension source file (9 TODOs)",
+      "tests/test_module_a.py @ main — scan dimension source file (3 TODOs)",
+      "utils/helpers.py @ main — scan dimension source file (3 TODOs)",
+      "cross_source_matrix.csv @ review/sync-todo-to-readme — combined two-dimension matrix"
     ],
     "total_todos": 27,
     "path_contested_count": 21,
