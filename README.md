@@ -38,18 +38,17 @@
 
 ### 🔎 Python Backlog Snapshot
 
-> **Branch:** `dev` · **Scanned:** 2026-04-10 11:58 UTC  
+> **Branch:** `dev` · **Scanned:** 2026-04-10 16:20 UTC
 > **Python files scanned:** 10 · **Files with items:** 4 · **TODOs:** 27 · **FIXMEs:** 0
 
-| File | TODOs | FIXMEs | Total |
-|------|------:|-------:|------:|
-| `module_a.py` | 12 | 0 | 12 |
-| `module_b.py` | 9 | 0 | 9 |
-| `tests/test_module_a.py` | 3 | 0 | 3 |
-| `utils/helpers.py` | 3 | 0 | 3 |
-| **TOTAL** | **27** | **0** | **27** |
+| file | TODOs | FIXMEs |
+|------|------:|-------:|
+| `module_a.py` | 12 | 0 |
+| `module_b.py` | 9 | 0 |
+| `tests/test_module_a.py` | 3 | 0 |
+| `utils/helpers.py` | 3 | 0 |
 
-_Full details: [`TODO_INDEX.md`](TODO_INDEX.md) · [`python_backlog_inventory.csv`](python_backlog_inventory.csv)_
+_Full inventory: [`python_backlog_inventory.csv`](python_backlog_inventory.csv)_
 
 ## Installation
 
