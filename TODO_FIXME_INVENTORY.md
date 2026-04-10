@@ -1,7 +1,6 @@
 # TODO and FIXME Inventory
 
 ## TODO
-
 - module_a.py:7 - Add input validation for empty data
 - module_a.py:8 - Implement caching mechanism for repeated calls
 - module_a.py:9 - Add support for streaming data processing
@@ -31,4 +30,3 @@
 - utils/helpers.py:8 - Support custom formatting templates
 
 ## FIXME
-
