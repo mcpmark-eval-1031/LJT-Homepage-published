@@ -39,8 +39,9 @@
 
 ### 🔎 Python Backlog Snapshot
 
-> **Branch:** `dev` · **Scanned:** 2026-04-10 17:09 UTC  
-> **Python files scanned:** 10 · **Files with items:** 5 · **TODOs:** 28 · **FIXMEs:** 0
+> _Last refreshed: 2026-04-10 19:06 UTC_
+
+Scanned **4** `.py` source files on branch `dev` and found **27 TODO** and **0 FIXME** comment(s) across **4** file(s).
 
 | file | TODOs | FIXMEs |
 |------|------:|-------:|
@@ -48,7 +49,6 @@
 | `module_b.py` | 9 | 0 |
 | `tests/test_module_a.py` | 3 | 0 |
 | `utils/helpers.py` | 3 | 0 |
-| `.python_tmp/setup_env.py` | 1 | 0 |
 
 _Full inventory: [`python_backlog_inventory.csv`](python_backlog_inventory.csv)_
 
