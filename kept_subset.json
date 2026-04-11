@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "task": "finalpool-personal-website-construct_9",
+    "review_branch": "review/personal-website-construct-finalpool-9",
+    "base_branch": "review/personal-website-construct-8",
+    "base_commit": "e9c13140e73dc25eeb99a7d7e9f63d11446860bd",
+    "subject_pair": {
+      "upstream_template": "academicpages/academicpages.github.io",
+      "fork_destination": "bugmaker00/My-Homepage"
+    },
+    "bootstrap_status": "failed",
+    "scope_decision": "KEEP",
+    "total_candidates_evaluated": 45,
+    "keep_count": 13,
+    "drop_count": 32,
+    "source_rule": "github_api_live > github_api_live_upstream > readme_opening_upstream > review_analysis",
+    "session_boundary": "boundary_review.csv",
+    "borderline_analysis": "borderline_cases.md"
+  },
+  "kept_files": [
+    {
+      "candidate_file_set": "conflict_resolution.csv",
+      "origin_branch": "review/personal-website-construct-finalpool",
+      "blob_sha": "6484b02f0e567c3d34b11b69399b90c377828956",
+      "size_bytes": 3607,
+      "file_role": "review-artifact",
+      "review_surface": "finalpool",
+      "decisive_rule": "Core finalpool review artifact — 12-field contested-values table",
+      "evidence_summary": "12 rows covering all contested fields; committed SHA 5ced514 before resolved_values.json SHA 15df681; every multi-candidate field in resolved_values.json traces to this table"
+    },
+    {
+      "candidate_file_set": "source_priority.md",
+      "origin_branch": "review/personal-website-construct-finalpool",
+      "blob_sha": "2a5a1237b61e5a8ce1427b3432b3996b5cea256c",
+      "size_bytes": 6261,
+      "file_role": "review-artifact",
+      "review_surface": "finalpool",
+      "decisive_rule": "Core finalpool policy artifact — source-order rule with bootstrap-failure exception",
+      "evidence_summary": "Rule: github_api_live > github_api_live_upstream > readme_opening_upstream > review_analysis; exception applies to 6 fields (destination size=0); 14-row per-field decision table matches all 13 resolved_values.json fields"
+    },
+    {
+      "candidate_file_set": "resolved_values.json",
+      "origin_branch": "review/personal-website-construct-finalpool",
+      "blob_sha": "9186f565a9be80e35c0a3fb425dd6356b94f40ed",
+      "size_bytes": 7021,
+      "file_role": "review-artifact",
+      "review_surface": "finalpool",
+      "decisive_rule": "Core finalpool output artifact — 13 authoritative resolved field values",
+      "evidence_summary": "6 unconditional github_api_live wins; 6 bootstrap-failure-exception github_api_live_upstream wins; 1 review_analysis win (scope_decision=KEEP); _meta cross-references source_priority.md and conflict_resolution.csv"
+    },
+    {
+      "candidate_file_set": "review_table_pair_1.csv",
+      "origin_branch": "review/personal-website-construct-pair-1",
+      "blob_sha": "2c629944575ac19ee88f1926dc8a96aadb309096",
+      "size_bytes": 1384,
+      "file_role": "review-artifact",
+      "review_surface": "pair-1",
+      "decisive_rule": "Pair-1 review evidence — 13-row 2-dimension table; earliest blocking-prerequisite and bootstrap-status record",
+      "evidence_summary": "8 selected=YES rows; repo_exists=true (blocking prerequisite); bootstrap_status=failed (dim2-winner); upstream_template_identity=academicpages (dim1-winner); scope_decision=KEEP"
+    },
+    {
+      "candidate_file_set": "decision_summary_pair_1.md",
+      "origin_branch": "review/personal-website-construct-pair-1",
+      "blob_sha": "a8627b4fe40cf71f7e2b6975b1853aeab243330d",
+      "size_bytes": 5838,
+      "file_role": "review-artifact",
+      "review_surface": "pair-1",
+      "decisive_rule": "Pair-1 narrative artifact — bootstrap failure explanation and KEEP rationale; only document co-establishing both blocking-prerequisite and bootstrap-failure conditions",
+      "evidence_summary": "Bootstrap failure: fork=false / size=0 / language=HTML artifact; blocking prerequisite satisfied (repo exists); upstream template: repo ID 68287594 / MIT / 16759 stars / is_template=true; sole narrative source for scope_decision=KEEP"
+    },
+    {
+      "candidate_file_set": "full_scope.csv",
+      "origin_branch": "review/personal-website-construct-8",
+      "blob_sha": "c8e5dcc4e9c2c7fa83aa4522b43a7da74dec460b",
+      "size_bytes": 1303,
+      "file_role": "review-artifact",
+      "review_surface": "session-8",
+      "decisive_rule": "Session-8 scope catalog — 11-row source-of-truth index required as readback_audit.md anchor",
+      "evidence_summary": "11 rows: 5 review artifacts + 6 source-base files; all 11 verified MATCH by readback_audit.md at commit SHA e9c1314"
+    },
+    {
+      "candidate_file_set": "readback_audit.md",
+      "origin_branch": "review/personal-website-construct-8",
+      "blob_sha": "8c83618853358c7eb243fed1d59154608658b37f",
+      "size_bytes": 4082,
+      "file_role": "review-artifact",
+      "review_surface": "session-8",
+      "decisive_rule": "Session-8 integrity audit — 11/11 MATCH on blob-SHA and byte-size; cryptographic integrity assurance for the reviewed change set",
+      "evidence_summary": "11 MATCH / 0 MISMATCH / 0 MISSING; methodology: file-present + blob-SHA + size checks; confirms branch state at SHA e9c1314 consistent with full_scope.csv"
+    },
+    {
+      "candidate_file_set": "README.md",
+      "origin_branch": "main",
+      "blob_sha": "14b4e0cc3bb0f8bee5cfe689e78e22369db6f1e8",
+      "size_bytes": 2111,
+      "file_role": "source-base",
+      "review_surface": "main",
+      "decisive_rule": "Source base — 27-item TODO checklist is the primary output of the sync-todo-to-readme workflow",
+      "evidence_summary": "27 TODO items sorted by (file, line) with src/nebula/ prefix; path-normalization fix in commit fbe7a13; verified MATCH session-8 audit (SHA 14b4e0cc / 2111 B)"
+    },
+    {
+      "candidate_file_set": "module_a.py",
+      "origin_branch": "main",
+      "blob_sha": "83c055ab41661b81774f1e4e88efffb67b1e0162",
+      "size_bytes": 1267,
+      "file_role": "source-base",
+      "review_surface": "main",
+      "decisive_rule": "Source base — 12 TODO comments at lines 7–41; ground-truth for README checklist entries src/nebula/module_a.py:7–41",
+      "evidence_summary": "Tags: bare/dev/warning/future; functions: process_data/validate_input/transform_data/DataProcessor; all 12 descriptions match README verbatim; verified MATCH session-8 audit"
+    },
+    {
+      "candidate_file_set": "module_b.py",
+      "origin_branch": "main",
+      "blob_sha": "f04fe17a92c1cf2a5e0237c60afbd111034c5696",
+      "size_bytes": 682,
+      "file_role": "source-base",
+      "review_surface": "main",
+      "decisive_rule": "Source base — 9 TODO comments at lines 5–24; ground-truth for README checklist entries src/nebula/module_b.py:5–24",
+      "evidence_summary": "Tags: bare/bug/dev; module-level (lines 5–7) and function-level (fetch_data/post_data/batch_request); all 9 descriptions match README verbatim; verified MATCH session-8 audit"
+    },
+    {
+      "candidate_file_set": "tests/test_module_a.py",
+      "origin_branch": "main",
+      "blob_sha": "5c41895d0de522f31c272cf7fca7d438a9937ec0",
+      "size_bytes": 153,
+      "file_role": "source-base",
+      "review_surface": "main",
+      "decisive_rule": "Source base — 3 TODO comments at lines 3/4/7; ground-truth for README checklist entries tests/test_module_a.py:3–7",
+      "evidence_summary": "Line 3: Add more test cases; line 4: Mock external dependencies; line 7: Test edge cases; all 3 match README verbatim; verified MATCH session-8 audit"
+    },
+    {
+      "candidate_file_set": "utils/helpers.py",
+      "origin_branch": "main",
+      "blob_sha": "3e4017ace1e7c68eda40bd31a3c75b277f5fadbf",
+      "size_bytes": 252,
+      "file_role": "source-base",
+      "review_surface": "main",
+      "decisive_rule": "Source base — 3 TODO comments at lines 3/4/8; ground-truth for README checklist entries utils/helpers.py:3–8",
+      "evidence_summary": "Line 3: add support for multi-threading; line 4: Race condition in concurrent access; line 8: Support custom formatting templates; all 3 match README verbatim; verified MATCH session-8 audit"
+    },
+    {
+      "candidate_file_set": ".gitignore",
+      "origin_branch": "main",
+      "blob_sha": "a81974ffd1df871c137252f8927315638ac36310",
+      "size_bytes": 14,
+      "file_role": "source-base",
+      "review_surface": "main",
+      "decisive_rule": "Source base (marginal) — credential-protection file; session-8 continuity rule applies; no DROP rule triggered",
+      "evidence_summary": "Content: .github_token\\n (14 B); protects GitHub API token; included in session-8 full_scope.csv with verified MATCH; session-8 acceptance is necessary-and-sufficient KEEP condition",
+      "marginal_keep_note": "See borderline_cases.md §4 — smallest file in kept set; no TODO content; kept solely on session-8 continuity and credential-protection grounds"
+    }
+  ]
+}
