@@ -4,7 +4,7 @@
 GitHub fork flows (HuggingFace-to-GitHub mirror bootstrap, 1 pair — 2 datasets).  
 **Review branch:** `review/github-fork-flow-pair-1`  
 **Companion surface:** `review_table_pair_1.csv` (24 rows, both review dimensions combined)  
-**Snapshot date:** 2026-04-09  
+**Snapshot date:** 2026-04-09 (original); live re-verification: 2026-04-12  
 **Source priority rule:** `github_api_live` > `huggingface_api_live` > `review_analysis`  
 
 ---
@@ -28,8 +28,8 @@ Both destination repositories (`bugmaker00/Annoy-PyEdu-Rs-Raw` and
 respective HuggingFace canonical datasets after commit `120c992` resolved the namespace
 placeholders in `bugmaker00/Annoy-DataSync`.
 
-At the 2026-04-09 snapshot:
-- A GitHub API search of `bugmaker00` namespace returns only **1 result** (`Annoy-DataSync`)
+At the 2026-04-09 snapshot and confirmed again via live GitHub API on 2026-04-12:
+- A GitHub API search of `bugmaker00` namespace returns **0 results** for `Annoy-PyEdu`
   — the two mirror repos are **completely absent** from GitHub
 - The HuggingFace datasets (`dongbobo/Annoy-PyEdu-Rs-Raw`, `dongbobo/Annoy-PyEdu-Rs`)
   **do exist** and are confirmed accessible via the live HuggingFace API
@@ -57,6 +57,23 @@ This review combines two dimensions in `review_table_pair_1.csv`:
 |-----------|--------|-------------|
 | **dim1** | `huggingface_api_live` | Upstream canonical source (HuggingFace datasets in `dongbobo` namespace) — field values from the live HuggingFace API. This dimension establishes the authoritative template identity and all field values since the GitHub destination is absent. |
 | **dim2** | `github_api_live` | Fork destination check (`bugmaker00` GitHub namespace) — live GitHub API response for the intended mirror repos. This dimension checks the blocking prerequisite (repo existence). |
+
+### dim1 — HuggingFace API Live (Upstream Templates)
+
+The upstream canonical source for both datasets is the `dongbobo` namespace on HuggingFace.
+All substantive field values (description, license, canonical_owner_repo, upstream_template_identity)
+are drawn from dim1 since the GitHub destinations are absent and provide no real values.
+
+### dim2 — GitHub API Live (Destination Namespace Check)
+
+The `bugmaker00` GitHub namespace was queried on 2026-04-09 and re-verified on 2026-04-12.
+In both queries, `user:bugmaker00 Annoy-PyEdu` returns **0 results**, confirming:
+- `bugmaker00/Annoy-PyEdu-Rs-Raw`: `repo_exists = false`
+- `bugmaker00/Annoy-PyEdu-Rs`: `repo_exists = false`
+
+This dimension is the authoritative source for the **blocking prerequisite** determination
+(`repo_exists`) and `bootstrap_status`. It wins over dim1 for these fields per source
+priority rule.
 
 ---
 
@@ -151,9 +168,9 @@ Only rows with `selected = YES` are reproduced here.
 
 ### Fork Destination Provenance
 
-**GitHub mirrors (both absent):**
-- `bugmaker00/Annoy-PyEdu-Rs-Raw` — not found in GitHub API (0 results in namespace search at 2026-04-09)
-- `bugmaker00/Annoy-PyEdu-Rs` — not found in GitHub API (0 results in namespace search at 2026-04-09)
+**GitHub mirrors (both absent — verified 2026-04-09 and 2026-04-12):**
+- `bugmaker00/Annoy-PyEdu-Rs-Raw` — not found in GitHub API; search `user:bugmaker00 Annoy-PyEdu` returns 0 results
+- `bugmaker00/Annoy-PyEdu-Rs` — not found in GitHub API; search `user:bugmaker00 Annoy-PyEdu` returns 0 results
 
 **Re-plan action required:**
 1. Create `bugmaker00/Annoy-PyEdu-Rs-Raw` as a GitHub repository (mirror of HF dataset)
