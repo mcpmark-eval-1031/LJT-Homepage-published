@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "mcpmark-eval-1031/LUFFY",
+  "source_branch": "review/finalpool-youtube-repo-11",
+  "scanned_at": "2026-04-12T00:00:00Z",
+  "scanned_files": [
+    "module_a.py",
+    "module_b.py",
+    "tests/test_module_a.py",
+    "utils/helpers.py"
+  ],
+  "total_items": 20,
+  "items": [
+    {
+      "id": 1,
+      "file": "module_a.py",
+      "line": 15,
+      "tag": null,
+      "description": "Implement caching mechanism for repeated calls",
+      "status": "open"
+    },
+    {
+      "id": 2,
+      "file": "module_a.py",
+      "line": 16,
+      "tag": "dev",
+      "description": "Add support for streaming data processing",
+      "status": "open"
+    },
+    {
+      "id": 3,
+      "file": "module_a.py",
+      "line": 29,
+      "tag": null,
+      "description": "Implement proper schema validation",
+      "status": "open"
+    },
+    {
+      "id": 4,
+      "file": "module_a.py",
+      "line": 63,
+      "tag": null,
+      "description": "Load config from file instead of hardcoding",
+      "status": "open"
+    },
+    {
+      "id": 5,
+      "file": "module_a.py",
+      "line": 68,
+      "tag": "warning",
+      "description": "Handle network timeout gracefully",
+      "status": "open"
+    },
+    {
+      "id": 6,
+      "file": "module_a.py",
+      "line": 69,
+      "tag": "future",
+      "description": "Add support for batch processing",
+      "status": "open"
+    },
+    {
+      "id": 7,
+      "file": "module_a.py",
+      "line": 70,
+      "tag": "dev",
+      "description": "Implement error recovery",
+      "status": "open"
+    },
+    {
+      "id": 8,
+      "file": "module_a.py",
+      "line": 75,
+      "tag": "dev",
+      "description": "Graceful shutdown implementation",
+      "status": "open"
+    },
+    {
+      "id": 9,
+      "file": "module_b.py",
+      "line": 5,
+      "tag": null,
+      "description": "Add retry logic for failed requests",
+      "status": "open"
+    },
+    {
+      "id": 10,
+      "file": "module_b.py",
+      "line": 6,
+      "tag": "bug",
+      "description": "Fix memory leak in connection pool",
+      "status": "open"
+    },
+    {
+      "id": 11,
+      "file": "module_b.py",
+      "line": 7,
+      "tag": "dev",
+      "description": "Add connection pooling configuration",
+      "status": "open"
+    },
+    {
+      "id": 12,
+      "file": "module_b.py",
+      "line": 11,
+      "tag": null,
+      "description": "Add timeout parameter",
+      "status": "open"
+    },
+    {
+      "id": 13,
+      "file": "module_b.py",
+      "line": 12,
+      "tag": null,
+      "description": "Handle SSL certificate errors",
+      "status": "open"
+    },
+    {
+      "id": 14,
+      "file": "module_b.py",
+      "line": 13,
+      "tag": "dev",
+      "description": "Implement exponential backoff",
+      "status": "open"
+    },
+    {
+      "id": 15,
+      "file": "module_b.py",
+      "line": 18,
+      "tag": null,
+      "description": "Implement request signing",
+      "status": "open"
+    },
+    {
+      "id": 16,
+      "file": "module_b.py",
+      "line": 19,
+      "tag": "dev",
+      "description": "Add response compression support",
+      "status": "open"
+    },
+    {
+      "id": 17,
+      "file": "module_b.py",
+      "line": 24,
+      "tag": "dev",
+      "description": "Implement concurrent batch processing",
+      "status": "open"
+    },
+    {
+      "id": 18,
+      "file": "tests/test_module_a.py",
+      "line": 3,
+      "tag": null,
+      "description": "Add more test cases",
+      "status": "open"
+    },
+    {
+      "id": 19,
+      "file": "tests/test_module_a.py",
+      "line": 4,
+      "tag": null,
+      "description": "Mock external dependencies",
+      "status": "open"
+    },
+    {
+      "id": 20,
+      "file": "tests/test_module_a.py",
+      "line": 7,
+      "tag": null,
+      "description": "Test edge cases",
+      "status": "open"
+    }
+  ]
+}
