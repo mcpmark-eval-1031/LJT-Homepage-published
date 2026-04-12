@@ -1,5 +1,5 @@
-source_identifier,redirects_or_canonicalizes,canonical_owner,canonical_repo,canonical_path,source_url,github_html_url,redirect_detected,notes
-openai/codex,no,openai,codex,openai/codex,https://github.com/openai/codex,https://github.com/openai/codex,No,"Fresh probe confirmed: Resolves directly; full_name=openai/codex in GitHub API response. No redirect or canonicalization detected."
-google-gemini/gemini-cli,no,google-gemini,gemini-cli,google-gemini/gemini-cli,https://github.com/google-gemini/gemini-cli,https://github.com/google-gemini/gemini-cli,No,"Fresh probe confirmed: Resolves directly; full_name=google-gemini/gemini-cli in GitHub API response. No redirect or canonicalization detected."
-QwenLM/Qwen3-Coder,no,QwenLM,Qwen3-Coder,QwenLM/Qwen3-Coder,https://github.com/QwenLM/Qwen3-Coder,https://github.com/QwenLM/Qwen3-Coder,No,"Fresh probe confirmed: Resolves directly; full_name=QwenLM/Qwen3-Coder in GitHub API response. No redirect or canonicalization detected."
-All-Hands-AI/OpenHands,YES,OpenHands,OpenHands,OpenHands/OpenHands,https://github.com/All-Hands-AI/OpenHands,https://github.com/OpenHands/OpenHands,Yes,"REDIRECTED (org rename): Fresh probe — API call with owner=All-Hands-AI repo=OpenHands returned all html_url fields pointing to github.com/OpenHands/OpenHands. Confirmed by GitHub issue OpenHands/OpenHands#11376: 'Before: All-Hands-AI/OpenHands; After: OpenHands/OpenHands'. Source identifier All-Hands-AI/OpenHands preserved verbatim; canonical path OpenHands/OpenHands stored separately."
+source_identifier,canonical_owner,canonical_repo,canonical_identifier,redirects
+openai/codex,openai,codex,openai/codex,no
+google-gemini/gemini-cli,google-gemini,gemini-cli,google-gemini/gemini-cli,no
+QwenLM/Qwen3-Coder,QwenLM,Qwen3-Coder,QwenLM/Qwen3-Coder,no
+All-Hands-AI/OpenHands,OpenHands,OpenHands,OpenHands/OpenHands,yes
