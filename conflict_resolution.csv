@@ -1,0 +1,24 @@
+field,candidate_value,source,source_type,chosen
+readme_module_a_path,module_a.py,dev README.md table (branch: dev snapshot),dev-branch-readme,no
+readme_module_a_path,src/nebula/module_a.py,main README.md after fix commit fbe7a13 (branch: main),main-branch-readme,yes
+readme_module_a_path,module_a.py,dev target_ledger.csv path column,dev-csv-ledger,no
+readme_module_a_path,module_a.py,dev path_reconciliation.csv source_path + intended_destination,dev-csv-reconciliation,no
+readme_module_b_path,module_b.py,dev README.md table (branch: dev snapshot),dev-branch-readme,no
+readme_module_b_path,src/nebula/module_b.py,main README.md after fix commit fbe7a13 (branch: main),main-branch-readme,yes
+readme_module_b_path,module_b.py,dev target_ledger.csv path column,dev-csv-ledger,no
+readme_module_b_path,module_b.py,dev path_reconciliation.csv source_path + intended_destination,dev-csv-reconciliation,no
+readme_todo_format,Markdown table (| file_path | line_number | task |),dev README.md — section uses table format,dev-branch-readme,no
+readme_todo_format,GitHub checklist (- [ ] `path:line` — description),main README.md — section uses checkbox list,main-branch-readme,yes
+readme_todo_section_title,### 📝 Complete TODO List,dev README.md heading,dev-branch-readme,no
+readme_todo_section_title,## Current TODO Items,main README.md heading,main-branch-readme,yes
+module_a_canonical_location,module_a.py (at repo root),dev path_reconciliation.csv intended_destination + actual filesystem,dev-csv-reconciliation,yes
+module_a_canonical_location,src/nebula/module_a.py,main README.md forward-looking monorepo path reference,main-branch-readme,no
+COLM2026_paper_title,(Title not specified in acceptance email),main message_plan.csv paper_title column,main-csv-message-plan,yes
+COLM2026_paper_title,(Title not specified in acceptance email),main pilot_cohort.csv paper_title column,main-csv-pilot-cohort,yes
+COLM2026_paper_title,(title to be confirmed),main mail_consistency_audit.md section 2 table,main-audit-doc,no
+COMLW2026_deadline_status,OVERDUE,main message_plan.csv status column,main-csv-message-plan,yes
+COMLW2026_deadline_status,2026-04-13 (MISSED),main message_plan.csv camera_ready_deadline column (inline label),main-csv-message-plan,no
+COMLW2026_deadline_status,NOT submitted,main pilot_cohort.csv rationale_for_inclusion text,main-csv-pilot-cohort,no
+readme_todo_path_separator,:,main README.md — uses colon between path and line number (src/nebula/module_a.py:7),main-branch-readme,yes
+readme_todo_path_separator,line N (natural language),dev README.md table — separate line_number column,dev-branch-readme,no
+readme_todo_path_separator,line N (natural language),dev action_preview.md — uses `module_a.py` line 7 format,dev-action-preview,no

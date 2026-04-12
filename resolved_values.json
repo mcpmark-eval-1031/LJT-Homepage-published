@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "repository": "mcpmark-eval-1031/LUFFY",
+    "review_branch": "review/finalpool-youtube-repo-10",
+    "reviewed_changeset": "diff of dev branch against main (dev snapshot 066a95260e2cc28ecf2d7b5044e9d9a87951287f)",
+    "main_head": "47d693ad1e128628c2c57c2225bda4cebc79e4f2",
+    "source_priority_doc": "source_priority.md",
+    "conflict_log": "conflict_resolution.csv"
+  },
+  "readme_module_a_path": "src/nebula/module_a.py",
+  "readme_module_b_path": "src/nebula/module_b.py",
+  "readme_todo_format": "github-checklist",
+  "readme_todo_section_title": "Current TODO Items",
+  "readme_todo_path_separator": ":",
+  "module_a_canonical_location": "module_a.py",
+  "module_b_canonical_location": "module_b.py",
+  "COLM2026_paper_title": "(Title not specified in acceptance email)",
+  "COMLW2026_deadline_status": "OVERDUE"
+}
