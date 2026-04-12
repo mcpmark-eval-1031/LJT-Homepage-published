@@ -1,0 +1,16 @@
+repo,field,candidate_value,source,review_state,selected
+bugmaker00/Annoy-DataSync,repo_exists,true,github_api_live,unchallenged,YES
+bugmaker00/Annoy-DataSync,canonical_owner_repo,bugmaker00/Annoy-DataSync,github_api_live,unchallenged,YES
+bugmaker00/Annoy-DataSync,fork_is_formal_github_fork,false,github_api_live,unchallenged,YES
+bugmaker00/Annoy-DataSync,upstream_template_identity,hkust-nlp/CodeIO,github_commit_log (Annoy-DataSync PR#2; lockon-n commits abde12e/08667ae/272cfc2f Sep-2025),winner,YES
+"bugmaker00/Annoy-DataSync",upstream_template_identity,"(absent from GitHub – hkust-nlp/CodeIO yields 0 results in live GitHub search; no formal upstream detectable via fork API)",github_api_live,discarded,NO
+bugmaker00/Annoy-DataSync,namespace_resolution_commit,"120c992 – chore: update README placeholders for namespaces (2026-04-08)",evidence_notes_single_1,unchallenged,YES
+bugmaker00/Annoy-DataSync,hf_namespace_resolved,dongbobo,"scope_matrix_single_1 / commit 120c992 (replaces {hf_namespace} with dongbobo)",winner,YES
+"bugmaker00/Annoy-DataSync",hf_namespace_resolved,"Shirley04 (variant observed in ShirleyLIYuxin/Annoy-DataSync – different agent instance)",github_api_live (cross-instance check),discarded,NO
+"bugmaker00/Annoy-DataSync",hf_namespace_resolved,"beketaevoleg (variant observed in evilsatana666/Annoy-DataSync – different agent instance)",github_api_live (cross-instance check),discarded,NO
+bugmaker00/Annoy-DataSync,github_namespace_resolved,bugmaker00,"scope_matrix_single_1 / commit 120c992 (replaces {github_namespace} with bugmaker00)",unchallenged,YES
+bugmaker00/Annoy-DataSync,bootstrap_status,"code_present – namespace resolved via commit 120c992 (2026-04-08); code repo fully deployed",evidence_notes_single_1,winner,YES
+"bugmaker00/Annoy-DataSync",bootstrap_status,"hf_mirrors_absent – GitHub mirrors bugmaker00/Annoy-PyEdu-Rs-Raw and bugmaker00/Annoy-PyEdu-Rs not yet created (documented in pair-1; re-plan required)",github_api_live,informational,NO
+bugmaker00/Annoy-DataSync,description,(null – no GitHub description set at 2026-04-12 snapshot),github_api_live,unchallenged,YES
+bugmaker00/Annoy-DataSync,license,"(null – no LICENSE file detected; tracked by open issue #1 in bugmaker00/Annoy-DataSync; both HF datasets also null per pair-1)",github_api_live,unchallenged,YES
+bugmaker00/Annoy-DataSync,scope_decision,KEEP,scope_matrix_single_1,unchallenged,YES
