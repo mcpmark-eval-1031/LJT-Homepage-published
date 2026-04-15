@@ -1,0 +1,12 @@
+<li>
+  <span itemprop="headline">{{ post.title }}</span>
+  {% if post.authors %}
+  <span class="archive__item-excerpt"> — {{ post.authors }}</span>
+  {% endif %}
+  {% if post.venue %}
+  <span class="archive__item-excerpt"> ({{ post.venue }})</span>
+  {% endif %}
+  {% if post.paperurl %}
+  <a href="{{ post.paperurl }}">[PDF]</a>
+  {% endif %}
+</li>

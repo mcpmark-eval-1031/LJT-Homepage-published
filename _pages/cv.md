@@ -18,6 +18,7 @@ redirect_from:
 * **B.Eng. in Computer Science** (2020–2024)
   * Shanghai Jiao Tong University (SJTU)
   * Graduated June 2024
+  * Received Zhiyuan Honor Scholarship
 
 ## Work Experience
 
