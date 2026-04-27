@@ -1,0 +1,48 @@
+file,record_id,field,candidate_value,source
+full_scope.csv,COML2026,conference,COML 2026 (Conference on Machine Learning),main_source_file
+full_scope.csv,COML2026,conference,COML 2026,pr_description
+full_scope.csv,COML2026,conference,COML 2026 (Conference on Machine Learning),pr_branch_file
+full_scope.csv,COML2026,registration_deadline,N/A (already registered — upgrade needed),main_source_file
+full_scope.csv,COML2026,registration_deadline,N/A,pr_branch_file
+full_scope.csv,COML2026,camera_ready_deadline,2026-04-23 (extended),main_source_file
+full_scope.csv,COML2026,camera_ready_deadline,2026-04-22 (video) / 2026-04-23 (camera-ready),pr_description
+full_scope.csv,COML2026,camera_ready_deadline,2026-04-23 (extended),pr_branch_file
+full_scope.csv,COML2026,primary_action,Submit camera-ready to OpenReview by 2026-04-23,main_source_file
+full_scope.csv,COML2026,primary_action,Upgrade registration Virtual→Conference; submit video; complete camera-ready on OpenReview; sign consent forms; include lay summary,pr_description
+full_scope.csv,COML2026,primary_action,Submit camera-ready to OpenReview by 2026-04-23,pr_branch_file
+full_scope.csv,COAI2026,conference,COAI 2026 (Conference on Artificial Intelligence),main_source_file
+full_scope.csv,COAI2026,conference,COAI 2026,pr_description
+full_scope.csv,COAI2026,conference,COAI 2026 (Conference on Artificial Intelligence),pr_branch_file
+full_scope.csv,COAI2026,paper_title,Optimizing Large Language Models for Contextual Reasoning in Multi-Task Environments,main_source_file
+full_scope.csv,COAI2026,paper_title,Optimizing LLMs for Contextual Reasoning…,pr_description
+full_scope.csv,COAI2026,paper_title,Optimizing Large Language Models for Contextual Reasoning in Multi-Task Environments,pr_branch_file
+full_scope.csv,COLM2026,conference,COLM 2026 (Conference on Language Modeling),main_source_file
+full_scope.csv,COLM2026,conference,COLM 2026,pr_description
+full_scope.csv,COLM2026,conference,COLM 2026 (Conference on Language Modeling),pr_branch_file
+full_scope.csv,COLM2026,paper_title,(Title not specified in acceptance email),main_source_file
+full_scope.csv,COLM2026,paper_title,(Title not specified),pr_description
+full_scope.csv,COLM2026,paper_title,(Title not specified in acceptance email),pr_branch_file
+full_scope.csv,COMLW2026,conference,COMLW 2026 (COML Workshop on Large Language Models),main_source_file
+full_scope.csv,COMLW2026,conference,COMLW 2026,pr_description
+full_scope.csv,COMLW2026,conference,COMLW 2026 (COML Workshop on Large Language Models),pr_branch_file
+full_scope.csv,COMLW2026,primary_action,Request late submission extension — deadline 2026-04-13 has passed,main_source_file
+full_scope.csv,COMLW2026,primary_action,emergency outreach required,pr_description
+full_scope.csv,COMLW2026,primary_action,Request late submission extension — deadline 2026-04-13 has passed,pr_branch_file
+full_scope.csv,COLM2026,source_sha,5f47a60c1b13c5293d92427fa5fb858c038b0823,main_source_file (message_plan.csv)
+full_scope.csv,COLM2026,source_sha,6ae3fdd977ae36e107e89992e989515a5eb3a6fa,main_source_file (pilot_cohort.csv)
+full_scope.csv,COLM2026,source_sha,6ae3fdd977ae36e107e89992e989515a5eb3a6fa,pr_branch_file
+full_scope.csv,COMLW2026,source_sha,5f47a60c1b13c5293d92427fa5fb858c038b0823,main_source_file (message_plan.csv)
+full_scope.csv,COMLW2026,source_sha,6ae3fdd977ae36e107e89992e989515a5eb3a6fa,main_source_file (pilot_cohort.csv)
+full_scope.csv,COMLW2026,source_sha,6ae3fdd977ae36e107e89992e989515a5eb3a6fa,pr_branch_file
+readback_audit.md,COAI2026,Paper,Optimizing LLMs for Contextual Reasoning...,readback_audit_summary
+readback_audit.md,COAI2026,Paper,Optimizing Large Language Models for Contextual Reasoning in Multi-Task Environments,pr_branch_file
+readback_audit.md,COLM2026,Paper,(Title not specified),readback_audit_summary
+readback_audit.md,COLM2026,Paper,(Title not specified in acceptance email),pr_branch_file
+readback_audit.md,COML2026,Conference,COML 2026,readback_audit_summary
+readback_audit.md,COML2026,Conference,COML 2026 (Conference on Machine Learning),pr_branch_file
+readback_audit.md,COAI2026,Conference,COAI 2026,readback_audit_summary
+readback_audit.md,COAI2026,Conference,COAI 2026 (Conference on Artificial Intelligence),pr_branch_file
+readback_audit.md,COLM2026,Conference,COLM 2026,readback_audit_summary
+readback_audit.md,COLM2026,Conference,COLM 2026 (Conference on Language Modeling),pr_branch_file
+readback_audit.md,COMLW2026,Conference,COMLW 2026,readback_audit_summary
+readback_audit.md,COMLW2026,Conference,COMLW 2026 (COML Workshop on Large Language Models),pr_branch_file
