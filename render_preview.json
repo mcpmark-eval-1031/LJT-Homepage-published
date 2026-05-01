@@ -10,22 +10,6 @@
   "total_records": 4,
   "records": [
     {
-      "record_id": "COML2026",
-      "conference": "COML 2026 (Conference on Machine Learning)",
-      "paper_title": "Ipsum Lorem is all you need",
-      "author_email": "timothyb@mcp.com",
-      "publication_contact": "coml2026publication@gmail.com",
-      "primary_action": "Submit camera-ready to OpenReview by 2026-04-23",
-      "camera_ready_deadline": "2026-04-23 (extended)",
-      "registration_deadline": "N/A",
-      "status": "PENDING",
-      "priority": "HIGH",
-      "in_pilot": false,
-      "live_action_applied": false,
-      "review_verdict": "deferred",
-      "source_sha": "5f47a60c1b13c5293d92427fa5fb858c038b0823"
-    },
-    {
       "record_id": "COAI2026",
       "conference": "COAI 2026 (Conference on Artificial Intelligence)",
       "paper_title": "Optimizing Large Language Models for Contextual Reasoning in Multi-Task Environments",
@@ -56,6 +40,22 @@
       "live_action_applied": true,
       "review_verdict": "pilot_applied",
       "source_sha": "6ae3fdd977ae36e107e89992e989515a5eb3a6fa"
+    },
+    {
+      "record_id": "COML2026",
+      "conference": "COML 2026 (Conference on Machine Learning)",
+      "paper_title": "Ipsum Lorem is all you need",
+      "author_email": "timothyb@mcp.com",
+      "publication_contact": "coml2026publication@gmail.com",
+      "primary_action": "Submit camera-ready to OpenReview by 2026-04-23",
+      "camera_ready_deadline": "2026-04-23 (extended)",
+      "registration_deadline": "N/A",
+      "status": "PENDING",
+      "priority": "HIGH",
+      "in_pilot": false,
+      "live_action_applied": false,
+      "review_verdict": "deferred",
+      "source_sha": "5f47a60c1b13c5293d92427fa5fb858c038b0823"
     },
     {
       "record_id": "COMLW2026",
