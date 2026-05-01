@@ -1,0 +1,138 @@
+{
+  "_meta": {
+    "subproblem": "single_2",
+    "description": "Upstream template identity from destination namespace when invoking GitHub fork flows (AI coding tools playlist, 5 repos)",
+    "scope_surface": "scope_matrix_single_2.csv",
+    "source_rule": "github_api_live > readme_opening > target_set_csv",
+    "snapshot_date": "2026-04-08",
+    "live_verification_date": "2026-04-27",
+    "review_branch": "review/id-alignment-single-2",
+    "upstream_evidence": [
+      "source_resolution_single_2.csv (34 rows, 25 selected=YES) @ review/source-resolution-single-2",
+      "evidence_notes_single_2.md @ review/scope-matrix-single-2",
+      "conflict_resolution.csv + resolved_values.json @ review/conflict-resolution",
+      "source_priority.md @ review/conflict-resolution",
+      "id_alignment_single_2.csv @ review/id-alignment-single-2",
+      "resolved_mapping_single_2.json @ review/id-alignment-single-2"
+    ],
+    "total_repos_reviewed": 5,
+    "total_repos_selected": 5,
+    "repos_dropped": 0,
+    "consistency_check": "id_alignment rows (5) == resolved_mapping entries (5) == source_resolution selected=YES repo count (5)",
+    "live_verification_summary": {
+      "openai/codex": "EXISTS — confirmed at main HEAD",
+      "google-gemini/gemini-cli": "EXISTS — confirmed at main HEAD",
+      "QwenLM/Qwen3-Coder": "EXISTS — confirmed at main HEAD",
+      "QwenLM/Qwen3-TTS": "EXISTS — confirmed at main HEAD",
+      "OpenHands/OpenHands": "EXISTS — confirmed at main HEAD; description updated to owner-set emoji; All-Hands-AI org redirect still active"
+    },
+    "id_alignment_surface": "id_alignment_single_2.csv"
+  },
+  "repos": {
+    "openai/codex": {
+      "project_name": "Codex CLI",
+      "original_url_from_playlist": "https://github.com/openai/codex",
+      "canonical_owner_repo": "openai/codex",
+      "description": "Lightweight coding agent that runs in your terminal",
+      "license": "Apache-2.0",
+      "redirect_detected": false,
+      "field_sources": {
+        "project_name": "target_set_csv",
+        "original_url_from_playlist": "target_set_csv",
+        "canonical_owner_repo": "github_api_live",
+        "description": "github_api_live",
+        "license": "github_api_live"
+      },
+      "contested_fields": [
+        "description"
+      ],
+      "scope_decision": "KEEP"
+    },
+    "google-gemini/gemini-cli": {
+      "project_name": "Gemini CLI",
+      "original_url_from_playlist": "https://github.com/google-gemini/gemini-cli",
+      "canonical_owner_repo": "google-gemini/gemini-cli",
+      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "license": "Apache-2.0",
+      "redirect_detected": false,
+      "field_sources": {
+        "project_name": "target_set_csv",
+        "original_url_from_playlist": "target_set_csv",
+        "canonical_owner_repo": "github_api_live",
+        "description": "github_api_live",
+        "license": "github_api_live"
+      },
+      "contested_fields": [
+        "description"
+      ],
+      "scope_decision": "KEEP"
+    },
+    "QwenLM/Qwen3-Coder": {
+      "project_name": "Qwen3-Coder",
+      "original_url_from_playlist": "https://github.com/QwenLM/Qwen3-Coder",
+      "canonical_owner_repo": "QwenLM/Qwen3-Coder",
+      "description": "Qwen3-Coder is the code version of Qwen3, the large language model series developed by Qwen team.",
+      "license": null,
+      "redirect_detected": false,
+      "field_sources": {
+        "project_name": "target_set_csv",
+        "original_url_from_playlist": "target_set_csv",
+        "canonical_owner_repo": "github_api_live",
+        "description": "github_api_live",
+        "license": "github_api_live"
+      },
+      "contested_fields": [
+        "description"
+      ],
+      "_notes": {
+        "license": "GitHub SPDX automated detection returned null at 2026-04-08 snapshot; re-confirmed null on live-verification pass 2026-04-27"
+      },
+      "scope_decision": "KEEP"
+    },
+    "QwenLM/Qwen3-TTS": {
+      "project_name": "Qwen3-TTS",
+      "original_url_from_playlist": "https://github.com/QwenLM/Qwen3-TTS",
+      "canonical_owner_repo": "QwenLM/Qwen3-TTS",
+      "description": "Qwen3-TTS is an open-source series of TTS models developed by the Qwen team at Alibaba Cloud, supporting stable, expressive, and streaming speech generation, free-form voice design, and vivid voice cloning.",
+      "license": "Apache-2.0",
+      "redirect_detected": false,
+      "field_sources": {
+        "project_name": "target_set_csv",
+        "original_url_from_playlist": "target_set_csv",
+        "canonical_owner_repo": "github_api_live",
+        "description": "github_api_live",
+        "license": "github_api_live"
+      },
+      "contested_fields": [
+        "description"
+      ],
+      "scope_decision": "KEEP"
+    },
+    "OpenHands/OpenHands": {
+      "project_name": "OpenHands",
+      "original_url_from_playlist": "https://github.com/All-Hands-AI/OpenHands",
+      "canonical_owner_repo": "OpenHands/OpenHands",
+      "description": "🙌 OpenHands: AI-Driven Development",
+      "license": "Other (NOASSERTION)",
+      "redirect_detected": true,
+      "field_sources": {
+        "project_name": "target_set_csv",
+        "original_url_from_playlist": "target_set_csv",
+        "canonical_owner_repo": "github_api_live",
+        "description": "github_api_live",
+        "license": "github_api_live"
+      },
+      "contested_fields": [
+        "canonical_owner_repo",
+        "description",
+        "license"
+      ],
+      "_notes": {
+        "canonical_owner_repo": "GitHub organization renamed All-Hands-AI to OpenHands; API confirms canonical path OpenHands/OpenHands (repo ID 771302083); original playlist URL preserved verbatim in original_url_from_playlist; redirect confirmed on live-verification pass 2026-04-27",
+        "license": "target_set_csv claimed MIT; GitHub SPDX automated detection returns NOASSERTION at 2026-04-08 snapshot and live-verification pass 2026-04-27; github_api_live is authoritative",
+        "description": "github_api_live wins over target_set_csv which embedded unverified SWE-Bench score and redirect note; updated 2026-04-27 to owner-set emoji string"
+      },
+      "scope_decision": "KEEP"
+    }
+  }
+}
