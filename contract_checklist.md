@@ -104,12 +104,12 @@ All 4 records verified.
 
 | Array Index | `record_id` | Order correct? |
 |-------------|-------------|----------------|
-| 0 | COML2026 | ✅ first (alphabetically first) |
-| 1 | COAI2026 | ✅ `COAI2026` > `COML2026` |
-| 2 | COLM2026 | ✅ `COLM2026` > `COAI2026` |
-| 3 | COMLW2026 | ✅ `COMLW2026` > `COLM2026` |
+| 0 | COAI2026 | ✅ first (alphabetically first) |
+| 1 | COLM2026 | ✅ `COLM2026` > `COAI2026` |
+| 2 | COML2026 | ✅ `COML2026` > `COLM2026` |
+| 3 | COMLW2026 | ✅ `COMLW2026` > `COML2026` |
 
-**Lexicographic order verified:** `COML2026` < `COAI2026` < `COLM2026` < `COMLW2026`. ✅
+**Lexicographic order verified:** `COAI2026` < `COLM2026` < `COML2026` < `COMLW2026`. ✅
 
 ### Rule O-2: Implicit array index
 
