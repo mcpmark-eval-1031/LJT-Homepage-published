@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "mcpmark-eval-1031/LUFFY",
+  "source_branch": "review/finalpool-youtube-repo-7-artifact",
+  "generated_at": "2026-05-01T00:00:00Z",
+  "source_files": [
+    "full_scope.csv",
+    "readback_audit.md"
+  ],
+  "total_records": 4,
+  "records": [
+    {
+      "record_id": "COML2026",
+      "conference": "COML 2026 (Conference on Machine Learning)",
+      "paper_title": "Ipsum Lorem is all you need",
+      "author_email": "timothyb@mcp.com",
+      "publication_contact": "coml2026publication@gmail.com",
+      "primary_action": "Submit camera-ready to OpenReview by 2026-04-23",
+      "camera_ready_deadline": "2026-04-23 (extended)",
+      "registration_deadline": "N/A",
+      "status": "PENDING",
+      "priority": "HIGH",
+      "in_pilot": false,
+      "live_action_applied": false,
+      "review_verdict": "deferred",
+      "source_sha": "5f47a60c1b13c5293d92427fa5fb858c038b0823"
+    },
+    {
+      "record_id": "COAI2026",
+      "conference": "COAI 2026 (Conference on Artificial Intelligence)",
+      "paper_title": "Optimizing Large Language Models for Contextual Reasoning in Multi-Task Environments",
+      "author_email": "timothyb@mcp.com",
+      "publication_contact": "proceedings@coai2026.org",
+      "primary_action": "Upload camera-ready to CMT by 2026-04-19",
+      "camera_ready_deadline": "2026-04-19",
+      "registration_deadline": "N/A",
+      "status": "PENDING",
+      "priority": "HIGH",
+      "in_pilot": false,
+      "live_action_applied": false,
+      "review_verdict": "deferred",
+      "source_sha": "5f47a60c1b13c5293d92427fa5fb858c038b0823"
+    },
+    {
+      "record_id": "COLM2026",
+      "conference": "COLM 2026 (Conference on Language Modeling)",
+      "paper_title": "(Title not specified in acceptance email)",
+      "author_email": "timothyb@mcp.com",
+      "publication_contact": "publications@colm-conf.org",
+      "primary_action": "Submit camera-ready to colm-conf.org/camera-ready/2026 by 2026-04-17",
+      "camera_ready_deadline": "2026-04-17",
+      "registration_deadline": "2026-04-15",
+      "status": "PENDING",
+      "priority": "CRITICAL",
+      "in_pilot": true,
+      "live_action_applied": true,
+      "review_verdict": "pilot_applied",
+      "source_sha": "6ae3fdd977ae36e107e89992e989515a5eb3a6fa"
+    },
+    {
+      "record_id": "COMLW2026",
+      "conference": "COMLW 2026 (COML Workshop on Large Language Models)",
+      "paper_title": "Ipsum Lorem is all you need for a workshop",
+      "author_email": "timothyb@mcp.com",
+      "publication_contact": "comlw-2026@googlegroups.com",
+      "primary_action": "Request late submission extension — deadline 2026-04-13 has passed",
+      "camera_ready_deadline": "2026-04-13 (MISSED)",
+      "registration_deadline": "N/A",
+      "status": "OVERDUE",
+      "priority": "CRITICAL",
+      "in_pilot": true,
+      "live_action_applied": true,
+      "review_verdict": "pilot_applied",
+      "source_sha": "6ae3fdd977ae36e107e89992e989515a5eb3a6fa"
+    }
+  ]
+}
