@@ -1,0 +1,322 @@
+{
+  "_meta": {
+    "subproblem": "sync-todo-to-readme",
+    "description": "TODO checklist path normalization audit for mcpmark-eval-1031/LUFFY. README on main branch carries erroneous src/nebula/ prefix for module_a.py and module_b.py entries; this file aligns each README coordinate (dimension 1) against the live source-scan coordinate (dimension 2) and resolves to the scan result (actual monorepo-root-relative path).",
+    "repo": "mcpmark-eval-1031/LUFFY",
+    "review_branch": "review/sync-todo-to-readme-21",
+    "snapshot_commit": "main",
+    "source_rule": "scan_result > readme_coordinate",
+    "source_rule_rationale": "Source files (module_a.py, module_b.py) reside at the monorepo root, not under src/nebula/. The src/nebula/ prefix was appended by commit fbe7a135 as a misapplied normalization step. scan_result is authoritative for the 21 contested entries; 6 entries (tests/, utils/) already matched and are unchallenged.",
+    "upstream_evidence": [
+      "README.md @ main \u2014 readme_coordinate dimension (27 entries)",
+      "module_a.py @ main \u2014 scan dimension source file (12 TODOs)",
+      "module_b.py @ main \u2014 scan dimension source file (9 TODOs)",
+      "tests/test_module_a.py @ main \u2014 scan dimension source file (3 TODOs)",
+      "utils/helpers.py @ main \u2014 scan dimension source file (3 TODOs)",
+      "cross_source_matrix.csv @ review/sync-todo-to-readme-21 \u2014 combined two-dimension matrix"
+    ],
+    "total_todos": 27,
+    "path_contested_count": 21,
+    "path_unchallenged_count": 6,
+    "consistency_check": "cross_source_matrix rows (27) == normalized_selection entries (27) == README TODO count (27) == source scan count (27)"
+  },
+  "todos": {
+    "module_a.py:14": {
+      "canonical_coordinate": "module_a.py:14",
+      "readme_coordinate": "src/nebula/module_a.py:14",
+      "scan_coordinate": "module_a.py:14",
+      "todo_text": "Implement proper schema validation",
+      "todo_tag": "plain",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:15": {
+      "canonical_coordinate": "module_a.py:15",
+      "readme_coordinate": "src/nebula/module_a.py:15",
+      "scan_coordinate": "module_a.py:15",
+      "todo_text": "Add type hints",
+      "todo_tag": "dev",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:22": {
+      "canonical_coordinate": "module_a.py:22",
+      "readme_coordinate": "src/nebula/module_a.py:22",
+      "scan_coordinate": "module_a.py:22",
+      "todo_text": "Implement option handling",
+      "todo_tag": "dev",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:29": {
+      "canonical_coordinate": "module_a.py:29",
+      "readme_coordinate": "src/nebula/module_a.py:29",
+      "scan_coordinate": "module_a.py:29",
+      "todo_text": "Load config from file instead of hardcoding",
+      "todo_tag": "plain",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:30": {
+      "canonical_coordinate": "module_a.py:30",
+      "readme_coordinate": "src/nebula/module_a.py:30",
+      "scan_coordinate": "module_a.py:30",
+      "todo_text": "Add validation for config parameters",
+      "todo_tag": "dev",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:35": {
+      "canonical_coordinate": "module_a.py:35",
+      "readme_coordinate": "src/nebula/module_a.py:35",
+      "scan_coordinate": "module_a.py:35",
+      "todo_text": "Handle network timeout gracefully",
+      "todo_tag": "warning",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:36": {
+      "canonical_coordinate": "module_a.py:36",
+      "readme_coordinate": "src/nebula/module_a.py:36",
+      "scan_coordinate": "module_a.py:36",
+      "todo_text": "Add support for batch processing",
+      "todo_tag": "future",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:37": {
+      "canonical_coordinate": "module_a.py:37",
+      "readme_coordinate": "src/nebula/module_a.py:37",
+      "scan_coordinate": "module_a.py:37",
+      "todo_text": "Implement error recovery",
+      "todo_tag": "dev",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:41": {
+      "canonical_coordinate": "module_a.py:41",
+      "readme_coordinate": "src/nebula/module_a.py:41",
+      "scan_coordinate": "module_a.py:41",
+      "todo_text": "Graceful shutdown implementation",
+      "todo_tag": "dev",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:7": {
+      "canonical_coordinate": "module_a.py:7",
+      "readme_coordinate": "src/nebula/module_a.py:7",
+      "scan_coordinate": "module_a.py:7",
+      "todo_text": "Add input validation for empty data",
+      "todo_tag": "plain",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:8": {
+      "canonical_coordinate": "module_a.py:8",
+      "readme_coordinate": "src/nebula/module_a.py:8",
+      "scan_coordinate": "module_a.py:8",
+      "todo_text": "Implement caching mechanism for repeated calls",
+      "todo_tag": "plain",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_a.py:9": {
+      "canonical_coordinate": "module_a.py:9",
+      "readme_coordinate": "src/nebula/module_a.py:9",
+      "scan_coordinate": "module_a.py:9",
+      "todo_text": "Add support for streaming data processing",
+      "todo_tag": "dev",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_a.py prefix in README; actual file at /module_a.py"
+    },
+    "module_b.py:11": {
+      "canonical_coordinate": "module_b.py:11",
+      "readme_coordinate": "src/nebula/module_b.py:11",
+      "scan_coordinate": "module_b.py:11",
+      "todo_text": "Add timeout parameter",
+      "todo_tag": "plain",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_b.py prefix in README; actual file at /module_b.py"
+    },
+    "module_b.py:12": {
+      "canonical_coordinate": "module_b.py:12",
+      "readme_coordinate": "src/nebula/module_b.py:12",
+      "scan_coordinate": "module_b.py:12",
+      "todo_text": "Handle SSL certificate errors",
+      "todo_tag": "plain",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_b.py prefix in README; actual file at /module_b.py"
+    },
+    "module_b.py:13": {
+      "canonical_coordinate": "module_b.py:13",
+      "readme_coordinate": "src/nebula/module_b.py:13",
+      "scan_coordinate": "module_b.py:13",
+      "todo_text": "Implement exponential backoff",
+      "todo_tag": "dev",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_b.py prefix in README; actual file at /module_b.py"
+    },
+    "module_b.py:18": {
+      "canonical_coordinate": "module_b.py:18",
+      "readme_coordinate": "src/nebula/module_b.py:18",
+      "scan_coordinate": "module_b.py:18",
+      "todo_text": "Implement request signing",
+      "todo_tag": "plain",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_b.py prefix in README; actual file at /module_b.py"
+    },
+    "module_b.py:19": {
+      "canonical_coordinate": "module_b.py:19",
+      "readme_coordinate": "src/nebula/module_b.py:19",
+      "scan_coordinate": "module_b.py:19",
+      "todo_text": "Add response compression support",
+      "todo_tag": "dev",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_b.py prefix in README; actual file at /module_b.py"
+    },
+    "module_b.py:24": {
+      "canonical_coordinate": "module_b.py:24",
+      "readme_coordinate": "src/nebula/module_b.py:24",
+      "scan_coordinate": "module_b.py:24",
+      "todo_text": "Implement concurrent batch processing",
+      "todo_tag": "dev",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_b.py prefix in README; actual file at /module_b.py"
+    },
+    "module_b.py:5": {
+      "canonical_coordinate": "module_b.py:5",
+      "readme_coordinate": "src/nebula/module_b.py:5",
+      "scan_coordinate": "module_b.py:5",
+      "todo_text": "Add retry logic for failed requests",
+      "todo_tag": "plain",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_b.py prefix in README; actual file at /module_b.py"
+    },
+    "module_b.py:6": {
+      "canonical_coordinate": "module_b.py:6",
+      "readme_coordinate": "src/nebula/module_b.py:6",
+      "scan_coordinate": "module_b.py:6",
+      "todo_text": "Fix memory leak in connection pool",
+      "todo_tag": "bug",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_b.py prefix in README; actual file at /module_b.py"
+    },
+    "module_b.py:7": {
+      "canonical_coordinate": "module_b.py:7",
+      "readme_coordinate": "src/nebula/module_b.py:7",
+      "scan_coordinate": "module_b.py:7",
+      "todo_text": "Add connection pooling configuration",
+      "todo_tag": "dev",
+      "coordinate_match": false,
+      "path_contested": true,
+      "resolution": "scan_result",
+      "_note": "src/nebula/module_b.py prefix in README; actual file at /module_b.py"
+    },
+    "tests/test_module_a.py:3": {
+      "canonical_coordinate": "tests/test_module_a.py:3",
+      "readme_coordinate": "tests/test_module_a.py:3",
+      "scan_coordinate": "tests/test_module_a.py:3",
+      "todo_text": "Add more test cases",
+      "todo_tag": "plain",
+      "coordinate_match": true,
+      "path_contested": false,
+      "resolution": "unchallenged",
+      "_note": "readme and scan agree"
+    },
+    "tests/test_module_a.py:4": {
+      "canonical_coordinate": "tests/test_module_a.py:4",
+      "readme_coordinate": "tests/test_module_a.py:4",
+      "scan_coordinate": "tests/test_module_a.py:4",
+      "todo_text": "Mock external dependencies",
+      "todo_tag": "plain",
+      "coordinate_match": true,
+      "path_contested": false,
+      "resolution": "unchallenged",
+      "_note": "readme and scan agree"
+    },
+    "tests/test_module_a.py:7": {
+      "canonical_coordinate": "tests/test_module_a.py:7",
+      "readme_coordinate": "tests/test_module_a.py:7",
+      "scan_coordinate": "tests/test_module_a.py:7",
+      "todo_text": "Test edge cases",
+      "todo_tag": "plain",
+      "coordinate_match": true,
+      "path_contested": false,
+      "resolution": "unchallenged",
+      "_note": "readme and scan agree"
+    },
+    "utils/helpers.py:3": {
+      "canonical_coordinate": "utils/helpers.py:3",
+      "readme_coordinate": "utils/helpers.py:3",
+      "scan_coordinate": "utils/helpers.py:3",
+      "todo_text": "add support for multi-threading",
+      "todo_tag": "plain",
+      "coordinate_match": true,
+      "path_contested": false,
+      "resolution": "unchallenged",
+      "_note": "readme and scan agree"
+    },
+    "utils/helpers.py:4": {
+      "canonical_coordinate": "utils/helpers.py:4",
+      "readme_coordinate": "utils/helpers.py:4",
+      "scan_coordinate": "utils/helpers.py:4",
+      "todo_text": "Race condition in concurrent access",
+      "todo_tag": "bugfix",
+      "coordinate_match": true,
+      "path_contested": false,
+      "resolution": "unchallenged",
+      "_note": "readme and scan agree"
+    },
+    "utils/helpers.py:8": {
+      "canonical_coordinate": "utils/helpers.py:8",
+      "readme_coordinate": "utils/helpers.py:8",
+      "scan_coordinate": "utils/helpers.py:8",
+      "todo_text": "Support custom formatting templates",
+      "todo_tag": "plain",
+      "coordinate_match": true,
+      "path_contested": false,
+      "resolution": "unchallenged",
+      "_note": "readme and scan agree"
+    }
+  }
+}

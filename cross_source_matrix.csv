@@ -1,0 +1,28 @@
+todo_id,readme_coordinate,scan_coordinate,todo_text,todo_tag,path_contested,coordinate_match,resolution,resolution_note
+module_a.py:14,src/nebula/module_a.py:14,module_a.py:14,Implement proper schema validation,plain,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:15,src/nebula/module_a.py:15,module_a.py:15,Add type hints,dev,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:22,src/nebula/module_a.py:22,module_a.py:22,Implement option handling,dev,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:29,src/nebula/module_a.py:29,module_a.py:29,Load config from file instead of hardcoding,plain,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:30,src/nebula/module_a.py:30,module_a.py:30,Add validation for config parameters,dev,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:35,src/nebula/module_a.py:35,module_a.py:35,Handle network timeout gracefully,warning,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:36,src/nebula/module_a.py:36,module_a.py:36,Add support for batch processing,future,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:37,src/nebula/module_a.py:37,module_a.py:37,Implement error recovery,dev,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:41,src/nebula/module_a.py:41,module_a.py:41,Graceful shutdown implementation,dev,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:7,src/nebula/module_a.py:7,module_a.py:7,Add input validation for empty data,plain,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:8,src/nebula/module_a.py:8,module_a.py:8,Implement caching mechanism for repeated calls,plain,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_a.py:9,src/nebula/module_a.py:9,module_a.py:9,Add support for streaming data processing,dev,YES,NO,scan_result,src/nebula/module_a.py prefix in README; actual file at /module_a.py
+module_b.py:11,src/nebula/module_b.py:11,module_b.py:11,Add timeout parameter,plain,YES,NO,scan_result,src/nebula/module_b.py prefix in README; actual file at /module_b.py
+module_b.py:12,src/nebula/module_b.py:12,module_b.py:12,Handle SSL certificate errors,plain,YES,NO,scan_result,src/nebula/module_b.py prefix in README; actual file at /module_b.py
+module_b.py:13,src/nebula/module_b.py:13,module_b.py:13,Implement exponential backoff,dev,YES,NO,scan_result,src/nebula/module_b.py prefix in README; actual file at /module_b.py
+module_b.py:18,src/nebula/module_b.py:18,module_b.py:18,Implement request signing,plain,YES,NO,scan_result,src/nebula/module_b.py prefix in README; actual file at /module_b.py
+module_b.py:19,src/nebula/module_b.py:19,module_b.py:19,Add response compression support,dev,YES,NO,scan_result,src/nebula/module_b.py prefix in README; actual file at /module_b.py
+module_b.py:24,src/nebula/module_b.py:24,module_b.py:24,Implement concurrent batch processing,dev,YES,NO,scan_result,src/nebula/module_b.py prefix in README; actual file at /module_b.py
+module_b.py:5,src/nebula/module_b.py:5,module_b.py:5,Add retry logic for failed requests,plain,YES,NO,scan_result,src/nebula/module_b.py prefix in README; actual file at /module_b.py
+module_b.py:6,src/nebula/module_b.py:6,module_b.py:6,Fix memory leak in connection pool,bug,YES,NO,scan_result,src/nebula/module_b.py prefix in README; actual file at /module_b.py
+module_b.py:7,src/nebula/module_b.py:7,module_b.py:7,Add connection pooling configuration,dev,YES,NO,scan_result,src/nebula/module_b.py prefix in README; actual file at /module_b.py
+tests/test_module_a.py:3,tests/test_module_a.py:3,tests/test_module_a.py:3,Add more test cases,plain,NO,YES,unchallenged,
+tests/test_module_a.py:4,tests/test_module_a.py:4,tests/test_module_a.py:4,Mock external dependencies,plain,NO,YES,unchallenged,
+tests/test_module_a.py:7,tests/test_module_a.py:7,tests/test_module_a.py:7,Test edge cases,plain,NO,YES,unchallenged,
+utils/helpers.py:3,utils/helpers.py:3,utils/helpers.py:3,add support for multi-threading,plain,NO,YES,unchallenged,
+utils/helpers.py:4,utils/helpers.py:4,utils/helpers.py:4,Race condition in concurrent access,bugfix,NO,YES,unchallenged,
+utils/helpers.py:8,utils/helpers.py:8,utils/helpers.py:8,Support custom formatting templates,plain,NO,YES,unchallenged,
