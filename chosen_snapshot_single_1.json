@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "subproblem": "single_1",
+    "description": "Camera-Ready Email Triage | Pilot Cohort Scan \u2014 snapshot selection single_1",
+    "snapshot_surface": "snapshot_selection_single_1.csv",
+    "source_rule": "pr_branch_file > main_source_file > pr_description > readback_audit_summary",
+    "snapshot_date": "2026-05-03",
+    "review_branch": "review/finalpool-youtube-repo-7",
+    "upstream_evidence": [
+      "full_scope.csv (4 records) @ review/finalpool-youtube-repo-7",
+      "readback_audit.md @ review/finalpool-youtube-repo-7",
+      "message_plan.csv @ main",
+      "pilot_cohort.csv @ main",
+      "mail_consistency_audit.md @ main"
+    ],
+    "total_records_reviewed": 4,
+    "total_records_selected": 2,
+    "records_dropped": 0,
+    "records_deferred": 2,
+    "consistency_check": "snapshot_selection rows (4) == total_records_reviewed (4); chosen_snapshot entries (2) == snapshot_selection APPLY rows (2); deferred entries (2) == snapshot_selection DEFER rows (2)",
+    "repository_identification": {
+      "canonical_repo": "bugmaker00/ipsum-lorem-all-you-need",
+      "rejected_stub": "mcptest-user/ipsum-lorem-all-you-need"
+    }
+  },
+  "records": {
+    "COLM2026": {
+      "record_id": "COLM2026",
+      "conference": "COLM 2026 (Conference on Language Modeling)",
+      "paper_title": "(Title not specified in acceptance email)",
+      "author_email": "timothyb@mcp.com",
+      "publication_contact": "publications@colm-conf.org",
+      "primary_action": "Submit camera-ready to colm-conf.org/camera-ready/2026 by 2026-04-17",
+      "camera_ready_deadline": "2026-04-17",
+      "registration_deadline": "2026-04-15",
+      "status": "PENDING",
+      "priority": "CRITICAL",
+      "in_pilot": true,
+      "live_action_applied": true,
+      "review_verdict": "pilot_applied",
+      "source_sha": "6ae3fdd977ae36e107e89992e989515a5eb3a6fa",
+      "field_sources": {
+        "record_id": "pr_branch_file",
+        "conference": "pr_branch_file",
+        "paper_title": "pr_branch_file",
+        "author_email": "pr_branch_file",
+        "publication_contact": "pr_branch_file",
+        "primary_action": "pr_branch_file",
+        "camera_ready_deadline": "pr_branch_file",
+        "registration_deadline": "pr_branch_file",
+        "status": "pr_branch_file",
+        "priority": "pr_branch_file",
+        "in_pilot": "pr_branch_file",
+        "live_action_applied": "pr_branch_file",
+        "review_verdict": "pr_branch_file",
+        "source_sha": "pr_branch_file"
+      },
+      "contested_fields": [],
+      "_notes": {
+        "rationale": "CRITICAL \u2014 author registration deadline 2026-04-15 is imminent; camera-ready due 2026-04-17; live action email sent to publications@colm-conf.org"
+      },
+      "snapshot_decision": "APPLY"
+    },
+    "COMLW2026": {
+      "record_id": "COMLW2026",
+      "conference": "COMLW 2026 (COML Workshop on Large Language Models)",
+      "paper_title": "Ipsum Lorem is all you need for a workshop",
+      "author_email": "timothyb@mcp.com",
+      "publication_contact": "comlw-2026@googlegroups.com",
+      "primary_action": "Request late submission extension \u2014 deadline 2026-04-13 has passed",
+      "camera_ready_deadline": "2026-04-13 (MISSED)",
+      "registration_deadline": "N/A",
+      "status": "OVERDUE",
+      "priority": "CRITICAL",
+      "in_pilot": true,
+      "live_action_applied": true,
+      "review_verdict": "pilot_applied",
+      "source_sha": "6ae3fdd977ae36e107e89992e989515a5eb3a6fa",
+      "field_sources": {
+        "record_id": "pr_branch_file",
+        "conference": "pr_branch_file",
+        "paper_title": "pr_branch_file",
+        "author_email": "pr_branch_file",
+        "publication_contact": "pr_branch_file",
+        "primary_action": "pr_branch_file",
+        "camera_ready_deadline": "pr_branch_file",
+        "registration_deadline": "pr_branch_file",
+        "status": "pr_branch_file",
+        "priority": "pr_branch_file",
+        "in_pilot": "pr_branch_file",
+        "live_action_applied": "pr_branch_file",
+        "review_verdict": "pr_branch_file",
+        "source_sha": "pr_branch_file"
+      },
+      "contested_fields": [],
+      "_notes": {
+        "rationale": "CRITICAL \u2014 camera-ready deadline 2026-04-13 has passed; paper flagged as NOT submitted; emergency outreach sent to comlw-2026@googlegroups.com"
+      },
+      "snapshot_decision": "APPLY"
+    }
+  }
+}
