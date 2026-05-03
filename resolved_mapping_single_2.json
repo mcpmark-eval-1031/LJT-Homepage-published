@@ -5,7 +5,7 @@
     "scope_surface": "scope_matrix_single_2.csv",
     "source_rule": "github_api_live > readme_opening > target_set_csv",
     "snapshot_date": "2026-04-08",
-    "live_verification_date": "2026-04-27",
+    "live_verification_date": "2026-05-04",
     "review_branch": "review/id-alignment-single-2",
     "upstream_evidence": [
       "source_resolution_single_2.csv (34 rows, 25 selected=YES) @ review/source-resolution-single-2",
@@ -20,11 +20,11 @@
     "repos_dropped": 0,
     "consistency_check": "id_alignment rows (5) == resolved_mapping entries (5) == source_resolution selected=YES repo count (5)",
     "live_verification_summary": {
-      "openai/codex": "EXISTS — confirmed at main HEAD",
-      "google-gemini/gemini-cli": "EXISTS — confirmed at main HEAD",
-      "QwenLM/Qwen3-Coder": "EXISTS — confirmed at main HEAD",
-      "QwenLM/Qwen3-TTS": "EXISTS — confirmed at main HEAD",
-      "OpenHands/OpenHands": "EXISTS — confirmed at main HEAD; description updated to owner-set emoji; All-Hands-AI org redirect still active"
+      "openai/codex": "EXISTS — confirmed at main HEAD 2026-05-04",
+      "google-gemini/gemini-cli": "EXISTS — confirmed at main HEAD 2026-05-04",
+      "QwenLM/Qwen3-Coder": "EXISTS — confirmed at main HEAD 2026-05-04",
+      "QwenLM/Qwen3-TTS": "EXISTS — confirmed at main HEAD 2026-05-04",
+      "OpenHands/OpenHands": "EXISTS — confirmed at main HEAD 2026-05-04; description unchanged; All-Hands-AI org redirect still active"
     },
     "id_alignment_surface": "id_alignment_single_2.csv"
   },
@@ -72,7 +72,7 @@
       "original_url_from_playlist": "https://github.com/QwenLM/Qwen3-Coder",
       "canonical_owner_repo": "QwenLM/Qwen3-Coder",
       "description": "Qwen3-Coder is the code version of Qwen3, the large language model series developed by Qwen team.",
-      "license": null,
+      "license": "(none detected)",
       "redirect_detected": false,
       "field_sources": {
         "project_name": "target_set_csv",
@@ -84,10 +84,10 @@
       "contested_fields": [
         "description"
       ],
+      "scope_decision": "KEEP",
       "_notes": {
-        "license": "GitHub SPDX automated detection returned null at 2026-04-08 snapshot; re-confirmed null on live-verification pass 2026-04-27"
-      },
-      "scope_decision": "KEEP"
+        "license": "GitHub SPDX automated detection returned null at 2026-04-08 snapshot; re-confirmed null on live-verification pass 2026-05-04"
+      }
     },
     "QwenLM/Qwen3-TTS": {
       "project_name": "Qwen3-TTS",
@@ -123,16 +123,16 @@
         "license": "github_api_live"
       },
       "contested_fields": [
-        "canonical_owner_repo",
+        "license",
         "description",
-        "license"
+        "canonical_owner_repo"
       ],
+      "scope_decision": "KEEP",
       "_notes": {
-        "canonical_owner_repo": "GitHub organization renamed All-Hands-AI to OpenHands; API confirms canonical path OpenHands/OpenHands (repo ID 771302083); original playlist URL preserved verbatim in original_url_from_playlist; redirect confirmed on live-verification pass 2026-04-27",
-        "license": "target_set_csv claimed MIT; GitHub SPDX automated detection returns NOASSERTION at 2026-04-08 snapshot and live-verification pass 2026-04-27; github_api_live is authoritative",
-        "description": "github_api_live wins over target_set_csv which embedded unverified SWE-Bench score and redirect note; updated 2026-04-27 to owner-set emoji string"
-      },
-      "scope_decision": "KEEP"
+        "canonical_owner_repo": "GitHub organization renamed All-Hands-AI to OpenHands; API confirms canonical path OpenHands/OpenHands (repo ID 771302083); original playlist URL preserved verbatim in original_url_from_playlist; redirect confirmed on live-verification pass 2026-05-04",
+        "license": "target_set_csv claimed MIT; GitHub SPDX automated detection returns NOASSERTION at 2026-04-08 snapshot and live-verification pass 2026-05-04; github_api_live is authoritative",
+        "description": "github_api_live wins over target_set_csv which embedded unverified SWE-Bench score and redirect note; owner-set emoji confirmed on live-verification pass 2026-05-04"
+      }
     }
   }
 }
