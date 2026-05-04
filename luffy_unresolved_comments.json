@@ -21,7 +21,7 @@
     "file_path": "luffy/module_a.py",
     "line_number": 14,
     "tag": "TODO",
-    "content": "- Implement proper schema validation"
+    "content": " - Implement proper schema validation"
   },
   {
     "file_path": "luffy/module_a.py",
@@ -111,7 +111,7 @@
     "file_path": "luffy/module_b.py",
     "line_number": 18,
     "tag": "TODO",
-    "content": "- Implement request signing"
+    "content": " - Implement request signing"
   },
   {
     "file_path": "luffy/module_b.py",
@@ -147,7 +147,7 @@
     "file_path": "luffy/utils/helpers.py",
     "line_number": 3,
     "tag": "TODO",
-    "content": "add support for multi-threading"
+    "content": " add support for multi-threading"
   },
   {
     "file_path": "luffy/utils/helpers.py",
