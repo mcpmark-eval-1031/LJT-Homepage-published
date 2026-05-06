@@ -1,9 +1,14 @@
-/* ==========================================================================
-   UTILITIES
-   ========================================================================== */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
 
-@import "utilities/clearfix";
-@import "utilities/float";
-@import "utilities/mixins";
-@import "utilities/skip-link";
-@import "utilities/visibility";
+.float--left { float: left !important; }
+.float--right { float: right !important; }
+.float--none { float: none !important; }
+
+@media (min-width: 48em) {
+  .float--left { float: left !important; }
+  .float--right { float: right !important; }
+}
