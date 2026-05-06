@@ -1,0 +1,25 @@
+---
+layout: archive
+title: "Tags"
+permalink: /tags/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% if site.tag_archive.type %}
+  {% for tag in site.tags %}
+    <h3 id="{{ tag[0] }}">{{ tag[0] }}</h3>
+    <ul class="post-list">
+      {% for post in tag[1] %}
+        <li itemscope>
+          <a href="{{ base_path }}{{ post.url }}">{{ post.title }}
+          <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% else %}
+  <p>Tags are not supported in this theme.</p>
+{% endif %}

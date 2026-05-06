@@ -1,1 +1,27 @@
-.github_token
+# Jekyll
+_site/
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+*.lock
+
+# Rake
+tasks/
+
+# Bundle
+vendor/
+.bundle/
+
+# Jekyll preview / cache
+.jekyll-cache/
+
+# Code editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/

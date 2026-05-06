@@ -1,0 +1,25 @@
+---
+layout: archive
+title: "Categories"
+permalink: /categories/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% if site.category_archive.type %}
+  {% for category in site.categories %}
+    <h3 id="{{ category[0] }}">{{ category[0] }}</h3>
+    <ul class="post-list">
+      {% for post in category[1] %}
+        <li itemscope>
+          <a href="{{ base_path }}{{ post.url }}">{{ post.title }}
+          <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% else %}
+  <p>Categories are not supported in this theme.</p>
+{% endif %n

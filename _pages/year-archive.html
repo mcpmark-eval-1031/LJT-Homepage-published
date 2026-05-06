@@ -1,0 +1,23 @@
+---
+layout: archive
+title: "Year Archive"
+permalink: /year-archive/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.posts reversed %}
+  {% capture year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% if year != previous_year %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h3 id="y{{ year }}">{{ year }}</h3>
+    <ul class="post-list">{% assign previous_year = year %}
+  {% endif %}
+  <li itemscope>
+    <a href="{{ base_path }}{{ post.url }}">{{ post.title }}
+    <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span>
+    </a>
+  </li>
+  {% if forloop.last %}</ul>{% endif %}
+{% endfor %}
