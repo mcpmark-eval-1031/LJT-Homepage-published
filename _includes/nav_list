@@ -1,0 +1,38 @@
+{% include base_path %}
+
+<nav class="nav__list">
+  {% if page.sidebar.title %}<header><h4 class="nav__title" style="padding: 0;">{{ page.sidebar.title }}</h4></header>{% endif %}
+  <ul>
+    {% for nav in site.data.navigation[include.nav] %}
+      <li>
+        {% if nav.url %}
+          {% if nav.url contains "://" %}
+            {% assign domain = "" %}
+          {% else %}
+            {% assign domain = base_path %}
+          {% endif %}
+          <a href="{{ domain }}{{ nav.url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
+        {% else %}
+          <span class="nav__sub-title">{{ nav.title }}</span>
+        {% endif %}
+        {% if nav.children != null %}
+        <ul>
+          {% for child in nav.children %}
+            {% if child.url contains "://" %}
+              {% assign domain = "" %}
+            {% else %}
+              {% assign domain = base_path %}
+            {% endif %}
+            {% if child.url == page.url %}
+              {% assign active = "active" %}
+            {% else %}
+              {% assign active = "" %}
+            {% endif %}
+            <li><a href="{{ domain }}{{ child.url }}" class="{{ active }}">{{ child.title }}</a></li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
