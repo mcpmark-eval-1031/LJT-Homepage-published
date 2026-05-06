@@ -1,0 +1,17 @@
+.fa-stack {
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+  vertical-align: middle;
+  width: 2em;
+  height: 2em;
+}
+.fa-stack-1x, .fa-stack-2x {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.fa-stack-1x { line-height: inherit; }
+.fa-stack-2x { font-size: 2em; }
+.fa-inverse { color: #fff; }
