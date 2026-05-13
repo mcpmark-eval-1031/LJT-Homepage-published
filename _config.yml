@@ -13,8 +13,8 @@ title                    : "LJT-Homepage"
 title_separator          : "-"
 name                     : &name "Junteng Liu"
 description              : &description "Junteng Liu's academic portfolio"
-url                      : https://bugmaker00.github.io/LJT-Homepage
-baseurl                  : "/LJT-Homepage"
+url                      : https://bugmaker00.github.io/LJT-AcademicHome
+baseurl                  : "/LJT-AcademicHome"
 repository               : "bugmaker00/LJT-AcademicHome"
 
 # Site Author
