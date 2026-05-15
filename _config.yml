@@ -13,14 +13,15 @@ title                    : "LJT-Homepage"
 title_separator          : "-"
 name                     : &name "Junteng Liu"
 description              : &description "Junteng Liu's academic portfolio"
-url                      : https://bugmaker00.github.io/LJT-AcademicHome
-baseurl                  : "/LJT-AcademicHome"
-repository               : "bugmaker00/LJT-AcademicHome"
+url                      : https://bugmaker00.github.io/LJT-Homepage
+baseurl                  : ""
+repository               : "bugmaker00/LJT-Homepage"
 
 # Site Author
 author:
   avatar           : "profile.png"
   name             : "Junteng Liu"
+  pronouns         : "he/him"
   bio              : "First-year PhD candidate at HKUST NLP Group. Research interests include LLM Reasoning, Reinforcement Learning, Vision-Language Models, and LLM Truthfulness & Interpretability."
   location         : "Hong Kong, China"
   employer         : "Hong Kong University of Science and Technology"
@@ -71,7 +72,6 @@ exclude:
   - assets/js/plugins
   - assets/js/vendor
   - CHANGELOG
-  - Capfile
   - config
   - Dockerfile
   - Gemfile
