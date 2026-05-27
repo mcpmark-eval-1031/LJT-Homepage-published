@@ -6,12 +6,11 @@ import numpy as np
 import requests
 from pathlib import Path
 
-# Paths
-WORKSPACE = Path("/workspace/agent_workspace")
+# Use GitHub workspace or current directory
+WORKSPACE = Path(os.environ.get("GITHUB_WORKSPACE", "."))
 FORMAT_JSON = WORKSPACE / "format.json"
 OUTPUT_PARQUET = WORKSPACE / "verl_deepscaler.parquet"
 GROUNDTRUTH_DIR = WORKSPACE / "groundtruth_workspace"
-SCHEMA_PATH = WORKSPACE / "format.json"
 
 
 def download_file(url, dest):
@@ -46,7 +45,7 @@ def ensure_groundtruth():
 
 def load_format_schema():
     """Load and return the format.json schema."""
-    with open(SCHEMA_PATH, "r", encoding="utf-8") as f:
+    with open(FORMAT_JSON, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
