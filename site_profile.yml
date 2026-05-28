@@ -1,0 +1,20 @@
+profile:
+  name: Ravi Narayan
+  role: Postdoctoral Fellow in Computational Social Science
+  affiliation: Harborview Data Lab
+  short_bio: studies how online communities coordinate during public-interest events
+  email: ravi.narayan@example.org
+  website: https://harborview.example.org/ravi
+  research_areas:
+    - civic technology
+    - social network measurement
+    - reproducible field studies
+  publications:
+    - title: Mapping Mutual Aid Networks
+      year: 2024
+    - title: Audit Trails for Community Moderation
+      year: 2025
+  experience:
+    - position: Data Science Fellow
+      organization: Open Cities Initiative
+      years: 2022-2024
