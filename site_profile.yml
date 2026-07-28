@@ -1,20 +1,33 @@
 profile:
-  name: Ravi Narayan
-  role: Postdoctoral Fellow in Computational Social Science
-  affiliation: Harborview Data Lab
-  short_bio: studies how online communities coordinate during public-interest events
-  email: ravi.narayan@example.org
-  website: https://harborview.example.org/ravi
+  name: Junteng Liu
+  role: PhD Candidate
+  affiliation: HKUST NLP Group
+  short_bio: studies natural language processing and machine learning, focusing on LLM reasoning, hallucination in vision-language models, and LLM truthfulness
+  email: jliugi@connect.ust.hk
   research_areas:
-    - civic technology
-    - social network measurement
-    - reproducible field studies
+    - LLM reasoning and reinforcement learning
+    - hallucination in vision-language models
+    - LLM truthfulness and interpretability
   publications:
-    - title: Mapping Mutual Aid Networks
-      year: 2024
-    - title: Audit Trails for Community Moderation
+    - title: "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond"
       year: 2025
+    - title: "On the Perception Bottleneck of VLMs for Chart Understanding"
+      year: 2025
+    - title: "On the Universal Truthfulness Hyperplane Inside LLMs"
+      year: 2024
+    - title: "In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation"
+      year: 2024
+    - title: "C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models"
+      year: 2023
+    - title: "Composing Parameter-Efficient Modules with Arithmetic Operations"
+      year: 2023
   experience:
-    - position: Data Science Fellow
-      organization: Open Cities Initiative
-      years: 2022-2024
+    - position: Research Intern
+      organization: MINIMAX
+      years: Feb 2025 - Present
+    - position: Research Intern
+      organization: Tencent WXG
+      years: Jun 2024 - Sep 2024
+    - position: Research Intern
+      organization: Shanghai AI Lab
+      years: Jun 2023 - Dec 2023

@@ -1,19 +1,21 @@
-# Ravi Narayan
+# Junteng Liu
 
-**Postdoctoral Fellow in Computational Social Science**  
-Harborview Data Lab
+**PhD Candidate, HKUST NLP Group**  
+Hong Kong University of Science and Technology
 
 ## About
 
-I study how online communities coordinate during public-interest events.
+I am a first-year PhD candidate at the HKUST NLP Group, supervised by Professor Junxian He. I graduated from Shanghai Jiao Tong University (SJTU) in June 2024. My research focuses on natural language processing and machine learning.
 
 ## Research Areas
 
-- Civic technology
-- Social network measurement
-- Reproducible field studies
+- LLM reasoning and reinforcement learning
+- Hallucination in vision-language models (VLM)
+- LLM truthfulness and interpretability
 
 ## Contact
 
-- Email: [ravi.narayan@example.org](mailto:ravi.narayan@example.org)
-- Website: [https://harborview.example.org/ravi](https://harborview.example.org/ravi)
+- Email: [jliugi@connect.ust.hk](mailto:jliugi@connect.ust.hk)
+- GitHub: [Vicent0205](https://github.com/Vicent0205)
+- Google Scholar: [Profile](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate)
+- X (Twitter): [@junteng88716710](https://x.com/junteng88716710)
