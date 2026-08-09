@@ -1,12 +1,21 @@
 # Source Identifier vs Canonicalized GitHub Path — Audit Report
 
 ## Purpose
-This document explicitly separates what the tutorial source **named** (verbatim source identifiers)
-from what GitHub **currently resolves** to (canonical paths after any redirects or org renames).
+Separate what the tutorial descriptions **named** (verbatim source identifiers) from what
+GitHub **currently resolves** to (canonical `owner/repo` paths after any redirect, org
+rename, or repository transfer).
+
+Machine-readable companion: **`target_set.csv`** at the repository root — 4 data rows,
+one per cited identifier, with `source_identifier` and `canonical_identifier` held in
+separate columns.
+
+- **Snapshot / re-verification date:** 2026-08-09 (live GitHub REST API)
+- **Authority order:** `github_api_live` > `readme_opening` > tutorial description text
+  (policy inherited from `review/conflict-resolution:source_priority.md`)
 
 ---
 
-## The Four Source Identifiers (verbatim, exactly as cited in the tutorial)
+## The Four Source Identifiers (verbatim, as cited in the tutorial descriptions)
 
 ```
 openai/codex
@@ -15,133 +24,172 @@ QwenLM/Qwen3-Coder
 All-Hands-AI/OpenHands
 ```
 
-> These four identifiers are copied verbatim before any probing. The probe results below
-> must not silently overwrite these identifiers — each verbatim identifier is preserved
-> as a named field in `target_set.csv` and in this document.
+Nothing is dropped, merged, or silently rewritten: 4 cited identifiers → 4 rows.
 
 ---
 
-## Probe Results: Tutorial Source vs GitHub Canonical
+## Method
 
-### 1. `openai/codex`
+For each cited identifier, `GET /repos/{owner}/{repo}` was called with the **cited**
+owner/repo. GitHub answers a stale path with the **canonical** payload, so comparing the
+requested path against the returned `full_name` / `owner.login` / `html_url` is direct
+proof of whether a redirect or canonicalization is in effect.
+
+```
+requested path == returned full_name   ->  no redirect
+requested path != returned full_name   ->  redirected / canonicalized
+```
+
+---
+
+## Resolution Results
+
+### 1. `openai/codex` — no change
 | Field | Value |
 |---|---|
-| **Tutorial-cited identifier (verbatim)** | `openai/codex` |
-| **GitHub redirect?** | **No** |
-| **Canonical path** | `openai/codex` |
-| **Canonical URL** | https://github.com/openai/codex |
-| **API evidence** | GitHub Search API returns `full_name=openai/codex`; all `html_url` fields → `https://github.com/openai/codex/...` |
-| **Description** | Lightweight coding agent that runs in your terminal |
-| **Language** | Rust |
-| **Stars** | ~74,615 |
-| **Notes** | Resolves directly. No org rename or redirect detected. |
+| **Tutorial-cited identifier** | `openai/codex` |
+| **Redirects / canonicalizes?** | **No** |
+| **Canonical identifier** (`full_name`) | `openai/codex` |
+| **Live URL** (`html_url`) | https://github.com/openai/codex |
+| **Repo id** | 965415649 |
+| **Owner** | `openai` (org id 14957082) |
+| **Live description** | Lightweight coding agent that runs in your terminal |
+| **License (SPDX)** | Apache-2.0 |
+| **Default branch** | `main` |
 
 ---
 
-### 2. `google-gemini/gemini-cli`
+### 2. `google-gemini/gemini-cli` — no change
 | Field | Value |
 |---|---|
-| **Tutorial-cited identifier (verbatim)** | `google-gemini/gemini-cli` |
-| **GitHub redirect?** | **No** |
-| **Canonical path** | `google-gemini/gemini-cli` |
-| **Canonical URL** | https://github.com/google-gemini/gemini-cli |
-| **API evidence** | GitHub Search API returns `full_name=google-gemini/gemini-cli`; all `html_url` fields → `https://github.com/google-gemini/gemini-cli/...` |
-| **Description** | An open-source AI agent that brings the power of Gemini directly into your terminal. |
-| **Language** | TypeScript |
-| **Stars** | ~100,938 |
-| **Notes** | Resolves directly. No org rename or redirect detected. |
+| **Tutorial-cited identifier** | `google-gemini/gemini-cli` |
+| **Redirects / canonicalizes?** | **No** |
+| **Canonical identifier** (`full_name`) | `google-gemini/gemini-cli` |
+| **Live URL** (`html_url`) | https://github.com/google-gemini/gemini-cli |
+| **Repo id** | 968197216 |
+| **Owner** | `google-gemini` (org id 161781182) |
+| **Live description** | An open-source AI agent that brings the power of Gemini directly into your terminal. |
+| **License (SPDX)** | Apache-2.0 |
+| **Default branch** | `main` |
 
 ---
 
-### 3. `QwenLM/Qwen3-Coder`
+### 3. `QwenLM/Qwen3-Coder` — no change
 | Field | Value |
 |---|---|
-| **Tutorial-cited identifier (verbatim)** | `QwenLM/Qwen3-Coder` |
-| **GitHub redirect?** | **No** |
-| **Canonical path** | `QwenLM/Qwen3-Coder` |
-| **Canonical URL** | https://github.com/QwenLM/Qwen3-Coder |
-| **API evidence** | GitHub Search API returns `full_name=QwenLM/Qwen3-Coder`; all `html_url` fields → `https://github.com/QwenLM/Qwen3-Coder/...` |
-| **Description** | Qwen3-Coder is the code version of Qwen3, the large language model series developed by Qwen team. |
-| **Language** | Python |
-| **Stars** | ~16,340 |
-| **Notes** | Resolves directly. No org rename or redirect detected. |
+| **Tutorial-cited identifier** | `QwenLM/Qwen3-Coder` |
+| **Redirects / canonicalizes?** | **No** |
+| **Canonical identifier** (`full_name`) | `QwenLM/Qwen3-Coder` |
+| **Live URL** (`html_url`) | https://github.com/QwenLM/Qwen3-Coder |
+| **Repo id** | 787368344 |
+| **Owner** | `QwenLM` (org id 141221163) |
+| **Live description** | Qwen3-Coder is the code version of Qwen3, the large language model series developed by Qwen team. |
+| **License (SPDX)** | *(null — GitHub SPDX detection reports no license at this snapshot)* |
+| **Default branch** | `main` |
+
+> Sibling-repo caution: `QwenLM/qwen-code` is a **different** repository (the Qwen coding
+> CLI). It is *not* a canonicalization of `QwenLM/Qwen3-Coder`, and must not be
+> substituted for it in the target set.
 
 ---
 
-### 4. `All-Hands-AI/OpenHands`
+### 4. `All-Hands-AI/OpenHands` — ⚠️ canonicalized
 | Field | Value |
 |---|---|
-| **Tutorial-cited identifier (verbatim)** | `All-Hands-AI/OpenHands` |
-| **GitHub redirect?** | **YES — org renamed/transferred** |
-| **Canonical path** | `OpenHands/OpenHands` |
-| **Canonical URL** | https://github.com/OpenHands/OpenHands |
-| **API evidence** | API call with `owner=All-Hands-AI, repo=OpenHands` returns all `html_url` fields pointing to `https://github.com/OpenHands/OpenHands/...` |
-| **Supporting evidence** | GitHub issue OpenHands/OpenHands#11376 states: *"Update: This has been executed. Before: All-Hands-AI/OpenHands; After: OpenHands/OpenHands"* |
-| **Search API note** | Search API returns 422 for `repo:All-Hands-AI/OpenHands` (resource moved) — confirms the redirect |
-| **Notes** | The GitHub organization was renamed/transferred from `All-Hands-AI` to `OpenHands`. The GitHub API transparently redirects all requests for `All-Hands-AI/OpenHands` to `OpenHands/OpenHands`. The source identifier `All-Hands-AI/OpenHands` is preserved verbatim in this document and in `target_set.csv`; the canonical path `OpenHands/OpenHands` is recorded separately in the `canonical_path` and `github_html_url` columns. |
+| **Tutorial-cited identifier** | `All-Hands-AI/OpenHands` |
+| **Redirects / canonicalizes?** | **YES** |
+| **Canonical identifier** (`full_name`) | `OpenHands/OpenHands` |
+| **Live URL** (`html_url`) | https://github.com/OpenHands/OpenHands |
+| **Repo id** | 771302083 |
+| **Owner** | `OpenHands` (org id 225919603) |
+| **Live description** | 🙌 OpenHands: AI-Driven Development |
+| **License (SPDX)** | MIT |
+| **Default branch** | `main` |
 
 ---
 
-## Summary Table — What Tutorial Named vs What GitHub Resolves To
+## Key Finding: identifier vs canonicalized identifier
 
-| # | Tutorial Source Identifier (verbatim) | GitHub Canonical Path | Redirect? |
+| # | Tutorial source identifier | Canonical identifier | Changed? |
 |---|---|---|---|
-| 1 | `openai/codex` | `openai/codex` | No |
-| 2 | `google-gemini/gemini-cli` | `google-gemini/gemini-cli` | No |
-| 3 | `QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | No |
-| 4 | `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` | **YES** |
+| 1 | `openai/codex` | `openai/codex` | No change |
+| 2 | `google-gemini/gemini-cli` | `google-gemini/gemini-cli` | No change |
+| 3 | `QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | No change |
+| 4 | `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` | **Redirected / canonicalized** |
+
+**1 of 4** cited identifiers no longer matches its canonical path; the other 3 resolve as-is.
 
 ---
 
 ## Evidence of Redirect for `All-Hands-AI/OpenHands`
 
-When the GitHub API was queried with `owner=All-Hands-AI, repo=OpenHands`, the response
-returned content where **all `html_url` fields** pointed to:
+Requesting the **cited** path returns the **canonical** payload:
+
 ```
-https://github.com/OpenHands/OpenHands/...
-```
-instead of the expected:
-```
-https://github.com/All-Hands-AI/OpenHands/...
+GET https://api.github.com/repos/All-Hands-AI/OpenHands   -> 200 OK
+  "id":        771302083
+  "full_name": "OpenHands/OpenHands"                 # <- not All-Hands-AI/OpenHands
+  "html_url":  "https://github.com/OpenHands/OpenHands"
+  "owner":     { "login": "OpenHands", "id": 225919603 }
 ```
 
-Additionally, the GitHub Search API returned a `422 Validation Failed` error for
-`repo:All-Hands-AI/OpenHands`, indicating the resource is no longer findable at the old path.
+Corroborated by a `git` object-level probe: `GET /repos/All-Hands-AI/OpenHands/commits/main`
+returns `html_url: https://github.com/OpenHands/OpenHands/commit/<sha>`.
 
-The GitHub issue [OpenHands/OpenHands#11376](https://github.com/OpenHands/OpenHands/issues/11376)
-explicitly confirms:
-> "Update: This has been executed. Before: All-Hands-AI/OpenHands; After: OpenHands/OpenHands"
+Cross-check on the legacy namespace:
 
-This confirms the `All-Hands-AI` organization was **canonically renamed/transferred** to `OpenHands`
-on GitHub. GitHub transparently redirects the old path to the new canonical path.
+```
+GET https://api.github.com/orgs/All-Hands-AI        -> 200 OK (id 169105795, 5 public repos)
+GET https://api.github.com/orgs/All-Hands-AI/repos  -> SWE-bench, openhands-resolver,
+                                                       swe-bench.github.io, pr-eval-results,
+                                                       docker-python-nodejs
+                                                       (all archived; no "OpenHands" repo)
+```
 
-The tutorial source identifier `All-Hands-AI/OpenHands` is:
-- **Preserved verbatim** in the `source_identifier` column of `target_set.csv`
-- **Preserved verbatim** in this document
-- **Separated** from the canonical `OpenHands/OpenHands` path (stored in `canonical_path`)
+Interpretation: as part of the All-Hands-AI → OpenHands rebrand, the repository moved out
+of the `All-Hands-AI` namespace into the `OpenHands` organization. Both facts hold and are
+non-contradictory — the cited identifier remains a *valid entry point* (GitHub redirects
+it), while the *canonical* identifier is `OpenHands/OpenHands`.
+
+Drift note: at the earlier 2026-04 snapshot GitHub's SPDX detection reported
+`NOASSERTION` for this repo; the live snapshot now reports `MIT`. The canonical path is
+unchanged between the two snapshots.
 
 ---
 
-## Verbatim Identifier Preservation Checklist
+## Why the two identifiers stay in separate columns
 
-All four source identifiers confirmed present verbatim in this document:
-- [x] `openai/codex` — preserved verbatim above ✓
-- [x] `google-gemini/gemini-cli` — preserved verbatim above ✓
-- [x] `QwenLM/Qwen3-Coder` — preserved verbatim above ✓
-- [x] `All-Hands-AI/OpenHands` — preserved verbatim above ✓ (redirect to `OpenHands/OpenHands` noted separately)
+`target_set.csv` deliberately carries both:
+
+- **`source_identifier`** — preserved **verbatim** as cited in the tutorial descriptions, so
+  the citation stays auditable and the tutorial text can still be matched literally.
+- **`canonical_owner` / `canonical_repo` / `canonical_identifier` / `github_html_url`** — the
+  live, owner-set canonical routing, safe to use for API calls, links, and dedup keys.
+
+Collapsing them would either (a) rewrite history by silently replacing what the tutorial
+actually said, or (b) freeze a path that keeps drifting as orgs are renamed and repos are
+transferred. Keeping both makes the single changed row explicit instead of invisible.
 
 ---
 
-## Machine-Readable Target Set
+## Checklist Confirmation
 
-See [`target_set.csv`](../target_set.csv) at the root of this branch for the full
-machine-readable target set with columns:
-- `source_identifier` — verbatim tutorial-cited identifier
-- `redirects_or_canonicalizes` — yes/no
-- `canonical_owner` — owner after resolution
-- `canonical_repo` — repo name after resolution
-- `canonical_path` — full `owner/repo` canonical path
-- `source_url` — GitHub URL constructed from source identifier
-- `github_html_url` — actual resolved GitHub URL
-- `redirect_detected` — Yes/No flag
-- `notes` — probe evidence and details
+All four source identifiers preserved verbatim, each with a live-verified canonical identifier:
+
+- [x] `openai/codex` → `openai/codex`
+- [x] `google-gemini/gemini-cli` → `google-gemini/gemini-cli`
+- [x] `QwenLM/Qwen3-Coder` → `QwenLM/Qwen3-Coder`
+- [x] `All-Hands-AI/OpenHands` → `OpenHands/OpenHands` (redirect)
+
+Row-count check: 4 cited identifiers → 4 data rows in `target_set.csv` (+ 1 header).
+
+---
+
+## Delivery Constraints Observed
+
+- All changes staged on the review branch
+  `review/separate-identifier-from-canonicalized-identifier-in`.
+- The production branch (`main`, the published-site branch) is **not** modified, and no
+  published-site path (`pages/`, `site_profile.yml`, `.nojekyll`, `publication_*`) is touched.
+- `target_set.csv` is written at the repository root — the established path for this
+  artifact in this review lineage — rather than at a new or alternate path.
