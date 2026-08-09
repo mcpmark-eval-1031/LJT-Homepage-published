@@ -1,5 +1,5 @@
-source_identifier,canonical_owner,canonical_repo,canonical_identifier,redirects
-openai/codex,openai,codex,openai/codex,no
-google-gemini/gemini-cli,google-gemini,gemini-cli,google-gemini/gemini-cli,no
-QwenLM/Qwen3-Coder,QwenLM,Qwen3-Coder,QwenLM/Qwen3-Coder,no
-All-Hands-AI/OpenHands,OpenHands,OpenHands,OpenHands/OpenHands,yes
+source_identifier,canonical_owner,canonical_repo,canonical_identifier,redirects_or_canonicalizes,source_url,github_html_url,notes
+openai/codex,openai,codex,openai/codex,no,https://github.com/openai/codex,https://github.com/openai/codex,"Live probe: GET /repos/openai/codex returns full_name=openai/codex (repo id 965415649). Resolves directly; no redirect or canonicalization detected."
+google-gemini/gemini-cli,google-gemini,gemini-cli,google-gemini/gemini-cli,no,https://github.com/google-gemini/gemini-cli,https://github.com/google-gemini/gemini-cli,"Live probe: GET /repos/google-gemini/gemini-cli returns full_name=google-gemini/gemini-cli (repo id 968197216). Resolves directly; no redirect or canonicalization detected."
+QwenLM/Qwen3-Coder,QwenLM,Qwen3-Coder,QwenLM/Qwen3-Coder,no,https://github.com/QwenLM/Qwen3-Coder,https://github.com/QwenLM/Qwen3-Coder,"Live probe: GET /repos/QwenLM/Qwen3-Coder returns full_name=QwenLM/Qwen3-Coder (repo id 787368344). Resolves directly; no redirect or canonicalization detected. Distinct from the sibling repo QwenLM/qwen-code, which is not a canonicalization target of this identifier."
+All-Hands-AI/OpenHands,OpenHands,OpenHands,OpenHands/OpenHands,YES,https://github.com/All-Hands-AI/OpenHands,https://github.com/OpenHands/OpenHands,"REDIRECTED / CANONICALIZED: live probe with owner=All-Hands-AI repo=OpenHands returns full_name=OpenHands/OpenHands and owner.login=OpenHands (repo id 771302083; org id 225919603). The legacy All-Hands-AI org (id 169105795) still exists but no longer hosts this repository, so GitHub serves the cited path as a transparent redirect. Source identifier preserved verbatim; canonical identifier stored separately."
