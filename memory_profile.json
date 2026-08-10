@@ -1,0 +1,88 @@
+{
+  "subject": "Junteng Liu",
+  "source": "memory (MCP knowledge-graph profile of record)",
+  "captured_at": "2026-08-10",
+  "notes": [
+    "This file is a verbatim dump of the profile facts that memory holds for the homepage pipeline.",
+    "Any field that is not present under \"fields\" is not recorded in memory and must not be inferred, guessed or copied from the rendered homepage."
+  ],
+  "fields": {
+    "name": "Junteng Liu",
+    "title": "PhD Candidate",
+    "affiliation": "HKUST NLP Group",
+    "advisor": "Professor Junxian He",
+    "short_bio": "studies natural language processing and machine learning, focusing on LLM reasoning, hallucination in vision-language models, and LLM truthfulness",
+    "email": "jliugi@connect.ust.hk",
+    "github": "Vicent0205",
+    "google_scholar": "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate",
+    "twitter": "@junteng88716710",
+    "research_interests": [
+      "LLM reasoning and reinforcement learning",
+      "hallucination in vision-language models",
+      "LLM truthfulness and interpretability"
+    ],
+    "education": [
+      {
+        "institution": "Hong Kong University of Science and Technology (HKUST)",
+        "status": "PhD candidate (first year), HKUST NLP Group",
+        "period": "2024 - Present"
+      },
+      {
+        "institution": "Shanghai Jiao Tong University (SJTU)",
+        "status": "Graduated",
+        "period": "June 2024"
+      }
+    ],
+    "research_experience": [
+      {
+        "position": "Research Intern",
+        "organization": "MINIMAX",
+        "years": "Feb 2025 - Present"
+      },
+      {
+        "position": "Research Intern",
+        "organization": "Tencent WXG",
+        "years": "Jun 2024 - Sep 2024"
+      },
+      {
+        "position": "Research Intern",
+        "organization": "Shanghai AI Lab",
+        "years": "Jun 2023 - Dec 2023"
+      }
+    ],
+    "publications": [
+      {
+        "title": "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond",
+        "year": 2025
+      },
+      {
+        "title": "On the Perception Bottleneck of VLMs for Chart Understanding",
+        "year": 2025
+      },
+      {
+        "title": "On the Universal Truthfulness Hyperplane Inside LLMs",
+        "year": 2024
+      },
+      {
+        "title": "In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation",
+        "year": 2024
+      },
+      {
+        "title": "C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models",
+        "year": 2023
+      },
+      {
+        "title": "Composing Parameter-Efficient Modules with Arithmetic Operations",
+        "year": 2023
+      }
+    ]
+  },
+  "fields_absent_from_memory": [
+    "awards",
+    "location",
+    "phone",
+    "portrait_url",
+    "service",
+    "teaching"
+  ]
+}
