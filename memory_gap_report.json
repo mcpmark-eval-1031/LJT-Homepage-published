@@ -7,9 +7,16 @@
     "requested_homepage_fields": "requested_homepage_fields.json",
     "repo_homepage_snapshot": "repo_homepage_snapshot.md"
   },
+  "homepage_under_review": {
+    "repository": "mcpmark-eval-1031/LJT-Homepage",
+    "branch": "master",
+    "homepage_body": "_pages/about.md (permalink '/')",
+    "profile_card": "_config.yml -> author, mirrored in _data/authors.yml",
+    "snapshot_captured_at": "2026-08-10"
+  },
   "policy": {
-    "supported": "A requested field is usable only when memory provides a value; the memory value is reproduced exactly in usable_fields.",
-    "unsupported": "A requested field with no memory value is listed in omitted_fields with reason 'not_provided_in_memory' and is never populated from any other source.",
+    "supported": "A requested field is usable only when memory (memory_profile.json -> fields) holds a value; that value is reproduced exactly in usable_fields.",
+    "unsupported": "A requested field with no memory value goes to omitted_fields with reason 'not_provided_in_memory' and is never inferred, guessed or back-filled from the rendered homepage.",
     "never_inferred": [
       "awards",
       "phone",
@@ -22,19 +29,29 @@
   "counts": {
     "requested_fields": 18,
     "usable_fields": 13,
-    "omitted_fields": 5
+    "omitted_fields": 5,
+    "homepage_update_plan": {
+      "add": 0,
+      "replace": 0,
+      "leave_unchanged": 13,
+      "remove_or_do_not_copy": 7
+    },
+    "evidence_index": 18
   },
   "usable_fields": [
     {
       "field": "advisor",
+      "memory_path": "fields.advisor",
       "memory_value": "Professor Junxian He"
     },
     {
       "field": "affiliation",
+      "memory_path": "fields.affiliation",
       "memory_value": "HKUST NLP Group"
     },
     {
       "field": "education",
+      "memory_path": "fields.education",
       "memory_value": [
         {
           "degree": "Ph.D. in Computer Science",
@@ -51,22 +68,27 @@
     },
     {
       "field": "email",
+      "memory_path": "fields.email",
       "memory_value": "jliugi@connect.ust.hk"
     },
     {
       "field": "github",
+      "memory_path": "fields.github",
       "memory_value": "Vicent0205"
     },
     {
       "field": "google_scholar",
+      "memory_path": "fields.google_scholar",
       "memory_value": "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
     },
     {
       "field": "name",
+      "memory_path": "fields.name",
       "memory_value": "Junteng Liu"
     },
     {
       "field": "publications",
+      "memory_path": "fields.publications",
       "memory_value": [
         {
           "title": "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond",
@@ -96,6 +118,7 @@
     },
     {
       "field": "research_experience",
+      "memory_path": "fields.research_experience",
       "memory_value": [
         {
           "position": "Research Intern",
@@ -116,6 +139,7 @@
     },
     {
       "field": "research_interests",
+      "memory_path": "fields.research_interests",
       "memory_value": [
         "LLM reasoning and reinforcement learning",
         "Hallucination in vision-language models (VLM)",
@@ -124,14 +148,17 @@
     },
     {
       "field": "short_bio",
+      "memory_path": "fields.short_bio",
       "memory_value": "studies natural language processing and machine learning, focusing on LLM reasoning, hallucination in vision-language models, and LLM truthfulness"
     },
     {
       "field": "title",
+      "memory_path": "fields.title",
       "memory_value": "PhD Candidate"
     },
     {
       "field": "twitter",
+      "memory_path": "fields.twitter",
       "memory_value": "@junteng88716710"
     }
   ],
@@ -164,12 +191,12 @@
       {
         "field": "advisor",
         "memory_value": "Professor Junxian He",
-        "homepage_evidence": "_pages/about.md intro paragraph 'supervised by Professor Junxian He'; 'Advisor: Professor Junxian He' in Academic Background and Research Experience."
+        "homepage_evidence": "_pages/about.md intro paragraph 'supervised by Professor Junxian He'; 'Advisor: Professor Junxian He' under Academic Background and Research Experience."
       },
       {
         "field": "affiliation",
         "memory_value": "HKUST NLP Group",
-        "homepage_evidence": "_pages/about.md intro paragraph 'HKUST NLP Group'; author card 'employer: HKUST NLP Group'."
+        "homepage_evidence": "_pages/about.md intro paragraph 'HKUST NLP Group'; profile card 'employer: HKUST NLP Group'."
       },
       {
         "field": "education",
@@ -186,27 +213,27 @@
             "years": "2020 - 2024"
           }
         ],
-        "homepage_evidence": "_pages/about.md 'Academic Background' reproduces both entries with the same degrees, institutions and years."
+        "homepage_evidence": "_pages/about.md 'Academic Background' repeats both entries with the same degrees, institutions, years and PhD advisor ('Ph.D. in Computer Science (2024-Present) - HKUST', 'B.Eng. (2020-2024) - SJTU')."
       },
       {
         "field": "email",
         "memory_value": "jliugi@connect.ust.hk",
-        "homepage_evidence": "_pages/about.md Contact section; author card 'email'."
+        "homepage_evidence": "_pages/about.md 'Contact' -> mailto jliugi@connect.ust.hk; profile card 'email'."
       },
       {
         "field": "github",
         "memory_value": "Vicent0205",
-        "homepage_evidence": "_pages/about.md Contact link https://github.com/Vicent0205; author card 'github: Vicent0205'."
+        "homepage_evidence": "_pages/about.md 'Contact' -> GitHub link https://github.com/Vicent0205; profile card 'github: Vicent0205'."
       },
       {
         "field": "google_scholar",
         "memory_value": "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate",
-        "homepage_evidence": "_pages/about.md Contact 'Google Scholar: Profile'; author card 'googlescholar'."
+        "homepage_evidence": "_pages/about.md 'Contact' -> Google Scholar 'Profile' link; profile card 'googlescholar' holds the identical URL."
       },
       {
         "field": "name",
         "memory_value": "Junteng Liu",
-        "homepage_evidence": "_pages/about.md front-matter title and H1; author card 'name'."
+        "homepage_evidence": "_pages/about.md page title / H1 'Junteng Liu'; profile card 'name: Junteng Liu'."
       },
       {
         "field": "publications",
@@ -236,7 +263,7 @@
             "year": 2023
           }
         ],
-        "homepage_evidence": "_pages/about.md 'Publications' lists the same six titles under the same years 2025/2024/2023."
+        "homepage_evidence": "_pages/about.md 'Publications' lists exactly these six titles grouped under 2025 / 2024 / 2023, matching the memory years."
       },
       {
         "field": "research_experience",
@@ -257,7 +284,7 @@
             "years": "Jun 2023 - Dec 2023"
           }
         ],
-        "homepage_evidence": "_pages/about.md 'Research Experience' lists the same three internships and periods (spelled out as February/June/September/December)."
+        "homepage_evidence": "_pages/about.md 'Research Experience' lists the same three Research Intern positions at MINIMAX, Tencent WXG and Shanghai AI Lab over the same periods (months spelled out: 'February 2025 - Present', 'June 2024 - September 2024', 'June 2023 - December 2023')."
       },
       {
         "field": "research_interests",
@@ -266,46 +293,73 @@
           "Hallucination in vision-language models (VLM)",
           "LLM truthfulness and interpretability"
         ],
-        "homepage_evidence": "_pages/about.md 'Research Interests' lists the same three topics (capitalisation only differs)."
+        "homepage_evidence": "_pages/about.md 'Research Interests' lists the same three topics; only capitalisation differs ('LLM Reasoning and Reinforcement Learning', 'Hallucination in Vision-Language Models (VLM)', 'LLM truthfulness and Interpretability')."
       },
       {
         "field": "short_bio",
         "memory_value": "studies natural language processing and machine learning, focusing on LLM reasoning, hallucination in vision-language models, and LLM truthfulness",
-        "homepage_evidence": "_pages/about.md intro paragraph and author card 'bio' convey the same statement."
+        "homepage_evidence": "_pages/about.md intro paragraph and profile card 'bio' state the same thing: NLP/ML research with the three listed interests, no extra claims."
       },
       {
         "field": "title",
         "memory_value": "PhD Candidate",
-        "homepage_evidence": "_pages/about.md intro paragraph 'first-year PhD candidate'; Research Experience heading 'PhD Candidate'."
+        "homepage_evidence": "_pages/about.md intro paragraph 'first-year PhD candidate'; 'PhD Candidate | HKUST NLP Group' heading in Research Experience."
       },
       {
         "field": "twitter",
         "memory_value": "@junteng88716710",
-        "homepage_evidence": "_pages/about.md Contact 'X (Twitter): @junteng88716710'; author card 'twitter: junteng88716710'."
+        "homepage_evidence": "_pages/about.md 'Contact' -> 'X (Twitter): @junteng88716710'; profile card 'twitter: junteng88716710' (same handle, no '@' prefix)."
       }
     ],
     "remove_or_do_not_copy": [
       {
-        "related_field": "awards",
+        "field": "awards",
+        "requested_field": true,
         "homepage_detail": "'Honors & Awards' section: 'Zhiyuan Honor Scholarship, Shanghai Jiao Tong University'",
         "homepage_location": "_pages/about.md -> 'Honors & Awards'",
         "reason": "not_provided_in_memory"
       },
       {
-        "related_field": "awards",
-        "homepage_detail": "'Awarded Zhiyuan Honor Scholarship' line under the B.Eng. entry",
-        "homepage_location": "_pages/about.md -> 'Academic Background'",
+        "field": "awards",
+        "requested_field": true,
+        "homepage_detail": "'Awarded Zhiyuan Honor Scholarship' line attached to the B.Eng. entry",
+        "homepage_location": "_pages/about.md -> 'Academic Background' (B.Eng., SJTU)",
         "reason": "not_provided_in_memory"
       },
       {
-        "related_field": "portrait_url",
+        "field": "location",
+        "requested_field": false,
+        "homepage_detail": "Profile-card location 'Hong Kong'",
+        "homepage_location": "_config.yml -> author.location; mirrored in _data/authors.yml",
+        "reason": "not_provided_in_memory"
+      },
+      {
+        "field": "portrait_url",
+        "requested_field": true,
         "homepage_detail": "Portrait / avatar reference 'profile.png'",
-        "homepage_location": "_config.yml -> author.avatar and _data/authors.yml -> avatar",
+        "homepage_location": "_config.yml -> author.avatar; mirrored in _data/authors.yml -> avatar",
         "reason": "not_provided_in_memory"
       },
       {
-        "related_field": "skills",
-        "homepage_detail": "'Skills' section ('Natural Language Processing', 'Machine Learning', plus a duplicate of the three research interests)",
+        "field": "publications",
+        "requested_field": true,
+        "homepage_detail": "Per-paper metadata beyond title and year: venue / status strings ('arXiv preprint, 2025', 'Proceedings of EMNLP 2024', 'Proceedings of ICML 2024', 'NeurIPS 2023'), the full author lists, and the '[Code]' links rendered for four of the six papers",
+        "homepage_location": "_pages/about.md -> 'Publications'",
+        "reason": "not_provided_in_memory",
+        "note": "The six titles and years are memory-backed and stay (see homepage_update_plan.leave_unchanged -> publications); memory records only 'title' and 'year', so these extra per-entry details must not be propagated."
+      },
+      {
+        "field": "research_experience",
+        "requested_field": true,
+        "homepage_detail": "Internship advisor attributions 'Advisor: Zifei Shan' (Tencent WXG) and 'Advisor: Prof. Yu Cheng' (Shanghai AI Lab)",
+        "homepage_location": "_pages/about.md -> 'Research Experience'",
+        "reason": "not_provided_in_memory",
+        "note": "The three internships themselves are memory-backed and stay; memory's research_experience entries carry only position, organization and years, and fields.advisor covers the doctoral supervisor only."
+      },
+      {
+        "field": "skills",
+        "requested_field": false,
+        "homepage_detail": "'Skills' section listing 'Natural Language Processing', 'Machine Learning' and a duplicate of the three research interests",
         "homepage_location": "_pages/about.md -> 'Skills'",
         "reason": "not_provided_in_memory"
       }
@@ -404,9 +458,12 @@
     }
   ],
   "notes": [
-    "homepage_update_plan.add is empty: every memory-backed requested field is already rendered on the homepage, so nothing has to be introduced.",
-    "homepage_update_plan.replace is empty: for every memory-backed requested field the homepage value equals the memory value (only capitalisation and month spelling differ).",
-    "Fields listed in omitted_fields are never written to the homepage. awards and portrait_url are already present on the homepage without memory support, so they appear under remove_or_do_not_copy; phone, service and teaching are absent from both memory and the homepage and therefore need no action.",
-    "remove_or_do_not_copy also covers the non-requested 'Skills' section, which memory does not support."
+    "18 requested fields: 13 are backed by memory_profile.json -> fields and appear in usable_fields with the memory value copied verbatim; 5 (awards, phone, portrait_url, service, teaching) are listed in memory_profile.json -> fields_absent_from_memory and go to omitted_fields with reason 'not_provided_in_memory'.",
+    "homepage_update_plan.add is empty: every memory-backed requested field is already rendered on the homepage snapshot (in _pages/about.md, in the _config.yml author card, or in both).",
+    "homepage_update_plan.replace is empty: no memory-backed requested field has a conflicting homepage value. The only differences are cosmetic - capitalisation of the research interests, months spelled out in Research Experience ('February 2025' vs 'Feb 2025'), and the '@' prefix on the X (Twitter) handle.",
+    "awards and portrait_url are rendered on the homepage even though memory does not support them, so they stay in omitted_fields and their homepage traces are listed under remove_or_do_not_copy. phone, service and teaching are absent from both memory and the homepage (_pages/teaching.html is an empty, unlinked archive page), so they need no homepage action.",
+    "remove_or_do_not_copy also covers homepage content that is not a requested field at all (the 'Skills' section and the profile-card location 'Hong Kong') and per-entry embellishments memory does not record (internship advisor names; publication venues, author lists and '[Code]' links). Their parent fields research_experience and publications remain memory-backed and are left unchanged - only these sub-details must not be propagated.",
+    "memory also holds long_bio, github_url and twitter_url, but they are not in requested_homepage_fields.json, so they are not reported as usable_fields.",
+    "Nothing in this report is derived from the homepage snapshot: the snapshot is used only to locate existing values and to detect homepage content that memory cannot support."
   ]
 }
