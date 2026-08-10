@@ -5,43 +5,43 @@
       "slug": "c-eval",
       "title": "C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models",
       "status": "published",
-      "venue": "NeurIPS 2023 (Datasets and Benchmarks Track)",
-      "reason": "Not eligible for an acceptance update: the homepage record already marks this paper published (NeurIPS 2023), and only records marked 'preprint' or 'under review' may be promoted from an acceptance email. No non-draft release tag could be confirmed for slug 'c-eval', so code_status was left exactly as the homepage has it."
+      "venue": "NeurIPS 2023",
+      "reason": "No new evidence. Out of scope for a status update: the homepage already records this paper as published (NeurIPS 2023), and only records marked 'preprint' or 'under review' may be promoted by a matching acceptance email. code_status was also left exactly as the homepage has it, because no non-draft release tag could be tied to slug 'c-eval': github_releases.json is present in the workspace but unreadable in this session, the homepage record carries no code link for this paper, and the only plausible upstream repository found on GitHub (hkust-nlp/ceval) reports zero releases. With no authoritative slug-to-repository mapping, neither 'released' nor 'repo_exists_no_release' can be asserted."
     },
     {
       "slug": "composing-parameter-efficient-modules",
       "title": "Composing Parameter-Efficient Modules with Arithmetic Operations",
       "status": "published",
       "venue": "NeurIPS 2023",
-      "reason": "Not eligible for an acceptance update: already published (NeurIPS 2023) on the homepage record, so it is outside the preprint/under-review scope. No non-draft release tag could be confirmed for slug 'composing-parameter-efficient-modules', so code_status was left unchanged."
+      "reason": "No new evidence. Out of scope for a status update: already published (NeurIPS 2023) on the homepage, so it cannot be promoted by an acceptance email. code_status left as recorded: no non-draft release tag could be tied to slug 'composing-parameter-efficient-modules', and the homepage record lists no code repository for this paper, so 'released' and 'repo_exists_no_release' are both unsupported."
     },
     {
       "slug": "in-context-sharpness",
       "title": "In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation",
       "status": "published",
       "venue": "ICML 2024",
-      "reason": "Not eligible for an acceptance update: already published (ICML 2024) on the homepage record, so it is outside the preprint/under-review scope. No non-draft release tag could be confirmed for slug 'in-context-sharpness', so code_status was left unchanged."
+      "reason": "No new evidence. Out of scope for a status update: already published (ICML 2024) on the homepage, so it cannot be promoted by an acceptance email. code_status left as recorded: no non-draft release tag could be tied to slug 'in-context-sharpness', and the homepage record lists no code repository for this paper."
     },
     {
       "slug": "perception-bottleneck-vlms-chart",
       "title": "On the Perception Bottleneck of VLMs for Chart Understanding",
       "status": "preprint",
       "venue": "arXiv preprint",
-      "reason": "In scope (preprint) but deliberately left unchanged: no acceptance notice could be matched to this exact title. acceptance_emails.jsonl exists at /workspace/dumps/workspace/acceptance_emails.jsonl but is not readable through any tool exposed in this session, and the live mail server holds no acceptance/rejection notice for it. Per the rules a paper is never promoted without a title-exact acceptance (a rejection, a workshop-only note or a near-title match would not qualify), so status and code_status stay as recorded."
+      "reason": "In scope (preprint) but deliberately not promoted: no acceptance notice could be matched to this exact title. The live mail server holds no acceptance or rejection notice for it (INBOX contains only an unrelated probe message and a MAILER-DAEMON failure notice), and acceptance_emails.jsonl - although confirmed to exist in the workspace - cannot be opened with any tool exposed in this session. A paper is never promoted without a title-exact acceptance, and a rejection, a workshop-only note or a near-title match would not qualify, so the status stays 'preprint'. code_status also stays as recorded: the code link on the homepage (github.com/Vicent0205/Vision4Chart) does not resolve to an existing repository, and the candidate upstream repository hkust-nlp/Vision4Chart reports zero releases, so no non-draft release tag is confirmable for this slug."
     },
     {
       "slug": "synlogic",
       "title": "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond",
-      "status": "published",
-      "venue": "NeurIPS 2025",
-      "reason": "Not eligible for an acceptance update: already published (NeurIPS 2025) on the homepage record, so it is outside the preprint/under-review scope. No non-draft release tag could be confirmed for slug 'synlogic', so code_status was left unchanged."
+      "status": "preprint",
+      "venue": "arXiv preprint",
+      "reason": "In scope (preprint, per _publications/2025-06-08-synlogic.md which records category 'preprints' and venue 'arXiv preprint') but deliberately not promoted: no acceptance notice could be matched to this exact title. The mail server holds no acceptance or rejection notice for it and acceptance_emails.jsonl cannot be opened in this session, so there is no title-exact acceptance to act on and no venue may be written in. code_status stays as recorded: the code link on the homepage (github.com/Vicent0205/SynLogic) does not resolve to an existing repository, and the candidate upstream repository MiniMax-AI/SynLogic reports zero releases, so no non-draft release tag is confirmable for slug 'synlogic'."
     },
     {
       "slug": "universal-truthfulness-hyperplane",
       "title": "On the Universal Truthfulness Hyperplane Inside LLMs",
       "status": "published",
       "venue": "EMNLP 2024",
-      "reason": "Not eligible for an acceptance update: already published (EMNLP 2024) on the homepage record, so it is outside the preprint/under-review scope. No non-draft release tag could be confirmed for slug 'universal-truthfulness-hyperplane', so code_status was left unchanged."
+      "reason": "No new evidence. Out of scope for a status update: already published (EMNLP 2024) on the homepage, so it cannot be promoted by an acceptance email. code_status left exactly as recorded: the code link on the homepage (github.com/Vicent0205/Universal_Truthfulness_Hyperplane) does not resolve to an existing repository, so neither a non-draft release tag nor a bare existing repository could be confirmed for slug 'universal-truthfulness-hyperplane'."
     }
   ]
 }
