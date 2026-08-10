@@ -4,19 +4,19 @@
     "page": "about",
     "file_path": "_pages/about.md",
     "permalink": "/",
-    "title": "Junteng Liu",
+    "page_title": "Junteng Liu",
     "name": "Junteng Liu",
-    "role": "PhD Candidate",
+    "title": "PhD Candidate",
     "affiliation": "HKUST NLP Group",
+    "advisor": "Professor Junxian He",
     "short_bio": "studies natural language processing and machine learning, focusing on LLM reasoning, hallucination in vision-language models, and LLM truthfulness",
-    "bio": "I am a first-year PhD candidate at the HKUST NLP Group, supervised by Professor Junxian He. I graduated from Shanghai Jiao Tong University (SJTU) in June 2024. My research focuses on natural language processing and machine learning.",
+    "long_bio": "I am a first-year PhD candidate at the HKUST NLP Group, supervised by Professor Junxian He. I graduated from Shanghai Jiao Tong University (SJTU) in June 2024. My research focuses on natural language processing and machine learning.",
     "section_order": [
       "Bio",
       "Research Interests",
       "Education",
-      "Experience",
+      "Research Experience",
       "Publications",
-      "Honors & Awards",
       "Contact"
     ],
     "research_interests": [
@@ -37,7 +37,7 @@
         "years": "2020 - 2024"
       }
     ],
-    "experience": [
+    "research_experience": [
       {
         "position": "Research Intern",
         "organization": "MINIMAX",
@@ -55,7 +55,7 @@
       }
     ],
     "publications_in_about_section": true,
-    "publications_note": "Publications are rendered as a section of the about page; they are not moved to a separate publications page.",
+    "publications_note": "Publications are rendered as the 'Publications' section of the about page itself; they are not moved to, or split out into, a separate publications page.",
     "publications": [
       {
         "title": "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond",
@@ -82,75 +82,36 @@
         "year": 2023
       }
     ],
-    "honors": [
-      "Zhiyuan Honor Scholarship, Shanghai Jiao Tong University"
-    ],
     "contact": {
       "email": "jliugi@connect.ust.hk",
       "github": "Vicent0205",
       "github_url": "https://github.com/Vicent0205",
       "google_scholar": "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate",
-      "x_twitter": "@junteng88716710",
-      "x_twitter_url": "https://x.com/junteng88716710"
+      "twitter": "@junteng88716710",
+      "twitter_url": "https://x.com/junteng88716710"
     }
   },
   "additional_pages_created": [],
   "omitted_fields": [
     {
-      "field": "profile_photo",
-      "reason": "The memory profile provides no image file, path, or URL for a portrait, so no avatar is planned."
-    },
-    {
-      "field": "pronouns",
-      "reason": "The memory profile does not record pronouns."
+      "field": "awards",
+      "reason": "not_provided_in_memory: memory_profile.json lists 'awards' under fields_absent_from_memory, so no honors, prizes or scholarships section is planned for the about page."
     },
     {
       "field": "phone",
-      "reason": "The memory profile lists no telephone number among the contact details."
+      "reason": "not_provided_in_memory: memory_profile.json records no telephone number, so the contact block carries only email, GitHub, Google Scholar and X (Twitter)."
     },
     {
-      "field": "office_address",
-      "reason": "The memory profile gives no office, building, or mailing address."
+      "field": "portrait_url",
+      "reason": "not_provided_in_memory: memory_profile.json gives no portrait/avatar image path or URL, so no profile photo is planned."
     },
     {
-      "field": "orcid",
-      "reason": "No ORCID iD is present in the memory profile."
-    },
-    {
-      "field": "linkedin",
-      "reason": "No LinkedIn profile is present in the memory profile; only email, GitHub, Google Scholar, and X (Twitter) are known."
-    },
-    {
-      "field": "other_academic_profiles",
-      "reason": "The memory profile contains no ResearchGate, Semantic Scholar, DBLP, or arXiv author identifiers."
-    },
-    {
-      "field": "cv",
-      "reason": "The memory profile references no CV or resume file, so no CV link or page is planned."
+      "field": "service",
+      "reason": "not_provided_in_memory: memory_profile.json records no reviewing, committee or community service activities."
     },
     {
       "field": "teaching",
-      "reason": "The memory profile contains no courses, teaching assistantships, or teaching statements."
-    },
-    {
-      "field": "talks",
-      "reason": "The memory profile contains no talks, invited presentations, dates, or venues."
-    },
-    {
-      "field": "portfolio",
-      "reason": "The memory profile records no standalone projects or software portfolio entries beyond the listed publications."
-    },
-    {
-      "field": "news",
-      "reason": "The memory profile has no dated news or update items to populate a news section."
-    },
-    {
-      "field": "funding",
-      "reason": "The memory profile lists no grants or funding sources."
-    },
-    {
-      "field": "academic_service",
-      "reason": "The memory profile records no reviewing, organizing, or other service activities."
+      "reason": "not_provided_in_memory: memory_profile.json records no courses taught or assisted."
     }
   ]
 }
