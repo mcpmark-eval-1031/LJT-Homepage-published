@@ -3,13 +3,14 @@
 - Captured: 2026-08-10
 - Source repository: `mcpmark-eval-1031/LJT-Homepage` (branch `master`)
 - Homepage body: `_pages/about.md` (permalink `/`)
-- Author profile card rendered alongside the homepage: `author:` block of `_config.yml`
+- Author profile card rendered next to the homepage: `author:` block of `_config.yml`, mirrored in `_data/authors.yml`
+- Header navigation (`_data/navigation.yml`): only `Publications` -> `/publications/`; there is no Teaching, Talks, Portfolio or CV link
 
 ---
 
-## Author profile card (`_config.yml` -> `author`)
+## Author profile card (`_config.yml` -> `author`, `_data/authors.yml`)
 
-| key | value on the homepage |
+| key | value rendered on the homepage |
 | --- | --- |
 | `avatar` | `profile.png` |
 | `name` | Junteng Liu |
@@ -72,36 +73,20 @@ Advisor: Prof. Yu Cheng
 
 ### 2025
 
-1. **SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond**
-   **Junteng Liu**, Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, Junxian He
-   *arXiv preprint, 2025*
-   [Code](https://github.com/Vicent0205/SynLogic)
-
-2. **On the Perception Bottleneck of VLMs for Chart Understanding**
-   **Junteng Liu**, Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, Junxian He
-   *arXiv preprint, 2025*
-   [Code](https://github.com/Vicent0205/Vision4Chart)
+1. **SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond** (arXiv preprint, 2025)
+2. **On the Perception Bottleneck of VLMs for Chart Understanding** (arXiv preprint, 2025)
 
 ### 2024
 
-3. **On the Universal Truthfulness Hyperplane Inside LLMs**
-   **Junteng Liu**, Shiqi Chen, Yu Cheng, Junxian He
-   *Proceedings of EMNLP 2024*
-   [Code](https://github.com/Vicent0205/Universal_Truthfulness_Hyperplane)
-
-4. **In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation**
-   Shiqi Chen, Miao Xiong, **Junteng Liu**, Zhengxuan Wu, Teng Xiao, Siyang Gao, Junxian He
-   *Proceedings of ICML 2024*
+3. **On the Universal Truthfulness Hyperplane Inside LLMs** (Proceedings of EMNLP 2024)
+4. **In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation** (Proceedings of ICML 2024)
 
 ### 2023
 
-5. **C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models**
-   Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, **Junteng Liu**, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He
-   *Advances in Neural Information Processing Systems (NeurIPS 2023)*
+5. **C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models** (NeurIPS 2023)
+6. **Composing Parameter-Efficient Modules with Arithmetic Operations** (NeurIPS 2023)
 
-6. **Composing Parameter-Efficient Modules with Arithmetic Operations**
-   Jinghan Zhang, Shiqi Chen, **Junteng Liu**, Junxian He
-   *Advances in Neural Information Processing Systems (NeurIPS 2023)*
+(Each entry additionally renders its full author list and, for four of the six papers, a `[Code]` link.)
 
 ## Honors & Awards
 
@@ -122,20 +107,24 @@ Advisor: Prof. Yu Cheng
 | --- | --- | --- |
 | advisor | yes | intro paragraph; Academic Background; Research Experience |
 | affiliation | yes | intro paragraph; `author.employer` |
-| awards | yes | "Honors & Awards"; "Awarded Zhiyuan Honor Scholarship" under B.Eng. |
+| awards | yes | "Honors & Awards"; "Awarded Zhiyuan Honor Scholarship" under the B.Eng. entry |
 | education | yes | "Academic Background" |
 | email | yes | Contact; `author.email` |
 | github | yes | Contact; `author.github` |
 | google_scholar | yes | Contact; `author.googlescholar` |
-| location | yes | `author.location` |
 | name | yes | page title; `author.name` |
 | phone | no | - |
-| portrait_url | yes | `author.avatar` (`profile.png`) |
+| portrait_url | yes | `author.avatar` = `profile.png` (`_config.yml` and `_data/authors.yml`) |
 | publications | yes | "Publications" |
 | research_experience | yes | "Research Experience" |
 | research_interests | yes | "Research Interests" |
 | service | no | - |
 | short_bio | yes | intro paragraph; `author.bio` |
-| teaching | no | - (no teaching entries; `_pages/teaching.html` is an empty archive page) |
+| teaching | no | - (`_pages/teaching.html` is an empty archive page and is not linked from the navigation) |
 | title | yes | intro paragraph; Research Experience |
 | twitter | yes | Contact; `author.twitter` |
+
+### Homepage content that is not one of the requested fields
+
+- A "Skills" section listing `Natural Language Processing`, `Machine Learning` and a duplicate of the three research interests.
+- `author.location` = `Hong Kong` on the profile card.

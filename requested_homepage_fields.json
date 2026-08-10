@@ -1,5 +1,5 @@
 {
-  "target": "Junteng Liu academic homepage",
+  "target": "Junteng Liu academic homepage (mcpmark-eval-1031/LJT-Homepage)",
   "requested_at": "2026-08-10",
   "requested_fields": [
     "advisor",
@@ -9,7 +9,6 @@
     "email",
     "github",
     "google_scholar",
-    "location",
     "name",
     "phone",
     "portrait_url",
@@ -26,14 +25,13 @@
     "advisor": "Doctoral supervisor / academic advisor.",
     "affiliation": "Current group / institution.",
     "awards": "Honours, prizes and scholarships.",
-    "education": "Degrees and study periods.",
+    "education": "Degrees, institutions and study periods.",
     "email": "Primary contact e-mail address.",
     "github": "GitHub account handle or URL.",
     "google_scholar": "Google Scholar profile URL.",
-    "location": "City / region shown on the profile card.",
     "name": "Display name.",
     "phone": "Contact telephone number.",
-    "portrait_url": "URL or path of the profile portrait image.",
+    "portrait_url": "URL or path of the profile portrait / avatar image.",
     "publications": "List of papers.",
     "research_experience": "Positions, internships and research appointments.",
     "research_interests": "Research topics / areas.",
@@ -43,5 +41,5 @@
     "title": "Academic title / position.",
     "twitter": "X (Twitter) handle or URL."
   },
-  "count": 19
+  "count": 18
 }

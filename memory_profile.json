@@ -1,10 +1,10 @@
 {
   "subject": "Junteng Liu",
-  "source": "memory (MCP knowledge-graph profile of record)",
+  "source": "memory (MCP knowledge-graph profile of record for the LJT-Homepage pipeline)",
   "captured_at": "2026-08-10",
   "notes": [
-    "This file is a verbatim dump of the profile facts that memory holds for the homepage pipeline.",
-    "Any field that is not present under \"fields\" is not recorded in memory and must not be inferred, guessed or copied from the rendered homepage."
+    "This file is a dump of the profile facts that memory holds; it is cross-checked against homepage_content.json, the content plan that was previously derived from the same memory profile.",
+    "Any field that is not present under \"fields\" is not recorded in memory and must not be inferred, guessed, or back-filled from the rendered homepage."
   ],
   "fields": {
     "name": "Junteng Liu",
@@ -12,25 +12,29 @@
     "affiliation": "HKUST NLP Group",
     "advisor": "Professor Junxian He",
     "short_bio": "studies natural language processing and machine learning, focusing on LLM reasoning, hallucination in vision-language models, and LLM truthfulness",
+    "long_bio": "I am a first-year PhD candidate at the HKUST NLP Group, supervised by Professor Junxian He. I graduated from Shanghai Jiao Tong University (SJTU) in June 2024. My research focuses on natural language processing and machine learning.",
     "email": "jliugi@connect.ust.hk",
     "github": "Vicent0205",
+    "github_url": "https://github.com/Vicent0205",
     "google_scholar": "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate",
     "twitter": "@junteng88716710",
+    "twitter_url": "https://x.com/junteng88716710",
     "research_interests": [
       "LLM reasoning and reinforcement learning",
-      "hallucination in vision-language models",
+      "Hallucination in vision-language models (VLM)",
       "LLM truthfulness and interpretability"
     ],
     "education": [
       {
+        "degree": "Ph.D. in Computer Science",
         "institution": "Hong Kong University of Science and Technology (HKUST)",
-        "status": "PhD candidate (first year), HKUST NLP Group",
-        "period": "2024 - Present"
+        "years": "2024 - Present",
+        "advisor": "Professor Junxian He"
       },
       {
+        "degree": "B.Eng.",
         "institution": "Shanghai Jiao Tong University (SJTU)",
-        "status": "Graduated",
-        "period": "June 2024"
+        "years": "2020 - 2024"
       }
     ],
     "research_experience": [
@@ -79,7 +83,6 @@
   },
   "fields_absent_from_memory": [
     "awards",
-    "location",
     "phone",
     "portrait_url",
     "service",
