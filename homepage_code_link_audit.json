@@ -1,0 +1,46 @@
+{
+  "link_actions": [
+    {
+      "slug": "c-eval",
+      "action": "no_change",
+      "code_status": "none",
+      "url": null,
+      "reason": "No code link is published for this paper (homepage entry _publications/2023-12-01-c-eval.md, permalink /publication/2023-c-eval: no 'codeurl' front-matter field and no [Code] item in the Publications section of _pages/about.md, mcpmark-eval-1031/LJT-Homepage@master), so there is nothing to repair and the accurate code status is 'none'. For reference only: the paper's official implementation hkust-nlp/ceval is public (private=false) but exposes 0 release tags (GET /repos/hkust-nlp/ceval/tags -> [], /releases/latest -> 404), so it would not qualify as 'released' either; a URL the homepage never published was deliberately not invented."
+    },
+    {
+      "slug": "composing-modules",
+      "action": "no_change",
+      "code_status": "none",
+      "url": null,
+      "reason": "No code link is published for this paper (homepage entry _publications/2023-12-01-composing-modules.md, permalink /publication/2023-composing-modules, i.e. 'Composing Parameter-Efficient Modules with Arithmetic Operations': no 'codeurl' front matter, no [Code] item in _pages/about.md), so there is nothing to repair and the accurate code status is 'none'. For reference only: hkust-nlp/PEM_composition is public but exposes 0 release tags (/tags -> []), so it would not qualify as 'released'; no unpublished URL was invented."
+    },
+    {
+      "slug": "in-context-sharpness-alerts",
+      "action": "no_change",
+      "code_status": "none",
+      "url": null,
+      "reason": "No code link is published for this paper (homepage entry _publications/2024-07-01-in-context-sharpness-alerts.md, permalink /publication/2024-in-context-sharpness-alerts, i.e. 'In-Context Sharpness as Alerts ...': no 'codeurl' front matter, no [Code] item in _pages/about.md), so there is nothing to repair and the accurate code status is 'none'. For reference only: hkust-nlp/Activation_Decoding is public but exposes 0 release tags (/tags -> []), so it would not qualify as 'released'; no unpublished URL was invented."
+    },
+    {
+      "slug": "synlogic",
+      "action": "repair",
+      "code_status": "repo_exists_no_release",
+      "url": "https://github.com/MiniMax-AI/SynLogic",
+      "reason": "The published link https://github.com/Vicent0205/SynLogic (codeurl in _publications/2025-06-08-synlogic.md and the [Code] link in _pages/about.md) is stale: GitHub answers every request for Vicent0205/SynLogic out of MiniMax-AI/SynLogic through a rename/transfer redirect (branches -> main @ d8c527fd17edb739172619efb9b681805fc74b8d, identical to MiniMax-AI/SynLogic HEAD). The canonical working URL is therefore https://github.com/MiniMax-AI/SynLogic - '[NeurIPS 2025] The official repo of SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond', private=false. It carries no release tag at all (/tags -> [], /releases -> [], /releases/latest -> 404), so the repository exists and is public but is not released."
+    },
+    {
+      "slug": "universal-truthfulness-hyperplane",
+      "action": "repair",
+      "code_status": "repo_exists_no_release",
+      "url": "https://github.com/hkust-nlp/Universal_Truthfulness_Hyperplane",
+      "reason": "The published link https://github.com/Vicent0205/Universal_Truthfulness_Hyperplane (codeurl in _publications/2024-12-01-universal-truthfulness-hyperplane.md and the [Code] link in _pages/about.md) is stale: GitHub answers requests for Vicent0205/Universal_Truthfulness_Hyperplane out of hkust-nlp/Universal_Truthfulness_Hyperplane through a rename/transfer redirect (branches -> main @ f509513016c5353bf8f5781635fbad925c0b7cea). The canonical working URL is therefore https://github.com/hkust-nlp/Universal_Truthfulness_Hyperplane - 'On the Universal Truthfulness Hyperplane Inside LLMs (EMNLP 2024)', private=false. It carries no release tag (/tags -> [], /releases/latest -> 404), so the repository exists and is public but is not released."
+    },
+    {
+      "slug": "vlm-chart",
+      "action": "repair",
+      "code_status": "repo_exists_no_release",
+      "url": "https://github.com/hkust-nlp/Vision4Chart",
+      "reason": "The published link https://github.com/Vicent0205/Vision4Chart (codeurl in _publications/2025-06-08-vlm-chart.md, 'On the Perception Bottleneck of VLMs for Chart Understanding', and the [Code] link in _pages/about.md) is dead: GET /repos/Vicent0205/Vision4Chart and /repos/Vicent0205/Vision4Chart/branches both return 404 Not Found - no repository, no rename redirect, nothing publicly reachable. The canonical working repository for this exact title is https://github.com/hkust-nlp/Vision4Chart - 'The official repo of \"On the Perception Bottleneck of VLMs for Chart Understanding\"', private=false - so the link is repaired to it. It carries no release tag (/tags -> [], /releases -> [], /releases/latest -> 404), so the repository exists and is public but is not released."
+    }
+  ]
+}
