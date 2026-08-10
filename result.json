@@ -1,0 +1,34 @@
+{
+  "updates": [
+    {
+      "slug": "synlogic",
+      "title": "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond",
+      "venue": "NeurIPS 2025",
+      "year": 2025,
+      "status": "published",
+      "evidence_email_id": "acceptance-synlogic-neurips-2025"
+    }
+  ],
+  "unchanged": [
+    {
+      "slug": "c-eval",
+      "reason": "Not eligible for an acceptance update: the homepage record already carries a final venue and year (NeurIPS 2023, 2023) and is not marked preprint or under review, so no acceptance notice can add a venue or year that is not already there."
+    },
+    {
+      "slug": "composing-modules",
+      "reason": "Not eligible for an acceptance update: already final on the homepage (NeurIPS 2023, 2023), i.e. outside the preprint / under-review scope that an acceptance email may promote."
+    },
+    {
+      "slug": "in-context-sharpness-alerts",
+      "reason": "Not eligible for an acceptance update: already final on the homepage (ICML 2024, 2024), i.e. outside the preprint / under-review scope that an acceptance email may promote."
+    },
+    {
+      "slug": "universal-truthfulness-hyperplane",
+      "reason": "Not eligible for an acceptance update: already final on the homepage (EMNLP 2024, 2024), i.e. outside the preprint / under-review scope that an acceptance email may promote."
+    },
+    {
+      "slug": "vlm-chart",
+      "reason": "In scope (homepage venue 'arXiv preprint', 2025) but deliberately left unchanged: no acceptance notice fixes a final venue and publication year for this title. A review request, an artifact-evaluation notice or a workshop invitation is not an acceptance, so venue, year and status stay exactly as recorded."
+    }
+  ]
+}
