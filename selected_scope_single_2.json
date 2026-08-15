@@ -1,38 +1,127 @@
 {
   "_meta": {
     "subproblem": "single_2",
-    "description": "Upstream template identity from destination namespace when invoking GitHub fork flows (AI coding tools playlist, 5 repos)",
+    "description": "Upstream / template identity separated from destination namespace when invoking GitHub fork flows, for the five repositories cited verbatim in the AI-coding-tools playlist descriptions",
+    "artifact_role": "Finalized subset. Only values that survived review AND reproduce (or were re-resolved) against the live GitHub API in this run are published here - i.e. only what would be safe to apply live. No discarded candidate string and no stale reviewed winner is published as a value.",
     "scope_surface": "scope_matrix_single_2.csv",
-    "source_rule": "github_api_live > readme_opening > target_set_csv",
-    "snapshot_date": "2026-04-08",
-    "live_verification_date": "2026-04-27",
-    "review_branch": "review/scope-matrix-single-2",
-    "upstream_evidence": [
-      "source_resolution_single_2.csv (34 rows, 25 selected=YES) @ review/source-resolution-single-2",
-      "evidence_notes_single_2.md @ review/scope-matrix-single-2",
-      "conflict_resolution.csv + resolved_values.json @ review/conflict-resolution",
-      "source_priority.md @ review/conflict-resolution"
+    "scope_surface_role": "Full reviewed target set: 7 data rows (5 target rows + 2 audited-and-dropped candidate identifiers), 22 columns. It stays faithful to the reviewed record and therefore still carries the two stale reviewed winners that are withheld from this document.",
+    "source_rule": "github_api_live > readme_opening > target_set_csv; target_set_csv_original_url never wins canonical routing",
+    "policy_of_record": "review/conflict-resolution:source_priority.md",
+    "reviewed_snapshot_dates": [
+      "2026-04-08 (source_resolution / scope reconstruction)",
+      "2026-04-09 (conflict-resolution policy + resolved_values.json)",
+      "2026-08-09 (target_set refresh)"
     ],
-    "total_repos_reviewed": 5,
-    "total_repos_selected": 5,
-    "repos_dropped": 0,
-    "consistency_check": "scope_matrix rows (5) == selected_scope entries (5) == source_resolution selected=YES repo count (5)",
+    "live_gate": {
+      "source": "live GitHub REST API (repository payloads with description / license.spdx_id / full_name / owner.login, and a contents probe on the cited redirected path)",
+      "date": "2026-08-15",
+      "earliest_observed_response_utc": "2026-08-15T21:57:04Z",
+      "rule": "requested owner/repo == returned full_name -> identity stable; reviewed winner == live value -> safe to apply live; reviewed winner != live value -> stale, must be re-resolved from github_api_live"
+    },
+    "review_branch": "review/scope-matrix-single-2",
+    "artifact_path": "repository root (established path for this artifact lineage)",
+    "production_branch_main_modified": false,
+    "applied_to_any_live_or_upstream_repository": false,
+    "upstream_evidence": [
+      "source_resolution_single_2.csv - 36 data rows x 6 columns, 25 selected=YES @ review/source-resolution-single-2",
+      "evidence_notes_single_2.md - finalized live-safe subset @ review/source-resolution-single-2",
+      "conflict_resolution.csv - 18 contested candidate rows @ review/conflict-resolution",
+      "source_priority.md - three-tier priority policy @ review/conflict-resolution",
+      "resolved_values.json - machine-readable reviewed choices (2026-04-09) @ review/conflict-resolution",
+      "target_set.csv / target_set.md - 14 columns, 5 rows, membership rules @ review/preserve-a-description-listed-repo-even",
+      "docs/identifier-vs-canonical.md + target_set.csv - cited-vs-canonical identifier audit and org-rename redirect proof @ review/separate-identifier-from-canonicalized-identifier-in",
+      "id_alignment_single_2.csv + resolved_mapping_single_2.json @ review/id-alignment-single-2"
+    ],
+    "membership_rules_applied": [
+      "Membership is defined by the playlist descriptions: every verbatim URL becomes exactly one target row. 5 URLs in, 5 target rows out - nothing dropped, nothing added.",
+      "A description-listed repo is preserved even when the live lookup disagrees with the listed path (All-Hands-AI/OpenHands -> OpenHands/OpenHands): the cited path is kept byte-for-byte and the canonical path is recorded additively.",
+      "A description-listed repo is preserved even when it is off-theme (QwenLM/Qwen3-TTS is speech synthesis, not a coding agent).",
+      "Missing metadata is reported, never invented (QwenLM/Qwen3-Coder has no license object).",
+      "No silent normalisation of owner/repo casing or URLs."
+    ],
+    "counts": {
+      "scope_matrix_rows_total": 7,
+      "scope_matrix_target_rows": 5,
+      "scope_matrix_audited_candidate_rows": 2,
+      "scope_matrix_keep_rows": 5,
+      "scope_matrix_drop_rows": 2,
+      "reviewed_candidate_values_total": 36,
+      "reviewed_candidate_values_selected": 25,
+      "reviewed_candidate_values_discarded": 11,
+      "reviewed_fields_per_repo": 5,
+      "selected_scope_entries": 5,
+      "fields_published_here": 25,
+      "fields_live_byte_exact": 23,
+      "fields_live_resolved": 2,
+      "discarded_candidate_values_reproduced_here": 0,
+      "stale_reviewed_winners_published_here": 0
+    },
+    "consistency_check": "scope_matrix target rows (5) == scope_matrix KEEP rows (5) == selected_scope entries (5) == distinct repos with selected=YES rows in source_resolution_single_2.csv (5); scope_matrix DROP rows (2) == excluded_from_scope entries (2); sum of fields_reviewed_count over scope_matrix rows (7+7+6+7+9+0+0) == 36 == source_resolution_single_2.csv data rows; sum of fields_selected_count (5x5) == 25; sum of fields_live_exact_count (5+5+5+5+3) == 23, plus 2 live-resolved == 25 fields published here",
+    "reviewed_fields": [
+      "project_name",
+      "original_url_from_playlist",
+      "canonical_owner_repo",
+      "description",
+      "license"
+    ],
     "live_verification_summary": {
-      "openai/codex": "EXISTS — confirmed at main HEAD",
-      "google-gemini/gemini-cli": "EXISTS — confirmed at main HEAD",
-      "QwenLM/Qwen3-Coder": "EXISTS — confirmed at main HEAD",
-      "QwenLM/Qwen3-TTS": "EXISTS — confirmed at main HEAD",
-      "OpenHands/OpenHands": "EXISTS — confirmed at main HEAD; description updated to owner-set emoji; All-Hands-AI org redirect still active"
-    }
+      "openai/codex": "EXISTS - repo id 965415649; full_name matches the cited path (no redirect); description and license.spdx_id byte-exact against the reviewed winners; 5/5 live-exact",
+      "google-gemini/gemini-cli": "EXISTS - repo id 968197216; full_name matches the cited path (no redirect); description and license.spdx_id byte-exact; 5/5 live-exact",
+      "QwenLM/Qwen3-Coder": "EXISTS - repo id 787368344; full_name matches the cited path (no redirect); description byte-exact; live payload carries no license object, re-confirming (none detected); 5/5 live-exact",
+      "QwenLM/Qwen3-TTS": "EXISTS - repo id 1138817132; full_name matches the cited path (no redirect); description and license.spdx_id byte-exact; 5/5 live-exact",
+      "OpenHands/OpenHands": "EXISTS - repo id 771302083, owner org id 225919603; the cited path All-Hands-AI/OpenHands returns 200 OK and the payload is rooted at OpenHands/OpenHands, so the redirect is still active; 3/5 live-exact and 2 fields re-resolved live (description, license)"
+    },
+    "live_resolved_fields": [
+      {
+        "repo": "OpenHands/OpenHands",
+        "field": "description",
+        "resolution": "published value is the byte-exact live owner-set string, which restores the leading U+1F64C ('raising hands') character that the 2026-04 reviewed winner had silently stripped",
+        "decision_unchanged": "github_api_live still beats the target_set_csv paraphrase and the readme_opening heading; only the string was refreshed"
+      },
+      {
+        "repo": "OpenHands/OpenHands",
+        "field": "license",
+        "resolution": "published value is MIT because live github_api_live reports license.key=mit / license.spdx_id=MIT / license.name=MIT License; the 2026-04 reviewed winner came from an SPDX auto-detection pass that returned no assertion",
+        "decision_unchanged": "this is licence-detection drift, not a policy change; the tier order is untouched and MIT is published because the live authoritative tier says MIT, not because target_set_csv happened to claim it"
+      }
+    ],
+    "withheld_from_this_document": [
+      {
+        "repo": "OpenHands/OpenHands",
+        "field": "description",
+        "reason": "the reviewed winner does not reproduce live; applying it would rewrite the owner's own description",
+        "reviewed_form_still_visible_in": "scope_matrix_single_2.csv column `description` and source_resolution_single_2.csv @ review/source-resolution-single-2"
+      },
+      {
+        "repo": "OpenHands/OpenHands",
+        "field": "license",
+        "reason": "the reviewed winner is a stale SPDX non-assertion from the 2026-04 snapshot and is not safe to apply live",
+        "reviewed_form_still_visible_in": "scope_matrix_single_2.csv column `license` and source_resolution_single_2.csv @ review/source-resolution-single-2"
+      },
+      {
+        "repo": "all 5 targets",
+        "field": "description / canonical_owner_repo / license",
+        "reason": "the 11 selected=NO candidate values (playlist paraphrases, README openings, the legacy routing claim and the legacy MIT claim) were discarded in review; reproducing them here would blur the finalized-subset contract",
+        "reviewed_form_still_visible_in": "source_resolution_single_2.csv @ review/source-resolution-single-2"
+      }
+    ],
+    "known_live_drift_that_changes_no_decision": [
+      "The live OpenHands/OpenHands README.md now opens on the 'Agent Canvas' product heading rather than 'OpenHands: AI-Driven Development'. readme_opening was already a discarded tier-2 candidate for that field, so no finalized value moves.",
+      "Star counts and release tags have moved since the 2026-08-09 target-set refresh (e.g. openai/codex 104,938 -> 106,116; OpenHands/OpenHands 83,541 -> 84,138 with the README now referencing agent-canvas 1.13.0). Neither stars nor latest_release_tag is one of the five reviewed fields, so they are noted only, never promoted."
+    ]
   },
   "repos": {
     "openai/codex": {
       "project_name": "Codex CLI",
+      "source_identifier": "openai/codex",
       "original_url_from_playlist": "https://github.com/openai/codex",
       "canonical_owner_repo": "openai/codex",
       "description": "Lightweight coding agent that runs in your terminal",
       "license": "Apache-2.0",
+      "repo_id": 965415649,
+      "repo_exists": true,
       "redirect_detected": false,
+      "default_branch": "main",
       "field_sources": {
         "project_name": "target_set_csv",
         "original_url_from_playlist": "target_set_csv",
@@ -40,16 +129,32 @@
         "description": "github_api_live",
         "license": "github_api_live"
       },
-      "contested_fields": ["description"],
-      "scope_decision": "KEEP"
+      "contested_fields": [
+        "description"
+      ],
+      "live_verification": {
+        "project_name": "n/a - editorial label, not an API field",
+        "original_url_from_playlist": "cited path resolves directly, no redirect",
+        "canonical_owner_repo": "full_name matches the cited path",
+        "description": "byte-exact",
+        "license": "byte-exact (license.spdx_id = Apache-2.0)"
+      },
+      "fields_live_exact": 5,
+      "fields_live_resolved": 0,
+      "scope_decision": "KEEP",
+      "safe_to_apply_live": true
     },
     "google-gemini/gemini-cli": {
       "project_name": "Gemini CLI",
+      "source_identifier": "google-gemini/gemini-cli",
       "original_url_from_playlist": "https://github.com/google-gemini/gemini-cli",
       "canonical_owner_repo": "google-gemini/gemini-cli",
       "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
       "license": "Apache-2.0",
+      "repo_id": 968197216,
+      "repo_exists": true,
       "redirect_detected": false,
+      "default_branch": "main",
       "field_sources": {
         "project_name": "target_set_csv",
         "original_url_from_playlist": "target_set_csv",
@@ -57,16 +162,35 @@
         "description": "github_api_live",
         "license": "github_api_live"
       },
-      "contested_fields": ["description"],
-      "scope_decision": "KEEP"
+      "contested_fields": [
+        "description"
+      ],
+      "live_verification": {
+        "project_name": "n/a - editorial label, not an API field",
+        "original_url_from_playlist": "cited path resolves directly, no redirect",
+        "canonical_owner_repo": "full_name matches the cited path",
+        "description": "byte-exact",
+        "license": "byte-exact (license.spdx_id = Apache-2.0)"
+      },
+      "fields_live_exact": 5,
+      "fields_live_resolved": 0,
+      "_notes": {
+        "description": "The discarded target_set_csv paraphrase embedded quota and context-window figures (60 req/min, 1M tokens) that are not part of the owner-set API field."
+      },
+      "scope_decision": "KEEP",
+      "safe_to_apply_live": true
     },
     "QwenLM/Qwen3-Coder": {
       "project_name": "Qwen3-Coder",
+      "source_identifier": "QwenLM/Qwen3-Coder",
       "original_url_from_playlist": "https://github.com/QwenLM/Qwen3-Coder",
       "canonical_owner_repo": "QwenLM/Qwen3-Coder",
       "description": "Qwen3-Coder is the code version of Qwen3, the large language model series developed by Qwen team.",
       "license": null,
+      "repo_id": 787368344,
+      "repo_exists": true,
       "redirect_detected": false,
+      "default_branch": "main",
       "field_sources": {
         "project_name": "target_set_csv",
         "original_url_from_playlist": "target_set_csv",
@@ -74,19 +198,36 @@
         "description": "github_api_live",
         "license": "github_api_live"
       },
-      "contested_fields": ["description"],
-      "_notes": {
-        "license": "GitHub SPDX automated detection returned null at 2026-04-08 snapshot; re-confirmed null on live-verification pass 2026-04-27"
+      "contested_fields": [
+        "description"
+      ],
+      "live_verification": {
+        "project_name": "n/a - editorial label, not an API field",
+        "original_url_from_playlist": "cited path resolves directly, no redirect",
+        "canonical_owner_repo": "full_name matches the cited path",
+        "description": "byte-exact",
+        "license": "byte-exact - the live payload carries no license object at all, re-confirming the reviewed '(none detected)'"
       },
-      "scope_decision": "KEEP"
+      "fields_live_exact": 5,
+      "fields_live_resolved": 0,
+      "_notes": {
+        "license": "null means GitHub's automated SPDX detection publishes no licence for this repository. Reported, never back-filled; re-confirmed absent on the 2026-08-15 live gate. Rendered as '(none detected)' in scope_matrix_single_2.csv.",
+        "sibling_repo_caution": "QwenLM/qwen-code (repo id 1008713177) is a different repository and must never be substituted for QwenLM/Qwen3-Coder (repo id 787368344). See excluded_from_scope."
+      },
+      "scope_decision": "KEEP",
+      "safe_to_apply_live": true
     },
     "QwenLM/Qwen3-TTS": {
       "project_name": "Qwen3-TTS",
+      "source_identifier": "QwenLM/Qwen3-TTS",
       "original_url_from_playlist": "https://github.com/QwenLM/Qwen3-TTS",
       "canonical_owner_repo": "QwenLM/Qwen3-TTS",
       "description": "Qwen3-TTS is an open-source series of TTS models developed by the Qwen team at Alibaba Cloud, supporting stable, expressive, and streaming speech generation, free-form voice design, and vivid voice cloning.",
       "license": "Apache-2.0",
+      "repo_id": 1138817132,
+      "repo_exists": true,
       "redirect_detected": false,
+      "default_branch": "main",
       "field_sources": {
         "project_name": "target_set_csv",
         "original_url_from_playlist": "target_set_csv",
@@ -94,30 +235,98 @@
         "description": "github_api_live",
         "license": "github_api_live"
       },
-      "contested_fields": ["description"],
-      "scope_decision": "KEEP"
+      "contested_fields": [
+        "description"
+      ],
+      "live_verification": {
+        "project_name": "n/a - editorial label, not an API field",
+        "original_url_from_playlist": "cited path resolves directly, no redirect",
+        "canonical_owner_repo": "full_name matches the cited path",
+        "description": "byte-exact",
+        "license": "byte-exact (license.spdx_id = Apache-2.0)"
+      },
+      "fields_live_exact": 5,
+      "fields_live_resolved": 0,
+      "_notes": {
+        "scope": "Retained on purpose: this is a speech-synthesis project rather than a coding agent, but it is cited verbatim in a playlist description, so a theme filter must not drop it."
+      },
+      "scope_decision": "KEEP",
+      "safe_to_apply_live": true
     },
     "OpenHands/OpenHands": {
       "project_name": "OpenHands",
+      "source_identifier": "All-Hands-AI/OpenHands",
       "original_url_from_playlist": "https://github.com/All-Hands-AI/OpenHands",
       "canonical_owner_repo": "OpenHands/OpenHands",
       "description": "🙌 OpenHands: AI-Driven Development",
-      "license": "Other (NOASSERTION)",
+      "license": "MIT",
+      "repo_id": 771302083,
+      "owner_org_id": 225919603,
+      "repo_exists": true,
       "redirect_detected": true,
+      "default_branch": "main",
       "field_sources": {
         "project_name": "target_set_csv",
         "original_url_from_playlist": "target_set_csv",
         "canonical_owner_repo": "github_api_live",
-        "description": "github_api_live",
-        "license": "github_api_live"
+        "description": "github_api_live (re-resolved on the live gate)",
+        "license": "github_api_live (re-resolved on the live gate)"
       },
-      "contested_fields": ["canonical_owner_repo", "description", "license"],
+      "contested_fields": [
+        "canonical_owner_repo",
+        "description",
+        "license"
+      ],
+      "live_verification": {
+        "project_name": "n/a - editorial label, not an API field",
+        "original_url_from_playlist": "preserved verbatim and never overwritten; a live probe of this exact cited path returns 200 OK",
+        "canonical_owner_repo": "full_name, owner.login and every URL in the live payload are rooted at OpenHands/OpenHands",
+        "description": "re-resolved - the reviewed winner did not reproduce; the byte-exact live owner-set string is published instead",
+        "license": "re-resolved - the reviewed winner did not reproduce; live SPDX detection now reports MIT"
+      },
+      "fields_live_exact": 3,
+      "fields_live_resolved": 2,
       "_notes": {
-        "canonical_owner_repo": "GitHub organization renamed All-Hands-AI to OpenHands; API confirms canonical path OpenHands/OpenHands (repo ID 771302083); original playlist URL preserved verbatim in original_url_from_playlist; redirect confirmed on live-verification pass 2026-04-27",
-        "license": "target_set_csv claimed MIT; GitHub SPDX automated detection returns NOASSERTION at 2026-04-08 snapshot and live-verification pass 2026-04-27; github_api_live is authoritative",
-        "description": "github_api_live wins over target_set_csv which embedded unverified SWE-Bench score and redirect note; updated 2026-04-27 to owner-set emoji string"
+        "canonical_owner_repo": "This is the central upstream-template-identity vs destination-namespace case. The playlist cites the pre-rename destination namespace All-Hands-AI/OpenHands; the organisation was renamed and the repository now lives at OpenHands/OpenHands (repo id 771302083, owner org id 225919603). Both facts hold at once: the cited path is still a valid entry point that GitHub redirects, while the canonical identity is OpenHands/OpenHands. The cited path is recorded only in source_identifier / original_url_from_playlist; the canonical identity is additive, never a rewrite. The legacy org All-Hands-AI (org id 169105795) still exists but no longer hosts this repository.",
+        "redirect_proof": "A live contents probe on the cited path returned 200 OK while url, html_url, download_url and git_url in the response body were all rooted at OpenHands/OpenHands (README blob sha dca34f6ffb88f397a635e1cedd78601747d1ecda).",
+        "description": "github_api_live wins over the target_set_csv paraphrase (which embedded an unverified SWE-Bench score and a redirect note) and over readme_opening. The published string is the live owner-set value including the leading U+1F64C character; the 2026-04 reviewed winner had that character stripped and is withheld.",
+        "license": "target_set_csv claimed MIT and the 2026-04 github_api_live pass reported no SPDX assertion. On the live gate GitHub's detector reports license.key=mit / license.spdx_id=MIT / license.name=MIT License, so MIT is published on the authority of the live github_api_live tier - the tier order is unchanged, only the snapshot moved.",
+        "readme_drift": "The live README now opens on the 'Agent Canvas' heading, no longer 'OpenHands: AI-Driven Development'. readme_opening was already a discarded tier-2 candidate for description, so no finalized value moves."
       },
-      "scope_decision": "KEEP"
+      "scope_decision": "KEEP",
+      "safe_to_apply_live": true
     }
-  }
+  },
+  "excluded_from_scope": [
+    {
+      "identifier": "All-Hands-AI/OpenHands",
+      "repo_id": 771302083,
+      "role": "cited destination-namespace identifier, audited as a canonical_owner_repo candidate",
+      "candidate_source_tier": "target_set_csv_original_url",
+      "review_state": "discarded",
+      "scope_decision": "DROP",
+      "reason": "The target_set_csv_original_url tier never wins canonical routing, so this identifier is not a canonical target and is not a separate member of the target set. It is equally never de-duplicated away: it is preserved verbatim as source_identifier / original_url_from_playlist on the OpenHands/OpenHands entry above.",
+      "values_published_here": "none as a canonical target; the string itself is published only in its selected role as the cited playlist URL",
+      "live_status": "the cited path still resolves (200 OK) as a transparent redirect to OpenHands/OpenHands"
+    },
+    {
+      "identifier": "QwenLM/qwen-code",
+      "repo_id": 1008713177,
+      "role": "sibling-repo substitution candidate for QwenLM/Qwen3-Coder",
+      "candidate_source_tier": "n/a - audit-only, never a candidate row in source_resolution_single_2.csv",
+      "review_state": "rejected",
+      "scope_decision": "DROP",
+      "reason": "QwenLM/qwen-code (repo id 1008713177, created 2025-06-26) is a different repository from QwenLM/Qwen3-Coder (repo id 787368344) and is not a canonicalization of it. It is not cited verbatim in any playlist description, so the membership rule excludes it, and it must never be substituted for QwenLM/Qwen3-Coder.",
+      "values_published_here": "none",
+      "live_status": "exists and was re-verified live in this run; distinct repo id confirms the two are not the same repository",
+      "provenance": "sibling-repo caution recorded in review/separate-identifier-from-canonicalized-identifier-in:docs/identifier-vs-canonical.md and carried forward by review/source-resolution-single-2:evidence_notes_single_2.md"
+    }
+  ],
+  "delivery_constraints_observed": [
+    "Both artifacts are staged on the review branch review/scope-matrix-single-2 at the repository root - the established path for this artifact lineage.",
+    "The production branch main (the published site) is not modified, and no published-site path (pages/, site_profile.yml, .nojekyll, publication_*, homepage_*, memory_*) is touched.",
+    "Nothing was applied to any live or upstream repository: no fork was created and no description, licence or link was written anywhere outside this review branch. The branch only records which values would be safe to apply.",
+    "Cited identifiers are preserved verbatim; canonical identities are recorded additively, never by overwriting the cited path.",
+    "Missing metadata is reported, never invented."
+  ]
 }
