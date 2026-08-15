@@ -1,7 +1,9 @@
 {
   "report": "phd_status_preservation_report",
+  "version": 2,
   "subject": "Junteng Liu",
   "generated_at": "2026-08-15",
+  "reverified_at": "2026-08-16",
   "requirement": "Preserve the explicit phrase and meaning that the person is a PhD candidate/student in the specified program and group; do not reduce it to generic researcher wording.",
   "specified_status": {
     "status_phrase": "PhD candidate",
@@ -57,7 +59,8 @@
       "status_word_kept": "PhD candidate",
       "group_named": true,
       "program_named": true,
-      "prior_phrase_survives_verbatim": true
+      "prior_phrase_survives_verbatim": true,
+      "reverified": true
     },
     {
       "repository": "mcpmark-eval-1031/LJT-Homepage",
@@ -70,7 +73,8 @@
       "status_word_kept": "n/a (degree entry; the program itself is the subject)",
       "group_named": false,
       "program_named": true,
-      "prior_phrase_survives_verbatim": true
+      "prior_phrase_survives_verbatim": true,
+      "reverified": true
     },
     {
       "repository": "mcpmark-eval-1031/LJT-Homepage",
@@ -84,6 +88,7 @@
       "group_named": true,
       "program_named": false,
       "prior_phrase_survives_verbatim": true,
+      "reverified": true,
       "note": "Deliberately not rewritten. This is the strongest explicit position line on the page and it is preserved byte for byte; the program is named two sections above under 'Academic Background'."
     },
     {
@@ -91,13 +96,14 @@
       "branch": "master",
       "path": "_config.yml",
       "location": "description",
-      "before": "Junteng Liu's personal homepage \u2014 PhD candidate at HKUST NLP Group",
-      "after": "Junteng Liu's personal homepage \u2014 PhD candidate (Ph.D. in Computer Science, HKUST) at the HKUST NLP Group",
+      "before": "Junteng Liu's personal homepage — PhD candidate at HKUST NLP Group",
+      "after": "Junteng Liu's personal homepage — PhD candidate (Ph.D. in Computer Science, HKUST) at the HKUST NLP Group",
       "action": "program_named",
       "status_word_kept": "PhD candidate",
       "group_named": true,
       "program_named": true,
       "prior_phrase_survives_verbatim": false,
+      "reverified": true,
       "note": "Only the word order changed ('at HKUST NLP Group' -> 'at the HKUST NLP Group'); the status word and the group name are both still present and explicit."
     },
     {
@@ -111,7 +117,8 @@
       "status_word_kept": "First-year PhD candidate",
       "group_named": true,
       "program_named": true,
-      "prior_phrase_survives_verbatim": true
+      "prior_phrase_survives_verbatim": true,
+      "reverified": true
     },
     {
       "repository": "mcpmark-eval-1031/LJT-Homepage",
@@ -124,7 +131,8 @@
       "status_word_kept": "n/a (group field)",
       "group_named": true,
       "program_named": false,
-      "prior_phrase_survives_verbatim": true
+      "prior_phrase_survives_verbatim": true,
+      "reverified": true
     },
     {
       "repository": "mcpmark-eval-1031/LJT-Homepage",
@@ -137,7 +145,8 @@
       "status_word_kept": "First-year PhD candidate",
       "group_named": true,
       "program_named": true,
-      "prior_phrase_survives_verbatim": true
+      "prior_phrase_survives_verbatim": true,
+      "reverified": true
     },
     {
       "repository": "mcpmark-eval-1031/LJT-Homepage",
@@ -150,7 +159,8 @@
       "status_word_kept": "PhD candidate",
       "group_named": true,
       "program_named": true,
-      "prior_phrase_survives_verbatim": true
+      "prior_phrase_survives_verbatim": true,
+      "reverified": true
     },
     {
       "repository": "mcpmark-eval-1031/LJT-Homepage",
@@ -164,6 +174,7 @@
       "group_named": true,
       "program_named": true,
       "prior_phrase_survives_verbatim": true,
+      "reverified": true,
       "note": "This artifact records the memory-verbatim content plan (bio == memory fields.long_bio). It is intentionally not edited so that it keeps matching memory byte for byte; education[0].degree already carries 'Ph.D. in Computer Science'."
     },
     {
@@ -178,6 +189,7 @@
       "group_named": true,
       "program_named": true,
       "prior_phrase_survives_verbatim": true,
+      "reverified": true,
       "note": "Source of record; never rewritten."
     },
     {
@@ -192,7 +204,40 @@
       "group_named": true,
       "program_named": true,
       "prior_phrase_survives_verbatim": true,
+      "reverified": true,
       "note": "Historical, date-stamped audit artifacts. Editing them would falsify a snapshot; their status wording is already explicit."
+    },
+    {
+      "repository": "mcpmark-eval-1031/LJT-Homepage",
+      "branch": "master",
+      "path": "publication_preview.md",
+      "location": "document header -> '**Owner:**' line",
+      "before": "**Owner:** Junteng Liu — PhD candidate, HKUST NLP Group.",
+      "after": "unchanged",
+      "action": "left_unchanged",
+      "status_word_kept": "PhD candidate",
+      "group_named": true,
+      "program_named": false,
+      "prior_phrase_survives_verbatim": true,
+      "reverified": true,
+      "added_after_pass_1": true,
+      "note": "Artifact committed after pass 1 (commit 03a3c49). Its byline already carries the explicit status word next to the group, so nothing needed repair and the file was left byte for byte unchanged. It is a publication-preview document rather than a rendered position line; the program is named for the same person in _pages/about.md (intro paragraph and 'Academic Background')."
+    },
+    {
+      "repository": "mcpmark-eval-1031/LJT-Homepage",
+      "branch": "master",
+      "path": "publication_fields.csv",
+      "location": "n/a — per-paper bibliographic columns only",
+      "before": "no status, role or affiliation wording for the person",
+      "after": "unchanged",
+      "action": "left_unchanged",
+      "status_word_kept": "n/a (file describes publications, not the person)",
+      "group_named": false,
+      "program_named": false,
+      "prior_phrase_survives_verbatim": true,
+      "reverified": true,
+      "added_after_pass_1": true,
+      "note": "Scanned in the re-verification pass: the only person-level columns are author lists and the owner's position in them, so there is no status phrase to preserve here and none was weakened."
     },
     {
       "repository": "mcpmark-eval-1031/LJT-Homepage-published",
@@ -205,7 +250,8 @@
       "status_word_kept": "PhD Candidate",
       "group_named": true,
       "program_named": true,
-      "prior_phrase_survives_verbatim": true
+      "prior_phrase_survives_verbatim": true,
+      "reverified": true
     },
     {
       "repository": "mcpmark-eval-1031/LJT-Homepage-published",
@@ -218,7 +264,8 @@
       "status_word_kept": "first-year PhD candidate",
       "group_named": true,
       "program_named": true,
-      "prior_phrase_survives_verbatim": true
+      "prior_phrase_survives_verbatim": true,
+      "reverified": true
     },
     {
       "repository": "mcpmark-eval-1031/LJT-Homepage-published",
@@ -232,6 +279,7 @@
       "group_named": true,
       "program_named": true,
       "prior_phrase_survives_verbatim": true,
+      "reverified": true,
       "note": "role and affiliation are untouched; four memory-backed keys were added so a consumer of this file cannot render the person without the program."
     },
     {
@@ -240,19 +288,20 @@
       "path": "entity 'Junteng Liu'",
       "location": "observations + relations",
       "before": "'First-year PhD candidate at HKUST NLP Group'; 'Ph.D. in Computer Science (2024-Present) at Hong Kong University of Science and Technology'; relation 'PhD candidate at' -> HKUST NLP Group; relation 'pursuing' -> Ph.D. in Computer Science",
-      "after": "all of the above kept, plus one added observation naming status, program, institution and group in a single sentence",
+      "after": "all of the above kept, plus added observations naming status, program, institution and group in a single sentence",
       "action": "observation_added",
       "status_word_kept": "First-year PhD candidate / PhD candidate",
       "group_named": true,
       "program_named": true,
       "prior_phrase_survives_verbatim": true,
-      "note": "No observation or relation was deleted or reworded."
+      "reverified": true,
+      "note": "No observation or relation was deleted or reworded in either pass. At the pass-2 recheck the live graph had been reloaded from the base profile, so the pass-1 additions were absent; four equivalent observations were re-added additively — two on 'Junteng Liu' (the combined status/program/institution/group sentence and the status-wording policy), one on 'Ph.D. in Computer Science' and one on 'HKUST NLP Group'."
     }
   ],
   "summary": {
-    "occurrences_reviewed": 15,
+    "occurrences_reviewed": 17,
     "program_named": 8,
-    "left_unchanged": 6,
+    "left_unchanged": 8,
     "observation_added": 1,
     "occurrences_reduced_to_generic_researcher_wording": 0,
     "status_words_removed": 0,
@@ -260,11 +309,46 @@
     "prior_phrases_lost": 1,
     "prior_phrases_lost_detail": "_config.yml description only: 'PhD candidate at HKUST NLP Group' became 'PhD candidate (Ph.D. in Computer Science, HKUST) at the HKUST NLP Group'. Status word and group name are both retained; only the definite article and the parenthetical program were inserted."
   },
+  "reverification": {
+    "pass": 2,
+    "trigger": "The requirement was re-issued as a standing constraint in a later session, after two new artifacts (publication_preview.md, publication_fields.csv) had been committed to mcpmark-eval-1031/LJT-Homepage.",
+    "method": "Every occurrence was re-read from the live GitHub API (file contents, not a cached snapshot) and cross-checked against the live memory knowledge graph; a full-text code search for the nine forbidden reductions was repeated in both repositories.",
+    "state_read": [
+      "mcpmark-eval-1031/LJT-Homepage @ master, head commit 03a3c495565e1a09e44b26f7c0d7577fd4d6b4ce",
+      "mcpmark-eval-1031/LJT-Homepage-published @ main, head commit 0e45faad7eb023d01b05ef251f50b9eb6703cf71 (before this report update)"
+    ],
+    "checks": [
+      {"check": "_pages/about.md intro keeps 'I am a first-year PhD candidate at the **HKUST NLP Group**'", "result": "pass"},
+      {"check": "_pages/about.md intro names 'in the **Ph.D. in Computer Science** program at the **Hong Kong University of Science and Technology (HKUST)**'", "result": "pass"},
+      {"check": "_pages/about.md 'Research Experience' still opens with '**PhD Candidate** | HKUST NLP Group'", "result": "pass"},
+      {"check": "_pages/about.md 'Academic Background' still lists '**Ph.D. in Computer Science** (2024–Present)' with HKUST and the advisor", "result": "pass"},
+      {"check": "_config.yml description still contains 'PhD candidate' and 'HKUST NLP Group'", "result": "pass"},
+      {"check": "_config.yml author.bio still starts 'First-year PhD candidate at HKUST NLP Group' and names the program", "result": "pass"},
+      {"check": "_data/authors.yml bio identical to _config.yml author.bio", "result": "pass"},
+      {"check": "README.md first prose line still reads 'PhD candidate at HKUST NLP Group, in the Ph.D. in Computer Science program at the Hong Kong University of Science and Technology (HKUST)'", "result": "pass"},
+      {"check": "LJT-Homepage-published/pages/home.md keeps '**PhD Candidate, HKUST NLP Group**' plus 'Ph.D. in Computer Science, Hong Kong University of Science and Technology'", "result": "pass"},
+      {"check": "LJT-Homepage-published/pages/home.md About paragraph keeps 'first-year PhD candidate at the HKUST NLP Group' plus the program", "result": "pass"},
+      {"check": "LJT-Homepage-published/site_profile.yml keeps 'role: PhD Candidate' and 'affiliation: HKUST NLP Group' plus program / program_years / institution / advisor", "result": "pass"},
+      {"check": "publication_preview.md byline keeps 'PhD candidate, HKUST NLP Group'", "result": "pass"},
+      {"check": "code search for 'researcher' in mcpmark-eval-1031/LJT-Homepage", "result": "pass (0 hits)"},
+      {"check": "code search for 'researcher' in mcpmark-eval-1031/LJT-Homepage-published", "result": "pass (0 hits)"},
+      {"check": "any occurrence reduced to a status-free description of the person", "result": "pass (none)"},
+      {"check": "any explicit status word or group mention removed since pass 1", "result": "pass (none)"}
+    ],
+    "memory_state_at_recheck": "read_graph returned the populated 'Junteng Liu' profile with 'First-year PhD candidate at HKUST NLP Group', 'Ph.D. in Computer Science (2024-Present) at Hong Kong University of Science and Technology', the relation 'PhD candidate at' -> HKUST NLP Group and the relation 'pursuing' -> Ph.D. in Computer Science, but without the observations added in pass 1 (the graph had been reloaded from the base profile).",
+    "actions_taken": [
+      "No rendered text was rewritten: every homepage occurrence already satisfied the requirement and was left exactly as pass 1 left it.",
+      "publication_preview.md and publication_fields.csv, both added after pass 1, were reviewed and left byte for byte unchanged; the first already names the status and the group, the second contains no person description.",
+      "Four observations were re-added to the memory knowledge graph so that memory itself again states the status together with the program, the institution and the group: two on 'Junteng Liu', one on 'Ph.D. in Computer Science', one on 'HKUST NLP Group'. Nothing was deleted and no relation was touched.",
+      "This report was updated in place (version 2) and mirrored to the Drive artifact 'phd_status_preservation_report.json'."
+    ]
+  },
   "notes": [
     "'Specified program' is resolved from memory as the doctoral degree programme 'Ph.D. in Computer Science' (2024 - Present) at the Hong Kong University of Science and Technology (HKUST); 'specified group' is resolved as 'HKUST NLP Group'. Both come from the memory profile of record, not from the rendered homepage.",
     "Both 'PhD candidate' and 'PhD Candidate' are accepted status words, matching the casing memory itself uses in fields.title ('PhD Candidate') and fields.long_bio ('first-year PhD candidate'). 'PhD student' was not introduced anywhere, because memory says candidate.",
-    "A full-text scan of mcpmark-eval-1031/LJT-Homepage for 'researcher' returns zero hits, so no occurrence had previously been genericised and none was introduced by this pass.",
+    "A full-text scan of mcpmark-eval-1031/LJT-Homepage and mcpmark-eval-1031/LJT-Homepage-published for 'researcher' returns zero hits, so no occurrence had previously been genericised and none was introduced by either pass.",
     "The 'first-year' qualifier is preserved wherever memory's long_bio placed it and was not promoted to places memory does not support (for example the 'Research Experience' position line, which stays 'PhD Candidate | HKUST NLP Group').",
-    "No fact outside memory was added: program name, years, institution, group and advisor all come from memory_profile.json -> fields and from the knowledge-graph entity 'Junteng Liu'."
+    "No fact outside memory was added: program name, years, institution, group and advisor all come from memory_profile.json -> fields and from the knowledge-graph entity 'Junteng Liu'.",
+    "Version 2 is additive with respect to version 1: every version-1 occurrence row is retained with its original before/after text and is now marked 'reverified': true; the two new rows describe artifacts that did not exist when version 1 was written."
   ]
 }
