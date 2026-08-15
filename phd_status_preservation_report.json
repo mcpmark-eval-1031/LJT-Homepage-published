@@ -2,8 +2,8 @@
   "report": "phd_status_preservation_report",
   "version": 2,
   "subject": "Junteng Liu",
-  "generated_at": "2026-08-15",
-  "reverified_at": "2026-08-16",
+  "generated_at": "2026-08-15T14:01Z (pass 1)",
+  "reverified_at": "2026-08-15T22:35Z (pass 2)",
   "requirement": "Preserve the explicit phrase and meaning that the person is a PhD candidate/student in the specified program and group; do not reduce it to generic researcher wording.",
   "specified_status": {
     "status_phrase": "PhD candidate",
@@ -33,7 +33,7 @@
   "policy": {
     "keep": "Every rendered occurrence must keep an explicit doctoral-student status word ('PhD candidate', 'PhD Candidate' or 'PhD student') together with the group ('HKUST NLP Group'); where a position line is rendered, the program ('Ph.D. in Computer Science') is named as well.",
     "never": "The status is never replaced by, or absorbed into, a status-free description of the person.",
-    "additive_only": "This pass only adds the memory-backed program name next to the group. No existing status phrase was rewritten, shortened, weakened or deleted; every prior phrase survives as a verbatim substring of the new text."
+    "additive_only": "Both passes only add the memory-backed program name next to the group. No existing status phrase was rewritten, shortened, weakened or deleted; every prior phrase survives as a verbatim substring of the new text."
   },
   "forbidden_reductions_checked": [
     "researcher",
@@ -311,6 +311,7 @@
   },
   "reverification": {
     "pass": 2,
+    "at": "2026-08-15T22:35Z",
     "trigger": "The requirement was re-issued as a standing constraint in a later session, after two new artifacts (publication_preview.md, publication_fields.csv) had been committed to mcpmark-eval-1031/LJT-Homepage.",
     "method": "Every occurrence was re-read from the live GitHub API (file contents, not a cached snapshot) and cross-checked against the live memory knowledge graph; a full-text code search for the nine forbidden reductions was repeated in both repositories.",
     "state_read": [
@@ -349,6 +350,7 @@
     "A full-text scan of mcpmark-eval-1031/LJT-Homepage and mcpmark-eval-1031/LJT-Homepage-published for 'researcher' returns zero hits, so no occurrence had previously been genericised and none was introduced by either pass.",
     "The 'first-year' qualifier is preserved wherever memory's long_bio placed it and was not promoted to places memory does not support (for example the 'Research Experience' position line, which stays 'PhD Candidate | HKUST NLP Group').",
     "No fact outside memory was added: program name, years, institution, group and advisor all come from memory_profile.json -> fields and from the knowledge-graph entity 'Junteng Liu'.",
-    "Version 2 is additive with respect to version 1: every version-1 occurrence row is retained with its original before/after text and is now marked 'reverified': true; the two new rows describe artifacts that did not exist when version 1 was written."
+    "Version 2 is additive with respect to version 1: every version-1 occurrence row is retained with its original before/after text and is now marked 'reverified': true; the two new rows describe artifacts that did not exist when version 1 was written.",
+    "Both passes happened on 2026-08-15 (pass 1 at 14:00-14:01Z, pass 2 at 22:35Z), so the two timestamps are distinguished by time rather than by date."
   ]
 }
