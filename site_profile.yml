@@ -2,6 +2,10 @@ profile:
   name: Junteng Liu
   role: PhD Candidate
   affiliation: HKUST NLP Group
+  program: Ph.D. in Computer Science
+  program_years: 2024 - Present
+  institution: Hong Kong University of Science and Technology (HKUST)
+  advisor: Professor Junxian He
   short_bio: studies natural language processing and machine learning, focusing on LLM reasoning, hallucination in vision-language models, and LLM truthfulness
   email: jliugi@connect.ust.hk
   research_areas:
