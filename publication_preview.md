@@ -1,220 +1,294 @@
-# Publication preview — new entries for the LJT homepage
+# Publication preview — new entries for Junteng Liu's homepage
 
-**Owner / site subject:** Junteng Liu (LJT) — PhD candidate, HKUST NLP Group (`site_profile.yml`).
+**Site:** `mcpmark-eval-1031/LJT-Homepage` @ `master` (academicpages / Jekyll).
+**Owner:** Junteng Liu — PhD candidate, HKUST NLP Group.
+**Companion file:** `publication_fields.csv` (one row per target paper, all parsed fields).
 
-**Site and publication style used as the rendering reference**
+## The style these entries are written in
 
-| Surface | Path | Style |
+Read from the site itself, not assumed:
+
+| Surface | File | What it defines |
 |---|---|---|
-| Site source (academicpages) | branch `LJT-Homepage` → `_publications/*.md`, listed by `_pages/publications.html` and `index.md` | one Markdown file per paper, `YYYY-MM-DD-<slug>.md`, YAML front matter (`layout, title, collection, category, permalink, citation, excerpt, date, venue, paperurl`) + short body with `**Authors:**` and `**Links:**` |
-| Published site | branch `main` → `pages/publications.md` | flat reverse-chronological bullet list: `- <Title> (<Year>)` |
+| Collection | `_config.yml` → `collections.publications` | one Markdown file per paper in `_publications/`, permalink `/publications/:path/` |
+| Categories | `_config.yml` → `publication_category` | `books`, `manuscripts` (*Journal Articles*), `conferences` (*Conference Papers*), `preprints` (*Preprints*) |
+| Listing page | `_pages/publications.html` | groups by category in the order above, `{% for post in site.publications reversed %}` inside each group |
+| Item renderer | `_includes/archive-single.html` | prints `Published in <i>{{ post.venue }}</i>, {{ post.date \| date: "%Y" }}`, then the excerpt, then `Recommended citation: {{ post.citation }}` and a `Download Paper` link when `paperurl` is set |
+| Existing entries | `_publications/*.md` | front matter `title, collection, category, permalink, excerpt, date, venue, codeurl, citation`; body `**Authors:** …` / `**Venue:** …` / `[Code](…)` |
 
-**Target papers:** the 6 papers of the publication set (see `publication_fields.csv`, newest first).
+Every entry below keeps that exact shape. File names follow the collection's `YYYY-MM-DD-<slug>.md` convention and the permalinks keep the site's existing `/publication/<year>-<slug>` form so no published link breaks.
+
+**Target papers:** the six papers of the publication set, newest first.
 
 ---
 
-## A. New entries in the site's `_publications/` style (primary)
+## A. New `_publications/` entries
 
 ### 1. `_publications/2025-12-01-synlogic.md`
 
 ```markdown
 ---
-layout: single
 title: "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond"
 collection: publications
 category: conferences
-permalink: /publication/2025-12-01-synlogic
-citation: >-
-  Liu, Junteng, Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, and Junxian He. (2025). "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond." NeurIPS 2025. arXiv:2505.19641.
-excerpt: "A data synthesis framework that generates verifiable logical reasoning data at scale across 35 tasks with controllable difficulty."
+permalink: /publication/2025-synlogic
+excerpt: 'Synthesizing verifiable reasoning data at scale for learning logical reasoning and beyond'
 date: 2025-12-01
 venue: 'NeurIPS 2025'
 paperurl: 'https://arxiv.org/abs/2505.19641'
+codeurl: 'https://github.com/MiniMax-AI/SynLogic'
+citation: 'Junteng Liu, Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, Junxian He. (2025). "SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond." <i>NeurIPS 2025</i>.'
 ---
 
-SynLogic is a logical-reasoning data synthesis framework: it covers 35 distinct reasoning tasks (Sudoku, Game of 24, Cipher, Arrow Maze, ...), supports controllable difficulty, and every instance is checkable by rule-based verifiers, which makes the data directly usable for reinforcement learning.
+**Authors:** Junteng Liu, Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, Junxian He
 
-**Authors:** **Junteng Liu**, Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, Junxian He
+**Venue:** NeurIPS 2025
 
-**Links:**
-- [arXiv](https://arxiv.org/abs/2505.19641)
-- [Code](https://github.com/MiniMax-AI/SynLogic)
-- [Data](https://huggingface.co/datasets/MiniMaxAI/SynLogic)
+[Code](https://github.com/MiniMax-AI/SynLogic)
 ```
 
-### 2. `_publications/2025-03-01-perception-bottleneck-vlms-chart.md`
+### 2. `_publications/2025-03-01-vlm-chart.md`
 
 ```markdown
 ---
-layout: single
 title: "On the Perception Bottleneck of VLMs for Chart Understanding"
 collection: publications
-category: manuscripts
-permalink: /publication/2025-03-01-perception-bottleneck-vlms-chart
-citation: >-
-  Liu, Junteng, Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, and Junxian He. (2025). "On the Perception Bottleneck of VLMs for Chart Understanding." arXiv preprint arXiv:2503.18435.
-excerpt: "Isolates visual perception - rather than reasoning - as a key bottleneck of vision-language models on chart understanding."
+category: preprints
+permalink: /publication/2025-vlm-chart
+excerpt: 'On the perception bottleneck of vision-language models for chart understanding'
 date: 2025-03-01
 venue: 'arXiv preprint'
 paperurl: 'https://arxiv.org/abs/2503.18435'
+codeurl: 'https://github.com/hkust-nlp/Vision4Chart'
+citation: 'Junteng Liu, Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, Junxian He. (2025). "On the Perception Bottleneck of VLMs for Chart Understanding." <i>arXiv preprint</i>.'
 ---
 
-We analyse where vision-language models break down on chart questions and show that the vision encoder is a major bottleneck. The study covers CLIP training with hard-negative captions, CLIP evaluation on chart datasets, and LLaVA training/evaluation on FigureQA, DVQA, PlotQA, ChartQA, ChartBench, ChartX and MathVista.
+**Authors:** Junteng Liu, Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, Junxian He
 
-**Authors:** **Junteng Liu**, Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, Junxian He
+**Venue:** arXiv preprint, 2025
 
-**Links:**
-- [arXiv](https://arxiv.org/abs/2503.18435)
-- [Code](https://github.com/hkust-nlp/Vision4Chart)
-- [Data](https://huggingface.co/datasets/Junteng/Vision4Chart)
+[Code](https://github.com/hkust-nlp/Vision4Chart)
 ```
 
-### 3. `_publications/2024-11-01-universal-truthfulness-hyperplane.md`
+### 3. `_publications/2024-12-01-universal-truthfulness-hyperplane.md`
 
 ```markdown
 ---
-layout: single
 title: "On the Universal Truthfulness Hyperplane Inside LLMs"
 collection: publications
 category: conferences
-permalink: /publication/2024-11-01-universal-truthfulness-hyperplane
-citation: >-
-  Liu, Junteng, Shiqi Chen, Yu Cheng, and Junxian He. (2024). "On the Universal Truthfulness Hyperplane Inside LLMs." EMNLP 2024. arXiv:2407.08582.
-excerpt: "Probes trained on diverse datasets give positive evidence for a single, universal truthfulness hyperplane inside LLMs."
-date: 2024-11-01
+permalink: /publication/2024-universal-truthfulness-hyperplane
+excerpt: 'On the universal truthfulness hyperplane inside LLMs'
+date: 2024-12-01
 venue: 'EMNLP 2024'
 paperurl: 'https://arxiv.org/abs/2407.08582'
+codeurl: 'https://github.com/hkust-nlp/Universal_Truthfulness_Hyperplane'
+citation: 'Junteng Liu, Shiqi Chen, Yu Cheng, Junxian He. (2024). "On the Universal Truthfulness Hyperplane Inside LLMs." <i>EMNLP 2024</i>.'
 ---
 
-We examine whether a universal truthfulness hyperplane exists inside a model by designing and training a probe on diverse datasets. The approach substantially improves over existing results and conveys positive signals for the existence of such a hyperplane.
+**Authors:** Junteng Liu, Shiqi Chen, Yu Cheng, Junxian He
 
-**Authors:** **Junteng Liu**, Shiqi Chen, Yu Cheng, Junxian He
+**Venue:** EMNLP 2024
 
-**Links:**
-- [arXiv](https://arxiv.org/abs/2407.08582)
-- [Code](https://github.com/hkust-nlp/Universal_Truthfulness_Hyperplane)
+[Code](https://github.com/hkust-nlp/Universal_Truthfulness_Hyperplane)
 ```
 
-### 4. `_publications/2024-07-01-in-context-sharpness.md`
+### 4. `_publications/2024-07-01-in-context-sharpness-alerts.md`
 
 ```markdown
 ---
-layout: single
 title: "In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation"
 collection: publications
 category: conferences
-permalink: /publication/2024-07-01-in-context-sharpness
-citation: >-
-  Chen, Shiqi, Miao Xiong, Junteng Liu, Zhengxuan Wu, Teng Xiao, Siyang Gao, and Junxian He. (2024). "In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation." ICML 2024. arXiv:2403.01548.
-excerpt: "Correct generations show sharper in-context activations; an entropy-based sharpness signal is folded into decoding to reduce hallucination."
+permalink: /publication/2024-in-context-sharpness-alerts
+excerpt: 'In-context sharpness as alerts: an inner representation perspective for hallucination mitigation'
 date: 2024-07-01
 venue: 'ICML 2024'
 paperurl: 'https://arxiv.org/abs/2403.01548'
+codeurl: 'https://github.com/hkust-nlp/Activation_Decoding'
+citation: 'Shiqi Chen, Miao Xiong, Junteng Liu, Zhengxuan Wu, Teng Xiao, Siyang Gao, Junxian He. (2024). "In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation." <i>ICML 2024</i>.'
 ---
 
-Correct generations tend to have sharper context activations in the hidden states of in-context tokens than incorrect ones. We quantify this sharpness with an entropy-based metric and use it to adjust the next-token distribution during decoding, improving factuality.
+**Authors:** Shiqi Chen, Miao Xiong, Junteng Liu, Zhengxuan Wu, Teng Xiao, Siyang Gao, Junxian He
 
-**Authors:** Shiqi Chen, Miao Xiong, **Junteng Liu**, Zhengxuan Wu, Teng Xiao, Siyang Gao, Junxian He
+**Venue:** ICML 2024
 
-**Links:**
-- [arXiv](https://arxiv.org/abs/2403.01548)
-- [Code](https://github.com/hkust-nlp/Activation_Decoding)
+[Code](https://github.com/hkust-nlp/Activation_Decoding)
 ```
 
 ### 5. `_publications/2023-12-01-c-eval.md`
 
 ```markdown
 ---
-layout: single
 title: "C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models"
 collection: publications
 category: conferences
-permalink: /publication/2023-12-01-c-eval
-citation: >-
-  Huang, Yuzhen, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, Junteng Liu, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, and Junxian He. (2023). "C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models." NeurIPS 2023, Datasets and Benchmarks Track. arXiv:2305.08322.
-excerpt: "A multi-level, multi-discipline Chinese evaluation suite for foundation models."
+permalink: /publication/2023-c-eval
+excerpt: 'A multi-level multi-discipline Chinese evaluation suite for foundation models'
 date: 2023-12-01
 venue: 'NeurIPS 2023'
 paperurl: 'https://arxiv.org/abs/2305.08322'
+codeurl: 'https://github.com/hkust-nlp/ceval'
+citation: 'Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, Junteng Liu, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He. (2023). "C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models." <i>NeurIPS 2023</i>.'
 ---
 
-C-Eval is a comprehensive Chinese evaluation suite for foundation models, spanning multiple difficulty levels and disciplines.
+**Authors:** Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, Junteng Liu, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He
 
-**Authors:** Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, **Junteng Liu**, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He
+**Venue:** NeurIPS 2023
 
-**Links:**
-- [arXiv](https://arxiv.org/abs/2305.08322)
-- [Code](https://github.com/hkust-nlp/ceval)
+[Code](https://github.com/hkust-nlp/ceval)
 ```
 
-### 6. `_publications/2023-12-01-composing-parameter-efficient-modules.md`
+### 6. `_publications/2023-12-01-composing-modules.md`
 
 ```markdown
 ---
-layout: single
 title: "Composing Parameter-Efficient Modules with Arithmetic Operations"
 collection: publications
 category: conferences
-permalink: /publication/2023-12-01-composing-parameter-efficient-modules
-citation: >-
-  Zhang, Jinghan, Shiqi Chen, Junteng Liu, and Junxian He. (2023). "Composing Parameter-Efficient Modules with Arithmetic Operations." NeurIPS 2023. arXiv:2306.14870.
-excerpt: "Training-free composition of parameter-efficient modules through linear arithmetic operations in weight space."
+permalink: /publication/2023-composing-modules
+excerpt: 'Composing parameter-efficient modules with arithmetic operations'
 date: 2023-12-01
 venue: 'NeurIPS 2023'
 paperurl: 'https://arxiv.org/abs/2306.14870'
+codeurl: 'https://github.com/hkust-nlp/PEM_composition'
+citation: 'Jinghan Zhang, Shiqi Chen, Junteng Liu, Junxian He. (2023). "Composing Parameter-Efficient Modules with Arithmetic Operations." <i>NeurIPS 2023</i>.'
 ---
 
-We define addition and negation operators over parameter-efficient modules and compose them by linear arithmetic in weight space, with no additional training. Applications include distribution generalization, multi-tasking, unlearning, domain transfer, and detoxifying Alpaca-LoRA.
+**Authors:** Jinghan Zhang, Shiqi Chen, Junteng Liu, Junxian He
 
-**Authors:** Jinghan Zhang, Shiqi Chen, **Junteng Liu**, Junxian He
+**Venue:** NeurIPS 2023
 
-**Links:**
-- [arXiv](https://arxiv.org/abs/2306.14870)
-- [Code](https://github.com/hkust-nlp/PEM_composition)
-- [Data](https://huggingface.co/datasets/jinghan23/DatasetofPEMCompostition)
+[Code](https://github.com/hkust-nlp/PEM_composition)
 ```
 
 ---
 
-## B. Same entries in the published-site list style (`pages/publications.md`)
+## B. How they come out on `/publications/`
+
+`_pages/publications.html` walks `publication_category` in `_config.yml` order and reverses each group, so the page reads:
+
+### Conference Papers
+
+> **SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond**
+> Published in *NeurIPS 2025*, 2025
+> Synthesizing verifiable reasoning data at scale for learning logical reasoning and beyond
+> Recommended citation: Junteng Liu, Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, Junxian He. (2025). "SynLogic: …" *NeurIPS 2025*. — Download Paper
+
+> **On the Universal Truthfulness Hyperplane Inside LLMs**
+> Published in *EMNLP 2024*, 2024 — Download Paper
+
+> **In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation**
+> Published in *ICML 2024*, 2024 — Download Paper
+
+> **Composing Parameter-Efficient Modules with Arithmetic Operations**
+> Published in *NeurIPS 2023*, 2023 — Download Paper
+
+> **C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models**
+> Published in *NeurIPS 2023*, 2023 — Download Paper
+
+### Preprints
+
+> **On the Perception Bottleneck of VLMs for Chart Understanding**
+> Published in *arXiv preprint*, 2025 — Download Paper
+
+*(The two 2023-12-01 papers share a date, so Jekyll breaks the tie on file name and `reversed` puts `composing-modules` ahead of `c-eval`. Every other position is a pure date ordering. "Conference Papers" precedes "Preprints" because that is the order the categories are declared in `_config.yml`.)*
+
+---
+
+## C. Same six entries in the about-page list style
+
+`_pages/about.md` lists publications grouped by year, numbered, with the site owner in bold:
 
 ```markdown
-# Publications
+## Publications
 
-- SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond (2025)
-- On the Perception Bottleneck of VLMs for Chart Understanding (2025)
-- On the Universal Truthfulness Hyperplane Inside LLMs (2024)
-- In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation (2024)
-- C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models (2023)
-- Composing Parameter-Efficient Modules with Arithmetic Operations (2023)
+### 2025
+
+1. **SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond**  
+   **Junteng Liu**, Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, Junxian He  
+   *NeurIPS 2025*  
+   [Paper](https://arxiv.org/abs/2505.19641) | [Code](https://github.com/MiniMax-AI/SynLogic)
+
+2. **On the Perception Bottleneck of VLMs for Chart Understanding**  
+   **Junteng Liu**, Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, Junxian He  
+   *arXiv preprint, 2025*  
+   [Paper](https://arxiv.org/abs/2503.18435) | [Code](https://github.com/hkust-nlp/Vision4Chart)
+
+### 2024
+
+3. **On the Universal Truthfulness Hyperplane Inside LLMs**  
+   **Junteng Liu**, Shiqi Chen, Yu Cheng, Junxian He  
+   *Proceedings of EMNLP 2024*  
+   [Paper](https://arxiv.org/abs/2407.08582) | [Code](https://github.com/hkust-nlp/Universal_Truthfulness_Hyperplane)
+
+4. **In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation**  
+   Shiqi Chen, Miao Xiong, **Junteng Liu**, Zhengxuan Wu, Teng Xiao, Siyang Gao, Junxian He  
+   *Proceedings of ICML 2024*  
+   [Paper](https://arxiv.org/abs/2403.01548) | [Code](https://github.com/hkust-nlp/Activation_Decoding)
+
+### 2023
+
+5. **C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models**  
+   Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, **Junteng Liu**, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He  
+   *Advances in Neural Information Processing Systems (NeurIPS 2023)*  
+   [Paper](https://arxiv.org/abs/2305.08322) | [Code](https://github.com/hkust-nlp/ceval)
+
+6. **Composing Parameter-Efficient Modules with Arithmetic Operations**  
+   Jinghan Zhang, Shiqi Chen, **Junteng Liu**, Junxian He  
+   *Advances in Neural Information Processing Systems (NeurIPS 2023)*  
+   [Paper](https://arxiv.org/abs/2306.14870) | [Code](https://github.com/hkust-nlp/PEM_composition)
 ```
 
 ---
 
-## C. `publication_fields.csv` <-> preview consistency check
+## D. `publication_fields.csv` ↔ preview consistency check
 
-| # | title | venue_abbr / `venue` | year / `date` | paper_url / `paperurl` | code_url | bold_author | match |
-|---|---|---|---|---|---|---|---|
-| 1 | SynLogic: Synthesizing Verifiable Reasoning Data at Scale ... | NeurIPS 2025 | 2025 / 2025-12-01 | arxiv.org/abs/2505.19641 | MiniMax-AI/SynLogic | **Junteng Liu** (1st) | OK |
-| 2 | On the Perception Bottleneck of VLMs for Chart Understanding | arXiv preprint | 2025 / 2025-03-01 | arxiv.org/abs/2503.18435 | hkust-nlp/Vision4Chart | **Junteng Liu** (1st) | OK |
-| 3 | On the Universal Truthfulness Hyperplane Inside LLMs | EMNLP 2024 | 2024 / 2024-11-01 | arxiv.org/abs/2407.08582 | hkust-nlp/Universal_Truthfulness_Hyperplane | **Junteng Liu** (1st) | OK |
-| 4 | In-Context Sharpness as Alerts ... | ICML 2024 | 2024 / 2024-07-01 | arxiv.org/abs/2403.01548 | hkust-nlp/Activation_Decoding | **Junteng Liu** (3rd) | OK |
-| 5 | C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite ... | NeurIPS 2023 | 2023 / 2023-12-01 | arxiv.org/abs/2305.08322 | hkust-nlp/ceval | **Junteng Liu** (7th) | OK |
-| 6 | Composing Parameter-Efficient Modules with Arithmetic Operations | NeurIPS 2023 | 2023 / 2023-12-01 | arxiv.org/abs/2306.14870 | hkust-nlp/PEM_composition | **Junteng Liu** (3rd) | OK |
+| # | slug | `category` | `date` / year | `venue` | `paperurl` (arXiv id) | `codeurl` | authors | owner position |
+|---|---|---|---|---|---|---|---|---|
+| 1 | synlogic | conferences | 2025-12-01 / 2025 | NeurIPS 2025 | 2505.19641 | MiniMax-AI/SynLogic | 15 | 1st |
+| 2 | vlm-chart | preprints | 2025-03-01 / 2025 | arXiv preprint | 2503.18435 | hkust-nlp/Vision4Chart | 6 | 1st |
+| 3 | universal-truthfulness-hyperplane | conferences | 2024-12-01 / 2024 | EMNLP 2024 | 2407.08582 | hkust-nlp/Universal_Truthfulness_Hyperplane | 4 | 1st |
+| 4 | in-context-sharpness-alerts | conferences | 2024-07-01 / 2024 | ICML 2024 | 2403.01548 | hkust-nlp/Activation_Decoding | 7 | 3rd |
+| 5 | c-eval | conferences | 2023-12-01 / 2023 | NeurIPS 2023 | 2305.08322 | hkust-nlp/ceval | 13 | 7th |
+| 6 | composing-modules | conferences | 2023-12-01 / 2023 | NeurIPS 2023 | 2306.14870 | hkust-nlp/PEM_composition | 4 | 3rd |
+
+All six rows agree with the entries in section A: same title, same author order, same category, same date, same venue, same URLs. Every `category` value is one of the four declared in `_config.yml`.
 
 ---
 
-## D. Conventions and provenance
+## E. Provenance and conventions
 
-1. **Author order** is verbatim from each paper's official BibTeX; the site owner (**Junteng Liu**) is bolded, matching the site's author-highlighting convention.
-2. **`date` rule** (used only for file naming and reverse-chronological ordering): venue month for peer-reviewed papers (NeurIPS -> December, EMNLP -> November, ICML -> July), arXiv posting month for the preprint; day is pinned to `01`.
-3. **`category`**: `conferences` for peer-reviewed venue papers, `manuscripts` for the arXiv preprint (switch to a dedicated `preprints` category if `_config.yml` defines one).
-4. **Verified in-environment** (official repositories reachable from GitHub):
-   - `MiniMax-AI/SynLogic` - BibTeX `eprint 2505.19641`, description "[NeurIPS 2025] The official repo of SynLogic ..."
-   - `hkust-nlp/Vision4Chart` - BibTeX `eprint 2503.18435`, dataset/model links
-   - `hkust-nlp/Universal_Truthfulness_Hyperplane` - BibTeX `arXiv:2407.08582`, News: accepted by EMNLP 2024
-   - `hkust-nlp/Activation_Decoding` - BibTeX + description: ICML 2024, `arXiv:2403.01548`
-   - `hkust-nlp/PEM_composition` - BibTeX + News: NeurIPS 2023, `arXiv:2306.14870`
-   - `hkust-nlp/ceval` - description: "Official github repo for C-Eval ... [NeurIPS 2023]"
-5. **Corrections vs. what was previously on the site**: the earlier `_publications` entries carried two wrong `paperurl` values - SynLogic (`arXiv:2502.11026`) and Universal Truthfulness Hyperplane (`arXiv:2412.04268`) - and pointed SynLogic's code at `Vicent0205/SynLogic`. The verified values are `arXiv:2505.19641` / `arXiv:2407.08582` and `github.com/MiniMax-AI/SynLogic`. SynLogic's venue is also now known (NeurIPS 2025) rather than "arXiv preprint".
-6. **Single unverified field**: C-Eval's arXiv id (`2305.08322`) comes from the public record and could not be re-confirmed from a repository file in this environment; it is flagged in the `field_source` column of `publication_fields.csv`.
+**1. Where each field was read.** Titles and author orders come from each paper's official BibTeX; venues, arXiv ids and code URLs were re-read from the repositories in this session:
+
+| Paper | Repository | Evidence |
+|---|---|---|
+| SynLogic | `MiniMax-AI/SynLogic` | BibTeX `liu2025synlogic`, `eprint 2505.19641`, `cs.AI`; description "[NeurIPS 2025] The official repo of SynLogic …"; dataset `MiniMaxAI/SynLogic` |
+| Perception Bottleneck | `hkust-nlp/Vision4Chart` | BibTeX `liu2025perceptionbottleneckvlmschart`, `eprint 2503.18435`, `cs.CV`; "Released Resources" → dataset `Junteng/Vision4Chart` |
+| Universal Truthfulness Hyperplane | `hkust-nlp/Universal_Truthfulness_Hyperplane` | BibTeX `liu2024universal`, `arXiv:2407.08582`; News "accepted by EMNLP 2024" |
+| In-Context Sharpness | `hkust-nlp/Activation_Decoding` | BibTeX `chen2024incontext`, `arxiv.org/abs/2403.01548`; description "… (ICML 2024)" |
+| C-Eval | `hkust-nlp/ceval` | Paper link `arxiv.org/abs/2305.08322`; News "[2023.10.26] C-Eval has been accepted to NeurIPS 2023"; BibTeX `huang2023ceval` |
+| Composing PEMs | `hkust-nlp/PEM_composition` | News "accepted to NeurIPS 2023"; paper link `arxiv.org/abs/2306.14870`; BibTeX `zhang2023composing` |
+
+**2. `date` rule.** The `date` field only drives the file name and the reverse-chronological order. Peer-reviewed papers use the venue month (NeurIPS → December, EMNLP → the site's existing December value, ICML → July); the preprint uses its arXiv posting month (2503 → March 2025). The day is always `01`, matching every entry already in the collection.
+
+**3. `category`.** `conferences` for the five papers with a confirmed venue, `preprints` for the one paper that claims no venue anywhere in its repository. `manuscripts` and `books` are unused — nothing in this set is a journal article or a book.
+
+**4. Excerpts and citation shape are the site's, unchanged.** Each `excerpt` is the string the site already carries for that paper, and each `citation` follows the dominant site pattern `Authors. (Year). "Title." <i>Venue</i>.`
+
+**5. Differences from what is on the site today — all evidence-backed, none cosmetic.**
+
+| Paper | Field | Currently on the site | New entry | Why |
+|---|---|---|---|---|
+| SynLogic | `venue` / `category` | `arXiv preprint` / `preprints` | `NeurIPS 2025` / `conferences` | The official repo's description states "[NeurIPS 2025] The official repo of SynLogic …" |
+| SynLogic | file name | `2025-06-08-synlogic.md` | `2025-12-01-synlogic.md` | The current name contradicts the file's own `date: 2025-03-01`; the new name matches the new venue date |
+| SynLogic | `codeurl` | `github.com/Vicent0205/SynLogic` | `github.com/MiniMax-AI/SynLogic` | See note 6 |
+| Perception Bottleneck | file name | `2025-06-08-vlm-chart.md` | `2025-03-01-vlm-chart.md` | The current name contradicts the file's own `date: 2025-03-01`; the new name matches it and the arXiv id `2503.*` |
+| Perception Bottleneck | `codeurl` | `github.com/Vicent0205/Vision4Chart` | `github.com/hkust-nlp/Vision4Chart` | See note 6 |
+| Universal Truthfulness | `codeurl` | `github.com/Vicent0205/Universal_Truthfulness_Hyperplane` | `github.com/hkust-nlp/Universal_Truthfulness_Hyperplane` | See note 6 |
+| In-Context Sharpness, C-Eval, Composing PEMs | `codeurl` | *(absent)* | `hkust-nlp/Activation_Decoding`, `hkust-nlp/ceval`, `hkust-nlp/PEM_composition` | Each repo's README identifies itself as that paper's official implementation |
+| all six | `paperurl` | *(absent)* | arXiv abstract URL | `_includes/archive-single.html` already renders `paperurl` as a "Download Paper" link; the ids come from the official BibTeX |
+
+**6. Why the `Vicent0205/*` code links were replaced.** The three code URLs on the site point at `Vicent0205/SynLogic`, `Vicent0205/Vision4Chart` and `Vicent0205/Universal_Truthfulness_Hyperplane`. A repository listing for that account returns 9 repositories and none of them is any of those three, so those paths carry no repository of their own. The URLs used above are the repositories that actually hold the code and that each paper's own BibTeX/README points to.
+
+**7. Nothing was invented.** No abstract, teaser image, slides URL, BibTeX file, award or venue was added beyond what the sources above state. Fields with no evidence are simply absent: no `dataurl` for the Universal Truthfulness Hyperplane or the In-Context Sharpness papers (their repos publish none), and no venue for the Perception Bottleneck paper.
