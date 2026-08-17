@@ -4,7 +4,7 @@ The playlist descriptions supply exactly five verbatim project URLs. This docume
 `target_set.csv`) reconstruct the **intended target set**: one row per description-listed
 project, enriched with metadata probed live from the GitHub REST API.
 
-- Snapshot taken: **2026-08-09 ~18:56 UTC**
+- Snapshot taken: **2026-08-17 ~08:45 UTC**
 - Source of truth for membership: the **playlist descriptions** (verbatim URLs)
 - Source of truth for metadata: **live GitHub API** (`GET /repos/{owner}/{repo}`, `.../releases/latest`)
 - Rows in the target set: **5 / 5** (nothing dropped, nothing added)
@@ -13,11 +13,11 @@ project, enriched with metadata probed live from the GitHub REST API.
 
 | # | Original URL (verbatim) | Listed owner/repo | Resolved owner/repo | Redirect? | Language | License | Default branch | Stars | Latest release |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | `https://github.com/openai/codex` | `openai/codex` | `openai/codex` | no | Rust | Apache-2.0 | `main` | 104,938 | `rust-v0.147.0` |
-| 2 | `https://github.com/google-gemini/gemini-cli` | `google-gemini/gemini-cli` | `google-gemini/gemini-cli` | no | TypeScript | Apache-2.0 | `main` | 106,432 | `v0.54.4` |
-| 3 | `https://github.com/QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | no | Python | none detected | `main` | 16,776 | none |
-| 4 | `https://github.com/QwenLM/Qwen3-TTS` | `QwenLM/Qwen3-TTS` | `QwenLM/Qwen3-TTS` | no | Python | Apache-2.0 | `main` | 12,878 | none |
-| 5 | `https://github.com/All-Hands-AI/OpenHands` | `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` ⚠️ | **yes** | TypeScript | MIT | `main` | 83,541 | `v1.12.0` |
+| 1 | `https://github.com/openai/codex` | `openai/codex` | `openai/codex` | no | Rust | Apache-2.0 | `main` | 106,396 | `rust-v0.147.0` |
+| 2 | `https://github.com/google-gemini/gemini-cli` | `google-gemini/gemini-cli` | `google-gemini/gemini-cli` | no | TypeScript | Apache-2.0 | `main` | 106,535 | `v0.55.1` |
+| 3 | `https://github.com/QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | no | Python | none detected | `main` | 16,792 | none |
+| 4 | `https://github.com/QwenLM/Qwen3-TTS` | `QwenLM/Qwen3-TTS` | `QwenLM/Qwen3-TTS` | no | Python | Apache-2.0 | `main` | 12,988 | none |
+| 5 | `https://github.com/All-Hands-AI/OpenHands` | `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` ⚠️ | **yes** | TypeScript | MIT | `main` | 84,261 | `v1.13.0` |
 
 Live descriptions (as returned by the API):
 
@@ -35,8 +35,8 @@ Live descriptions (as returned by the API):
    listed path.** `All-Hands-AI/OpenHands` has been transferred and GitHub now serves it as
    `OpenHands/OpenHands`. The row is kept, the listed path stays byte-for-byte in
    `original_url` / `listed_owner_repo`, and the canonical path is recorded *additively* in
-   `resolved_owner_repo` with `redirect_detected = yes`. The listed path is never overwritten
-   and the entry is never de-duplicated away.
+   `resolved_owner_repo` with `redirect_detected = yes`. The listed path is never
+   overwritten and the entry is never de-duplicated away.
 3. **A description-listed repo is preserved even when it is off-theme.** `QwenLM/Qwen3-TTS`
    is a speech-synthesis project, not a coding agent, so a theme-based filter would discard
    it. It is listed in a description, therefore it stays in the target set (flagged in
@@ -44,8 +44,9 @@ Live descriptions (as returned by the API):
 4. **Missing metadata is reported, not invented.** `QwenLM/Qwen3-Coder` has no license
    detected by the API (`license = null`) and neither Qwen repository has a published
    release, so those cells read `none` rather than being guessed or back-filled.
-5. **No silent normalisation.** Owner/repo casing (`QwenLM`, `All-Hands-AI`, `OpenHands`) is
-   kept exactly as published; URLs are not rewritten to `www`/`.git`/trailing-slash variants.
+5. **No silent normalisation.** Owner/repo casing (`QwenLM`, `All-Hands-AI`, `OpenHands`)
+   is kept exactly as published; URLs are not rewritten to `www`/`.git`/trailing-slash
+   variants.
 
 ## Verbatim URL check
 
