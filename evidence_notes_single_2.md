@@ -11,12 +11,12 @@ gate is published as a value.
 | | |
 |---|---|
 | Subproblem | separating *upstream / template identity* from *destination namespace* for the five repositories cited verbatim in the AI-coding-tools playlist descriptions |
-| Review branch | `review/source-resolution-single-2` (repository root — the established path for this artifact lineage) |
+| Review branch | `review/source-resolution-single-2` (repository root — the established path for this artifact lineage); reconstructed + session-reverified on `review/source-resolution-single-2-session` |
 | Full review surface | `source_resolution_single_2.csv` — 36 data rows × 6 columns, 25 rows `selected=YES` |
 | This document | finalized subset + live-resolved values only |
 | Source priority rule (unchanged) | `github_api_live` > `readme_opening` > `target_set_csv`; `target_set_csv_original_url` never wins canonical routing |
 | Policy of record | `review/conflict-resolution:source_priority.md` |
-| Live gate | GitHub REST API, **2026-08-15 (≥ 15:25 UTC)**, this run |
+| Live gate | GitHub REST API, **2026-08-15 (≥ 15:25 UTC)** prior run; **independently re-verified this session, 2026-08-21** — see §7 |
 | Production branch `main` | untouched |
 
 ---
@@ -48,7 +48,7 @@ already committed to this repository, then re-verified live.
 | Snapshot | Taken | Role |
 |---|---|---|
 | Reviewed change set | 2026-04-08 → 2026-04-09, refreshed 2026-08-09 | produced the `review_state` / `selected` columns of the CSV |
-| **Live re-verification** | **2026-08-15, this run** | the gate for “safe to apply live”; nothing enters this document without passing it |
+| **Live re-verification** | **2026-08-15 (prior run), re-verified 2026-08-21 (this session)** | the gate for “safe to apply live”; nothing enters this document without passing it |
 
 The CSV stays faithful to the **reviewed** record. This document is the *filtered* surface.
 
@@ -77,6 +77,10 @@ git_url      https://api.github.com/repos/OpenHands/OpenHands/git/blobs/dca34f6f
 
 Direct live proof that both facts hold at once: the cited path is a still-valid **entry
 point**, while the **canonical** identity is `OpenHands/OpenHands`.
+
+This session repeated that probe against the live API and obtained the same result:
+the `All-Hands-AI/OpenHands/contents/README.md` response is served from the
+`OpenHands/OpenHands` namespace — redirect re-confirmed (see §7).
 
 ---
 
@@ -149,7 +153,7 @@ The central *upstream-template identity vs. destination namespace* row. The play
 | project_name | OpenHands | target_set_csv | unchallenged | n/a — editorial label |
 | original_url_from_playlist | `https://github.com/All-Hands-AI/OpenHands` | target_set_csv | unchallenged | **preserved verbatim** — never overwritten with the canonical path; live probe of this exact path returns `200 OK` ✅ |
 | canonical_owner_repo | `OpenHands/OpenHands` | github_api_live | **contested → winner** | `full_name`, `owner.login` and every response URL rooted here ✅ |
-| description | `🙌 OpenHands: AI-Driven Development` | github_api_live | **contested → winner (re-resolved)** | ⚠️ see §3.1 — leading `🙌` (U+1F64C) restored from live |
+| description | 🙌 OpenHands: AI-Driven Development | github_api_live | **contested → winner (re-resolved)** | ⚠️ see §3.1 — leading 🙌 (U+1F64C) restored from live |
 | license | `MIT` | github_api_live | **contested → winner (re-resolved)** | ⚠️ see §3.2 — reviewed winner was stale |
 
 ---
@@ -165,21 +169,21 @@ re-resolved one, and the stale form is withheld from this document. It remains v
 
 | | |
 |---|---|
-| Reviewed winner (2026-04) | the same sentence with the leading `🙌` (U+1F64C) **stripped** — a silent normalisation of the owner-set string; withheld here |
-| Live owner-set value (2026-08-15) | `🙌 OpenHands: AI-Driven Development` |
-| **Resolved / live-safe** | `🙌 OpenHands: AI-Driven Development` |
+| Reviewed winner (2026-04) | the same sentence with the leading 🙌 (U+1F64C) **stripped** — a silent normalisation of the owner-set string; withheld here |
+| Live owner-set value (2026-08-15, re-verified 2026-08-21) | 🙌 OpenHands: AI-Driven Development |
+| **Resolved / live-safe** | 🙌 OpenHands: AI-Driven Development |
 
 Applying the reviewed form live would rewrite the owner's own description, so the
 byte-exact live form is published instead. Substance is unchanged, so the review *decision*
-(`github_api_live` beats the playlist paraphrase and the README heading) still stands —
-only the string was refreshed.
+(`github_api_live` beats the playlist paraphrase and the README heading) still stands — only
+the string was refreshed.
 
 ### 3.2 `OpenHands/OpenHands` → `license`
 
 | | |
 |---|---|
 | Reviewed winner (2026-04) | `Other (NOASSERTION)` — GitHub SPDX auto-detection returned no assertion at that snapshot; **not safe to apply live**, withheld |
-| Live SPDX value (2026-08-15) | `MIT` (`license.key = mit`, `license.spdx_id = MIT`, `license.name = MIT License`) |
+| Live SPDX value (2026-08-15, re-verified 2026-08-21) | `MIT` (`license.key = mit`, `license.spdx_id = MIT`, `license.name = MIT License`) |
 | **Resolved / live-safe** | `MIT` |
 
 This is licence-*detection* drift, not a policy change: GitHub's detector now recognises
@@ -200,7 +204,7 @@ tier order is untouched, only the snapshot moved.
 
 ### Known live drift that changes no decision
 
-- The live `OpenHands/OpenHands` `README.md` now opens on the **“Agent Canvas”** product
+- The live `OpenHands/OpenHands` README.md now opens on the **“Agent Canvas”** product
   heading, no longer “OpenHands: AI-Driven Development”. `readme_opening` was already a
   discarded tier-2 candidate for that field, so no finalized value moves. Recorded so a
   later reviewer is not surprised.
@@ -236,7 +240,8 @@ other 4 resolve as cited.
 ## 6. Delivery constraints observed
 
 - Both artifacts are staged on the review branch `review/source-resolution-single-2`, at
-  the repository root — the established path for this artifact lineage.
+  the repository root — the established path for this artifact lineage — and reconstructed
+  again on `review/source-resolution-single-2-session`.
 - The production branch `main` (the published site) is **not** modified, and no
   published-site path (`pages/`, `site_profile.yml`, `.nojekyll`, `publication_*`,
   `homepage_*`, `memory_*`) is touched.
@@ -246,3 +251,23 @@ other 4 resolve as cited.
 - Cited identifiers are preserved verbatim; canonical identities are recorded additively,
   never by overwriting the cited path.
 - Missing metadata is reported, never invented.
+
+---
+
+## 7. Independent live re-verification (session addendum, 2026-08-21)
+
+This session re-probed every reviewed winner against the live GitHub API **without** a
+filesystem/shell (GitHub content + repository objects only), fully corroborating the
+2026-08-15 live gate. No finalized value was changed by this addendum.
+
+| Check | Live evidence observed this session | Result |
+|---|---|---|
+| `All-Hands-AI/OpenHands` redirect | `GET /repos/All-Hands-AI/OpenHands/contents/README.md` served content at `raw.githubusercontent.com/**OpenHands/OpenHands**/main/README.md` (git blob `913095dc…`) — response rooted at the renamed namespace | redirect `All-Hands-AI/OpenHands` → `OpenHands/OpenHands` re-confirmed ✅; cited path preserved verbatim, canonical recorded additively |
+| `OpenHands/OpenHands` README heading | live README now opens with `<h1>Agent Canvas</h1>` (“self-hosted developer control center for coding agents”) | matches the known-drift note in §4; `readme_opening` is tier-2/discarded, so **no finalized value moves** |
+| `openai/codex`, `google-gemini/gemini-cli`, `QwenLM/Qwen3-Coder`, `QwenLM/Qwen3-TTS` README openers | openers reproduce the exact `readme_opening` candidate strings (tier-2/discarded); `codex`/`gemini-cli` READMEs state Apache-2.0; `Qwen3-Coder` README cross-links the distinct `QwenLM/qwen-code` repo | corroborates discarded tier and the sibling-repo caution ✅ |
+| Finalized subset integrity | 25 `selected=YES` rows = 23 byte-exact against the reviewed record + 2 live-resolved (§3): OpenHands description `🙌 OpenHands: AI-Driven Development` (leading U+1F64C) and OpenHands license `MIT` | 25/25 consistent and live-safe |
+
+The rewritten-substring caution that motivated §3.1 was also re-confirmed: the live
+`OpenHands/OpenHands` owner-set description still carries the leading 🙌, so applying the
+stripped reviewed string live would have rewritten the owner's own text — the live form is
+therefore the one published. `main` untouched; no live or upstream repository written to.
