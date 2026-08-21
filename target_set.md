@@ -1,8 +1,6 @@
 # Playlist Target Set — Reconstructed
 
-The playlist descriptions supply exactly five verbatim project URLs. This document (and
-`target_set.csv`) reconstruct the **intended target set**: one row per description-listed
-project, enriched with metadata probed live from the GitHub REST API.
+The playlist descriptions supply exactly five verbatim project URLs. This document (and `target_set.csv`) reconstruct the **intended target set**: one row per description-listed project, enriched with metadata probed live from the GitHub REST API.
 
 - Snapshot taken: **2026-08-17 ~08:45 UTC**
 - Source of truth for membership: the **playlist descriptions** (verbatim URLs)
@@ -20,7 +18,6 @@ project, enriched with metadata probed live from the GitHub REST API.
 | 5 | `https://github.com/All-Hands-AI/OpenHands` | `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` ⚠️ | **yes** | TypeScript | MIT | `main` | 84,261 | `v1.13.0` |
 
 Live descriptions (as returned by the API):
-
 1. `openai/codex` — Lightweight coding agent that runs in your terminal
 2. `google-gemini/gemini-cli` — An open-source AI agent that brings the power of Gemini directly into your terminal.
 3. `QwenLM/Qwen3-Coder` — Qwen3-Coder is the code version of Qwen3, the large language model series developed by Qwen team.
@@ -29,29 +26,15 @@ Live descriptions (as returned by the API):
 
 ## Reconstruction rules applied
 
-1. **Membership is defined by the descriptions.** Every URL that appears verbatim in a
-   playlist description becomes exactly one row. Five URLs in, five rows out.
-2. **A description-listed repo is preserved even when the live lookup disagrees with the
-   listed path.** `All-Hands-AI/OpenHands` has been transferred and GitHub now serves it as
-   `OpenHands/OpenHands`. The row is kept, the listed path stays byte-for-byte in
-   `original_url` / `listed_owner_repo`, and the canonical path is recorded *additively* in
-   `resolved_owner_repo` with `redirect_detected = yes`. The listed path is never
-   overwritten and the entry is never de-duplicated away.
-3. **A description-listed repo is preserved even when it is off-theme.** `QwenLM/Qwen3-TTS`
-   is a speech-synthesis project, not a coding agent, so a theme-based filter would discard
-   it. It is listed in a description, therefore it stays in the target set (flagged in
-   `notes` instead of being dropped).
-4. **Missing metadata is reported, not invented.** `QwenLM/Qwen3-Coder` has no license
-   detected by the API (`license = null`) and neither Qwen repository has a published
-   release, so those cells read `none` rather than being guessed or back-filled.
-5. **No silent normalisation.** Owner/repo casing (`QwenLM`, `All-Hands-AI`, `OpenHands`)
-   is kept exactly as published; URLs are not rewritten to `www`/`.git`/trailing-slash
-   variants.
+1. **Membership is defined by the descriptions.** Every URL that appears verbatim in a playlist description becomes exactly one row. Five URLs in, five rows out.
+2. **A description-listed repo is preserved even when the live lookup disagrees with the listed path.** `All-Hands-AI/OpenHands` has been transferred and GitHub now serves it as `OpenHands/OpenHands`. The row is kept, the listed path stays byte-for-byte in `original_url` / `listed_owner_repo`, and the canonical path is recorded *additively* in `resolved_owner_repo` with `redirect_detected = yes`. The listed path is never overwritten and the entry is never de-duplicated away.
+3. **A description-listed repo is preserved even when it is off-theme.** `QwenLM/Qwen3-TTS` is a speech-synthesis project, not a coding agent, so a theme-based filter would discard it. It is listed in a description, therefore it stays in the target set (flagged in `notes` instead of being dropped).
+4. **Missing metadata is reported, not invented.** `QwenLM/Qwen3-Coder` has no license detected by the API (`license = null`) and neither Qwen repository has a published release, so those cells read `none` rather than being guessed or back-filled.
+5. **No silent normalisation.** Owner/repo casing (`QwenLM`, `All-Hands-AI`, `OpenHands`) is kept exactly as published; URLs are not rewritten to `www`/`.git`/trailing-slash variants.
 
 ## Verbatim URL check
 
 All five URLs appear below exactly as given in the playlist descriptions:
-
 1. `https://github.com/openai/codex`
 2. `https://github.com/google-gemini/gemini-cli`
 3. `https://github.com/QwenLM/Qwen3-Coder`
@@ -67,5 +50,4 @@ All five URLs appear below exactly as given in the playlist descriptions:
 | Branch | `review/preserve-a-description-listed-repo-even` |
 | Production branch (`main`) | untouched — no production file path was modified |
 
-The changes are delivered on the review branch above so they can be inspected before any
-promotion; `main` and the existing published file paths are deliberately left unchanged.
+The changes are delivered on the review branch above so they can be inspected before any promotion; `main` and the existing published file paths are deliberately left unchanged.
