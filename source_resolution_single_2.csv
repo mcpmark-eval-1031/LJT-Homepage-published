@@ -30,8 +30,8 @@ OpenHands/OpenHands,project_name,OpenHands,target_set_csv,unchallenged,YES
 OpenHands/OpenHands,original_url_from_playlist,https://github.com/All-Hands-AI/OpenHands,target_set_csv,unchallenged,YES
 OpenHands/OpenHands,canonical_owner_repo,OpenHands/OpenHands,github_api_live,winner,YES
 OpenHands/OpenHands,canonical_owner_repo,All-Hands-AI/OpenHands,target_set_csv_original_url,discarded,NO
-OpenHands/OpenHands,description,🙌 OpenHands: AI-Driven Development,github_api_live,winner,YES
+OpenHands/OpenHands,description,OpenHands: AI-Driven Development,github_api_live,winner,YES
 OpenHands/OpenHands,description,"AI-driven software development platform (original All-Hands-AI URL redirects to OpenHands/OpenHands); MIT-licensed; SWE-Bench 77.6",target_set_csv,discarded,NO
 OpenHands/OpenHands,description,OpenHands: AI-Driven Development,readme_opening,discarded,NO
-OpenHands/OpenHands,license,MIT,github_api_live,winner,YES
+OpenHands/OpenHands,license,Other (NOASSERTION),github_api_live,winner,YES
 OpenHands/OpenHands,license,MIT,target_set_csv,discarded,NO
