@@ -7,20 +7,18 @@ This document lists the ML technology projects found in the YouTube playlist, th
 ## Source Identifiers vs. Canonical GitHub Paths
 
 > **Note:** The four tutorial-cited source identifiers and their current GitHub canonical resolution:
->
-> | Tutorial Source Identifier | Canonicalizes To | Redirects? |
-> |---|---|---|
-> | `openai/codex` | `openai/codex` | No |
-> | `google-gemini/gemini-cli` | `google-gemini/gemini-cli` | No |
-> | `QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | No |
-> | `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` | **Yes** |
+
+| Tutorial Source Identifier | Canonicalizes To | Redirects? |
+|---|---|---|
+| `openai/codex` | `openai/codex` | No |
+| `google-gemini/gemini-cli` | `google-gemini/gemini-cli` | No |
+| `QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | No |
+| `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` | **Yes** |
 
 ---
 
 ## 1. OpenAI Codex (openai/codex)
-
 **GitHub Repository:** https://github.com/openai/codex
-
 **Main Functions:**
 - AI-powered code generation and completion
 - Natural language to code translation
@@ -30,9 +28,7 @@ This document lists the ML technology projects found in the YouTube playlist, th
 ---
 
 ## 2. Google Gemini CLI (google-gemini/gemini-cli)
-
 **GitHub Repository:** https://github.com/google-gemini/gemini-cli
-
 **Main Functions:**
 - Command-line interface for Google Gemini AI models
 - Interactive AI coding and reasoning assistant
@@ -42,9 +38,7 @@ This document lists the ML technology projects found in the YouTube playlist, th
 ---
 
 ## 3. Qwen3-Coder (QwenLM/Qwen3-Coder)
-
 **GitHub Repository:** https://github.com/QwenLM/Qwen3-Coder
-
 **Main Functions:**
 - Large language model specialized for code generation
 - Supports agentic coding workflows
@@ -54,11 +48,9 @@ This document lists the ML technology projects found in the YouTube playlist, th
 ---
 
 ## 4. OpenHands (All-Hands-AI/OpenHands)
+**GitHub Repository:** https://github.com/OpenHands/OpenHands
 
-**GitHub Repository:** https://github.com/All-Hands-AI/OpenHands
-
-> **Canonical resolution:** `All-Hands-AI/OpenHands` redirects to `OpenHands/OpenHands` on GitHub.
-> The source identifier used in the tutorial is `All-Hands-AI/OpenHands`; the live canonical path is `OpenHands/OpenHands`.
+> **Identifier vs. canonical path:** the tutorial cited the source identifier `All-Hands-AI/OpenHands`, which canonicalizes (GitHub organization rename/transfer of owner `All-Hands-AI` → `OpenHands`, same repo) to the live path `OpenHands/OpenHands`. The cited source identifier and the live canonical path are kept separate.
 
 **Main Functions:**
 - Open-source AI software development agent platform
@@ -69,9 +61,7 @@ This document lists the ML technology projects found in the YouTube playlist, th
 ---
 
 ## 5. Awesome O1 (srush/awesome-o1)
-
 **GitHub Repository:** https://github.com/srush/awesome-o1
-
 **Main Functions:**
 - Curated collection of resources related to OpenAI o1 reasoning models
 - Papers, implementations, and tutorials on chain-of-thought reasoning
@@ -80,9 +70,7 @@ This document lists the ML technology projects found in the YouTube playlist, th
 ---
 
 ## 6. Flash Attention (Dao-AILab/flash-attention)
-
 **GitHub Repository:** https://github.com/Dao-AILab/flash-attention
-
 **Main Functions:**
 - Fast and memory-efficient exact attention mechanism
 - IO-aware attention algorithm for transformer training and inference
@@ -92,9 +80,7 @@ This document lists the ML technology projects found in the YouTube playlist, th
 ---
 
 ## 7. Claude Code (anthropics/claude-code)
-
 **GitHub Repository:** https://github.com/anthropics/claude-code
-
 **Main Functions:**
 - Anthropic's agentic coding assistant powered by Claude models
 - CLI-based tool for autonomous software development tasks
