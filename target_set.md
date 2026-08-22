@@ -2,7 +2,7 @@
 
 The playlist descriptions supply exactly five verbatim project URLs. This document (and `target_set.csv`) reconstruct the **intended target set**: one row per description-listed project, enriched with metadata probed live from the GitHub REST API.
 
-- Snapshot taken: **2026-08-17 ~08:45 UTC**
+- Snapshot refreshed: **2026-08-22 ~18:12 UTC**
 - Source of truth for membership: the **playlist descriptions** (verbatim URLs)
 - Source of truth for metadata: **live GitHub API** (`GET /repos/{owner}/{repo}`, `.../releases/latest`)
 - Rows in the target set: **5 / 5** (nothing dropped, nothing added)
@@ -11,11 +11,11 @@ The playlist descriptions supply exactly five verbatim project URLs. This docume
 
 | # | Original URL (verbatim) | Listed owner/repo | Resolved owner/repo | Redirect? | Language | License | Default branch | Stars | Latest release |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | `https://github.com/openai/codex` | `openai/codex` | `openai/codex` | no | Rust | Apache-2.0 | `main` | 106,396 | `rust-v0.147.0` |
-| 2 | `https://github.com/google-gemini/gemini-cli` | `google-gemini/gemini-cli` | `google-gemini/gemini-cli` | no | TypeScript | Apache-2.0 | `main` | 106,535 | `v0.55.1` |
-| 3 | `https://github.com/QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | no | Python | none detected | `main` | 16,792 | none |
-| 4 | `https://github.com/QwenLM/Qwen3-TTS` | `QwenLM/Qwen3-TTS` | `QwenLM/Qwen3-TTS` | no | Python | Apache-2.0 | `main` | 12,988 | none |
-| 5 | `https://github.com/All-Hands-AI/OpenHands` | `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` ⚠️ | **yes** | TypeScript | MIT | `main` | 84,261 | `v1.13.0` |
+| 1 | `https://github.com/openai/codex` | `openai/codex` | `openai/codex` | no | Rust | Apache-2.0 | `main` | 112,807 | `rust-v0.149.0` |
+| 2 | `https://github.com/google-gemini/gemini-cli` | `google-gemini/gemini-cli` | `google-gemini/gemini-cli` | no | TypeScript | Apache-2.0 | `main` | 106,611 | `v0.56.0` |
+| 3 | `https://github.com/QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | `QwenLM/Qwen3-Coder` | no | Python | none detected | `main` | 16,810 | none |
+| 4 | `https://github.com/QwenLM/Qwen3-TTS` | `QwenLM/Qwen3-TTS` | `QwenLM/Qwen3-TTS` | no | Python | Apache-2.0 | `main` | 13,058 | none |
+| 5 | `https://github.com/All-Hands-AI/OpenHands` | `All-Hands-AI/OpenHands` | `OpenHands/OpenHands` ⚠️ | **yes** | TypeScript | MIT | `main` | 84,789 | `v1.15.0` |
 
 Live descriptions (as returned by the API):
 1. `openai/codex` — Lightweight coding agent that runs in your terminal
@@ -40,6 +40,11 @@ All five URLs appear below exactly as given in the playlist descriptions:
 3. `https://github.com/QwenLM/Qwen3-Coder`
 4. `https://github.com/QwenLM/Qwen3-TTS`
 5. `https://github.com/All-Hands-AI/OpenHands`
+
+## Refresh log
+
+- 2026-08-17 ~08:45 UTC — initial reconstruction, metadata captured.
+- 2026-08-22 ~18:12 UTC — metadata re-probed live and refreshed (star counts, release tags); membership and preservation decisions unchanged.
 
 ## Delivery
 
